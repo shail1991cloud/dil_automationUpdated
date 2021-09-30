@@ -4329,3 +4329,16 @@
 2021-09-17 19:09:332 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
 2021-09-17 19:09:758 INFO  DIL_loginpage:43 - User is logged into DIL UI with userId-->parihars
 2021-09-17 19:09:758 INFO  commonSteps:40 - --user name and Password are entered--
+2021-09-20 11:09:676 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-09-20 11:09:104 INFO  DIL_loginpage:43 - User is logged into DIL UI with userId-->parihars
+2021-09-20 11:09:104 INFO  commonSteps:40 - --user name and Password are entered--
+2021-09-30 18:09:60 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-09-30 18:09:413 INFO  DIL_loginpage:43 - User is logged into DIL UI with userId-->parihars
+2021-09-30 18:09:413 INFO  commonSteps:40 - --user name and Password are entered--
+2021-09-30 18:09:891 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-09-30 18:09:395 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test_Pipeline
+2021-09-30 18:09:639 INFO  createProjectSteps:79 - PipeLines is created with-->PipeLIne--ProjectForAutomation--Test_Pipeline--STREAMING--k1v1--s1v2
+2021-09-30 18:09:911 INFO  createProjectSteps:86 - PipeLines Properties is validated with details-->ProjectForAutomation--Test_Pipeline--STREAMING--k1v1--s1v2
+2021-09-30 19:09:285 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-09-30 19:09:649 INFO  DIL_loginpage:43 - User is logged into DIL UI with userId-->parihars
+2021-09-30 19:09:649 INFO  commonSteps:40 - --user name and Password are entered--
