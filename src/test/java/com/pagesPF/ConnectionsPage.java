@@ -81,7 +81,6 @@ public class ConnectionsPage {
     ConfigFileReader configFileReader;
 
     public ConnectionsPage(WebDriver driver) {
-
         this.driver = driver;
         projectspage = PageFactory.initElements(driver, ProjectsPage.class);
         functions_leanPageObject = PageFactory.initElements(driver, Functions_LeanPageObject.class);

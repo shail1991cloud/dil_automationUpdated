@@ -15,7 +15,7 @@ Feature:Creation of Sources and Destination
     Then Source should get created with "<Name>"
     Examples:
       | ProjectName | Description          | Tag           | Pipeline | Icon         | Name       | Type        | connection             | fileType | FilePath | Separator | sourceSchema  | SchemaValue |
-      | AutoDIL     | ProjectForAutomation | Test_Pipeline | PipeLIne | Add a Source | DemoSource | File System | Auto_Kerb_DND | CSV      | .csv     | ,         | Manual Schema | Auto_ManualSchema      |
+      | AutoDIL     | ProjectForAutomation | Test_Pipeline | PipeLIne | Add a Source | DemoSource | File System | Auto_Kerb_DND | CSV      | .csv     | ,         | Manual Schema | AutoManualSchemaDND     |
 
   @Smoke @Reg @Positive @CSource-Test3 @TC19
   Scenario Outline: user is able to create FileSystem source with No schema
@@ -63,7 +63,7 @@ Feature:Creation of Sources and Destination
     Then Transformation with "<TransformationName>" should get created
     Examples:
       | ProjectName | Description          | Tag           | Pipeline | Icon         | SourceName | Type        | connection             | fileType | FilePath | Separator | sourceSchema  | SchemaValue | TransformationName | Category | TransformationType | columnValue |
-      | AutoDIL     | ProjectForAutomation | Test_Pipeline | PipeLIne | Add a Source | DemoSource | File System | Auto_Kerb_DND | CSV      | .csv     | ,         | Manual Schema | Auto_ManualSchema      | TestTrans          | Column   | GroupBy            | m_boolean         |
+      | AutoDIL     | ProjectForAutomation | Test_Pipeline | PipeLIne | Add a Source | DemoSource | File System | Auto_Kerb_DND | CSV      | .csv     | ,         | Manual Schema | AutoManualSchemaDND      | TestTrans          | Column   | GroupBy            | m_boolean         |
 
   @Smoke @Reg @Positive @CDestination-Test1 @TC22
   Scenario Outline: user is able to create File System type Destination

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/dil-automation.iml" filepath="$PROJECT_DIR$/.idea/dil-automation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/dil.iml" filepath="$PROJECT_DIR$/.idea/dil.iml" />
     </modules>
   </component>
 </project>

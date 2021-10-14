@@ -17,7 +17,7 @@ public class PipeLIne_BuilderPage {
     public Functions_LeanPageObject functions_leanPageObject;
     @FindBy(how = How.XPATH, using = "//scale-text-field[@label=\"Name*\"]//input[@type=\"text\"]")
     public WebElement FieldEnterName;
-    @FindBy(how = How.XPATH, using = "//*[text()=\"File path*\"]/following::input[@maxlength='200']")
+    @FindBy(how = How.XPATH, using = "//scale-text-field[@label=\"File Path*\"]//input[@type=\"text\"]")
     public WebElement filePath;
     @FindBy(how = How.XPATH, using = "//*[text()=\"File path*\"]/following::input[@maxlength='200']")
     public List<WebElement> filePathOnDest;

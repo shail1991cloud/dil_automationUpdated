@@ -11,7 +11,7 @@ import org.openqa.selenium.ie.InternetExplorerOptions;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author - Shailendra PS Parihar
+ * @ author - Shailendra PS Parihar
  */
 public class Baseclass {
 
