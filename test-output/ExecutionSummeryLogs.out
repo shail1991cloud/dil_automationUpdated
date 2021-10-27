@@ -1004,6 +1004,18 @@
 2021-07-12 16:07:759 INFO  createSourceAndDestination:46 - Icon is clicked-->Add a Source
 2021-07-12 16:07:749 INFO  createSourceAndDestination:55 - Details entered-->.csv--AUTOMATION_DONOTDELETE
 2021-07-12 16:07:40 INFO  createSourceAndDestination:62 - DRecord validated-->DemoSource
+2021-10-27 11:10:262 INFO  commonSteps:32 - --Browser Launched--and user is navigated to DIL Login Page
+2021-10-27 11:10:614 INFO  DIL_loginpage:42 - User is logged into DIL UI with userId-->parihars
+2021-10-27 11:10:614 INFO  commonSteps:39 - --user name and Password are entered--
+2021-10-27 11:10:85 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-10-27 11:10:147 INFO  commonSteps:32 - --Browser Launched--and user is navigated to DIL Login Page
+2021-10-27 11:10:494 INFO  DIL_loginpage:42 - User is logged into DIL UI with userId-->parihars
+2021-10-27 11:10:494 INFO  commonSteps:39 - --user name and Password are entered--
+2021-10-27 11:10:777 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-10-27 11:10:822 INFO  commonSteps:32 - --Browser Launched--and user is navigated to DIL Login Page
+2021-10-27 11:10:159 INFO  DIL_loginpage:42 - User is logged into DIL UI with userId-->parihars
+2021-10-27 11:10:159 INFO  commonSteps:39 - --user name and Password are entered--
+2021-10-27 11:10:174 INFO  createProjectSteps:177 - Varification of-->Create Project--is done
 2021-07-12 16:07:829 INFO  commonSteps:32 - --Browser Launched--and user is navigated to DIL Login Page
 2021-07-12 16:07:176 INFO  DIL_loginpage:42 - User is logged into DIL UI with userId-->parihars
 2021-07-12 16:07:177 INFO  commonSteps:39 - --user name and Password are entered--
@@ -4393,9 +4405,28 @@
 2021-10-14 14:10:861 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
 2021-10-14 14:10:240 INFO  DIL_loginpage:43 - User is logged into DIL UI with userId-->parihars
 2021-10-14 14:10:240 INFO  commonSteps:40 - --user name and Password are entered--
+2021-10-27 11:10:425 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-10-27 11:10:212 INFO  DIL_loginpage:43 - User is logged into DIL UI with userId-->parihars
+2021-10-27 11:10:212 INFO  commonSteps:40 - --user name and Password are entered--
+2021-10-27 11:10:919 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-10-27 11:10:403 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test_Pipeline
+2021-10-27 11:10:434 INFO  DIL_loginpage:31 - User is switched to-->Overview
+2021-10-27 11:10:434 INFO  createProjectSteps:39 - User navigated to tab-->Overview
+2021-10-27 12:10:132 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-10-27 12:10:509 INFO  DIL_loginpage:43 - User is logged into DIL UI with userId-->parihars
+2021-10-27 12:10:510 INFO  commonSteps:40 - --user name and Password are entered--
+2021-10-27 12:10:924 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-10-27 12:10:396 INFO  createProjectSteps:51 - --Details entered for Project With--->Auto_Pro,CreatingPipeLine and Test
+2021-10-27 12:10:273 INFO  createProjectSteps:143 - --Project with Name-->MxmImAuto_Pro27-04--is validated on Project Listing page
 2021-10-14 16:10:429 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
 2021-10-14 16:10:790 INFO  DIL_loginpage:43 - User is logged into DIL UI with userId-->parihars
 2021-10-14 16:10:790 INFO  commonSteps:40 - --user name and Password are entered--
 2021-10-19 14:10:38 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
 2021-10-19 14:10:370 INFO  DIL_loginpage:38 - User is logged into DIL UI with userId-->parihars
 2021-10-19 14:10:371 INFO  commonSteps:40 - --user name and Password are entered--
+2021-10-27 12:10:951 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-10-27 12:10:326 INFO  DIL_loginpage:38 - User is logged into DIL UI with userId-->parihars
+2021-10-27 12:10:327 INFO  commonSteps:40 - --user name and Password are entered--
+2021-10-27 12:10:596 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-10-27 12:10:400 INFO  DIL_loginpage:38 - User is logged into DIL UI with userId-->parihars
+2021-10-27 12:10:401 INFO  commonSteps:40 - --user name and Password are entered--
