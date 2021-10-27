@@ -1,29 +1,50 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/projects/GoogleSearch.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/projects/simpleScenario.feature");
 formatter.feature({
-  "name": "To search result in Google Search box",
+  "name": "user should be able to make a connection",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "name": "User is able to search a result and verify the same",
+  "name": "user is able to make kerberos connection",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@SmokeTest"
+      "name": "@CNC-1"
+    },
+    {
+      "name": "@Smoke"
+    },
+    {
+      "name": "@Reg"
+    },
+    {
+      "name": "@Positive"
     }
   ]
 });
 formatter.step({
-  "name": "user passes \"\u003curl\u003e\" and navigates to Google page",
+  "name": "user is on DIL login page",
   "keyword": "Given "
 });
 formatter.step({
-  "name": "enters \"\u003cItem\u003e\" to Google Search box",
+  "name": "enter username and password",
   "keyword": "When "
 });
 formatter.step({
-  "name": "\"\u003cItemWithDescription\u003e\" should be validated in Search result",
+  "name": "navigates to \"\u003cCreate Connection\u003e\" page",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "he enters \"\u003cname\u003e\",\"\u003cdescription\u003e\",\"\u003cconnectionType\u003e\" ,principal and file name",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "when clicks on Test connection",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "Connection is created and tested",
   "keyword": "Then "
 });
 formatter.examples({
@@ -33,27 +54,38 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "url",
-        "Item",
-        "ItemWithDescription"
+        "Create Connection",
+        "name",
+        "description",
+        "connectionType"
       ]
     },
     {
       "cells": [
-        "https://www.google.com/",
-        "Fiserv",
-        "Fiserv: Financial Services Technology, Mobile Banking ..."
+        "Create a connection",
+        "Connection_Dil",
+        "Connection_Dil",
+        "KERBEROS"
       ]
     }
   ]
 });
 formatter.scenario({
-  "name": "User is able to search a result and verify the same",
+  "name": "user is able to make kerberos connection",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@SmokeTest"
+      "name": "@CNC-1"
+    },
+    {
+      "name": "@Smoke"
+    },
+    {
+      "name": "@Reg"
+    },
+    {
+      "name": "@Positive"
     }
   ]
 });
@@ -62,31 +94,61 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "user passes \"https://www.google.com/\" and navigates to Google page",
+  "name": "user is on DIL login page",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "com.steps.googleSearchSteps.userPassesAndNavigatesToGooglePage(java.lang.String)"
+  "location": "com.steps.commonSteps.userIsOnDILLoginPage()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "enters \"Fiserv\" to Google Search box",
+  "name": "enter username and password",
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.steps.googleSearchSteps.entersToGoogleSearchBox(java.lang.String)"
+  "location": "com.steps.commonSteps.enterUsernameAndPassword()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "\"Fiserv: Financial Services Technology, Mobile Banking ...\" should be validated in Search result",
+  "name": "navigates to \"Create a connection\" page",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.steps.createNewConnection.navigatesToPage(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "he enters \"Connection_Dil\",\"Connection_Dil\",\"KERBEROS\" ,principal and file name",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.steps.createNewConnection.heEntersPrincipalAndFileName(java.lang.String,java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "when clicks on Test connection",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.steps.createNewConnection.whenClicksOnTestConnection()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Connection is created and tested",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.steps.googleSearchSteps.shouldBeValidatedInSearchResult(java.lang.String)"
+  "location": "com.steps.createNewConnection.connectionIsCreatedAndTested()"
 });
 formatter.result({
   "status": "passed"

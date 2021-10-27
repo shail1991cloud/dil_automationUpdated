@@ -85,4 +85,6 @@ public class apiSteps extends Baseclass {
         restFunctions.fetchBearerToken(jsonPath,bearerToken);
         log.info("BearerTokenObtained");
     }
+
+
 }

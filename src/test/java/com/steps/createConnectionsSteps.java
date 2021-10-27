@@ -23,7 +23,6 @@ public class createConnectionsSteps extends Baseclass {
     public createConnectionsSteps() {
         connectionsPage = PageFactory.initElements(driver, ConnectionsPage.class);
         configFileReader = new ConfigFileReader();
-
     }
 
 
@@ -34,7 +33,7 @@ public class createConnectionsSteps extends Baseclass {
 
     @When("enters {string},{string},{string},principal and fileType")
     public void entersPrincipalAndFileType(String name, String description, String connectionType) throws InterruptedException, IOException {
-        connectionsPage.enterDetailsForKerberosConnection(name,description,connectionType);
+        connectionsPage.enterBasicConnectionDetails(name,description,connectionType);
         connectionsPage.enterKerberosPrincipalDetails();
     }
 
@@ -64,6 +63,8 @@ public class createConnectionsSteps extends Baseclass {
 
     @When("enters {string},{string},{string}")
     public void enters(String name, String description, String connectionType) throws IOException, InterruptedException {
-        connectionsPage.enterDetailsForKerberosConnection(name,description,connectionType);
+        connectionsPage.enterBasicConnectionDetails(name,description,connectionType);
     }
+
+
 }

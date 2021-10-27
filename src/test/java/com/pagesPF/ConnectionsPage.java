@@ -96,7 +96,7 @@ public class ConnectionsPage {
         createConnection.click();
 
     }
-    public void enterDetailsForKerberosConnection(String name,String description,String connectionType) throws InterruptedException, IOException {
+    public void enterBasicConnectionDetails(String name, String description, String connectionType) throws InterruptedException, IOException {
      CommonFunction.waitForElementToAppear(driver,textFieldConnectionName);
      String uniqueConnectionName = name + DatesHelper.getTodayDateWithSeconds();
      EnvSetUp.setDataValue(Constant.ConnectionName, uniqueConnectionName);
@@ -135,7 +135,6 @@ public class ConnectionsPage {
         CommonFunction.waitForElementToAppear(driver,fieldSearchBoxOnConnectionsPage);
         fieldSearchBoxOnConnectionsPage.sendKeys(Keys.ENTER);
         fieldSearchBoxOnConnectionsPage.sendKeys(EnvSetUp.getDataKeyValue(Constant.ConnectionName));
-        System.out.println(EnvSetUp.getDataKeyValue(Constant.ConnectionName));
         Assert.assertTrue(CommonFunction.getCustomisedWebElement(driver,connectionRecordOnConnectionListingPage,EnvSetUp.getDataKeyValue(Constant.ConnectionName)).isDisplayed());
         CommonFunction.waitForElementToAppear(driver,buttonDeleteOnConnectionRecord);
         buttonDeleteOnConnectionRecord.click();

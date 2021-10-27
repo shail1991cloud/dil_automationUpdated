@@ -4393,3 +4393,9 @@
 2021-10-14 14:10:861 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
 2021-10-14 14:10:240 INFO  DIL_loginpage:43 - User is logged into DIL UI with userId-->parihars
 2021-10-14 14:10:240 INFO  commonSteps:40 - --user name and Password are entered--
+2021-10-14 16:10:429 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-10-14 16:10:790 INFO  DIL_loginpage:43 - User is logged into DIL UI with userId-->parihars
+2021-10-14 16:10:790 INFO  commonSteps:40 - --user name and Password are entered--
+2021-10-19 14:10:38 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-10-19 14:10:370 INFO  DIL_loginpage:38 - User is logged into DIL UI with userId-->parihars
+2021-10-19 14:10:371 INFO  commonSteps:40 - --user name and Password are entered--
