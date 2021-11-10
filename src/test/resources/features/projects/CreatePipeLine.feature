@@ -15,7 +15,7 @@ Feature:Creation and Field level validation of pipelines
     Then PipeLine listing page is validated for ProjectName,PipelineTag and "<Message>"
     Examples:
       | ProjectName | Description          | Tag           | Tab      | Message                               |
-      | AutoDIL     | ProjectForAutomation | Test_Pipeline | Overview | There is no pipelines in this project |
+      | AutoDIL     | ProjectForAutomation | Test_Pipeline | Overview |  There is no pipelines in this project.  |
 
   @Smoke @Reg @Positive @CP-Test1 @TC2
   Scenario Outline: user is able validate pipeline properties

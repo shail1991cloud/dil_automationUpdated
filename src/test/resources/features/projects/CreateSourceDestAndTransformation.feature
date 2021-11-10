@@ -3,7 +3,7 @@ Feature:Creation of Sources and Destination
   As a user I want to Create a Source and Destination,Validate Source and Destination attributes
 
 
-  @Smoke @Reg @Positive @CSource-Test2 @TC18
+  @Smoke @Reg @Positive @CSource-Test1 @TC18
   Scenario Outline: user is able to create file type source for ManualSchema
     Given user is on DIL login page
     When enter username and password
@@ -17,7 +17,7 @@ Feature:Creation of Sources and Destination
       | ProjectName | Description          | Tag           | Pipeline | Icon         | Name       | Type        | connection             | fileType | FilePath | Separator | sourceSchema  | SchemaValue |
       | AutoDIL     | ProjectForAutomation | Test_Pipeline | PipeLIne | Add a Source | DemoSource | File System | Auto_Kerb_DND | CSV      | .csv     | ,         | Manual Schema | AutoManualSchemaDND     |
 
-  @Smoke @Reg @Positive @CSource-Test3 @TC19
+  @Smoke @Reg @Positive @CSource-Test2 @TC19
   Scenario Outline: user is able to create FileSystem source with No schema
     Given user is on DIL login page
     When enter username and password
@@ -79,9 +79,9 @@ Feature:Creation of Sources and Destination
     Then Destination with "<DestinationName>" should get created
     Examples:
       | ProjectName | Description          | Tag           | Pipeline | Icon         | SourceName | SourceType  | SourceConnection       | fileType | FilePath | Separator | sourceSchema  | SchemaValue | DestinationName | DestinationType | DestConnection         | TopicName |
-      | AutoDIL     | ProjectForAutomation | Test_Pipeline | PipeLIne | Add a Source | DemoSource | File System | Auto_Kerb_DND | CSV      | .csv     | ,         | Manual Schema | Auto_ManualSchema      | DemoDestination | File System     | Auto_Kerb_DND | CDR       |
+      | AutoDIL     | ProjectForAutomation | Test_Pipeline | PipeLIne | Add a Source | DemoSource | File System | Auto_Kerb_DND | CSV      | .csv     | ,         | Manual Schema | AutoManualSchemaDND      | DemoDestination | File System     | Auto_Kerb_DND | CDR       |
 
-  @Smoke @RegN @Positive @CDestination-Test1 @TC23
+  @Smoke @Reg @Positive @CDestination-Test1 @TC23
   Scenario Outline: user is able to create Kafka type Destination
     Given user is on DIL login page
     When enter username and password
@@ -95,9 +95,9 @@ Feature:Creation of Sources and Destination
     Then Destination with "<DestinationName>" should get created
     Examples:
       | ProjectName | Description          | Tag           | Pipeline | Icon         | SourceName | SourceType  | SourceConnection       | fileType | FilePath | Separator | sourceSchema  | SchemaValue | DestinationName | DestinationType | DestConnection | TopicName    |
-      | AutoDIL     | ProjectForAutomation | Test_Pipeline | PipeLIne | Add a Source | DemoSource | File System | Auto_Kerb_DND | CSV      | .csv     | ,         | Manual Schema | Auto_ManualSchema      | DemoDestination | KAFKA           | Auto_KAFKA_DND    | CDR |
+      | AutoDIL     | ProjectForAutomation | Test_Pipeline | PipeLIne | Add a Source | DemoSource | File System | Auto_Kerb_DND | CSV      | .csv     | ,         | Manual Schema | AutoManualSchemaDND      | DemoDestination | KAFKA           | KafkaSSLConnection    | CDR |
 
-  @Smoke @RegN @Positive @CSource-Test1 @TC24
+  @Smoke @Reg @Positive @CSource-Test1 @TC24
   Scenario Outline: user is able to create Kafka source for Manual Schema
     Given user is on DIL login page
     When enter username and password
@@ -109,8 +109,8 @@ Feature:Creation of Sources and Destination
     Then Source should get created with "<SourceName>"
     Examples:
       | ProjectName | Description          | Tag           | Pipeline | Icon         | SourceName      | SourceType | SourceConnection | TopicName | SourceSchema | RegistryName            | Offset|Key | Value |
-      | AutoDIL     | ProjectForAutomation | Test_Pipeline | PipeLIne | Add a Source | DemoSourceKafka | KAFKA      | Auto_KAFKA_DND      | CDR       | Manual    | Auto_ManualSchema | Earlier |K   | v     |
-  @Smoke @RegN @Positive @CSource-Test1 @TC25
+      | AutoDIL     | ProjectForAutomation | Test_Pipeline | PipeLIne | Add a Source | DemoSourceKafka | KAFKA      | KafkaSSLConnection      | CDR       | Manual    | AutoManualSchemaDND | Earlier |K   | v     |
+  @Smoke @Reg @Positive @CSource-Test1 @TC25
   Scenario Outline: user is able to create Kafka source for NoSchema
     Given user is on DIL login page
     When enter username and password
@@ -122,7 +122,7 @@ Feature:Creation of Sources and Destination
     Then Source should get created with "<SourceName>"
     Examples:
       | ProjectName | Description          | Tag           | Pipeline | Icon         | SourceName      | SourceType | SourceConnection | TopicName | SourceSchema | RegistryName            | Offset|Key | Value |
-      | AutoDIL     | ProjectForAutomation | Test_Pipeline | PipeLIne | Add a Source | DemoSourceKafka | KAFKA      | Auto_KAFKA_DND      | CDR       | No_Schema    | Auto_ManualSchema | Earlier |K   | v     |
+      | AutoDIL     | ProjectForAutomation | Test_Pipeline | PipeLIne | Add a Source | DemoSourceKafka | KAFKA      | KafkaSSLConnection      | CDR       | No_Schema    | AutoManualSchemaDND | Earlier |K   | v     |
 #-----------------------------------In Progress__----------------------
 
 

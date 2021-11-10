@@ -18,7 +18,7 @@ import java.util.List;
 
 public class PipeLIne_ListingPage {
 
-    private final String recordPipeLine = "//*[text()='%s ']";
+    private final String recordPipeLine = "//*[text()='%s']";
     public ProjectsPage projectspage;
     public Functions_LeanPageObject functions_leanPageObject;
     public String pipeLineNameOnPipelineProperties = "//div[@title=\"%s\"]";
