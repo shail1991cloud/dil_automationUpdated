@@ -1,5 +1,7 @@
+/home/pihu/dil_automation/src/test/java/com/steps/createConnectionsSteps.java
 /home/pihu/dil_automation/src/test/java/com/pagesPF/DIL_loginpage.java
 /home/pihu/dil_automation/src/test/java/com/steps/Hooks.java
+/home/pihu/dil_automation/src/test/java/com/pagesPF/ConnectionsPage.java
 /home/pihu/dil_automation/src/test/java/com/steps/createSourceDestAndTransform.java
 /home/pihu/dil_automation/src/test/java/com/managersUtilities/CommonFunction.java
 /home/pihu/dil_automation/src/test/java/com/managersUtilities/FileReaderManager.java

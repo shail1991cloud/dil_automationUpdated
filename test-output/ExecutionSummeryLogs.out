@@ -4430,3 +4430,38 @@
 2021-10-27 12:10:596 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
 2021-10-27 12:10:400 INFO  DIL_loginpage:38 - User is logged into DIL UI with userId-->parihars
 2021-10-27 12:10:401 INFO  commonSteps:40 - --user name and Password are entered--
+2021-11-09 16:11:928 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-09 16:11:401 INFO  DIL_loginpage:38 - User is logged into DIL UI with userId-->parihars
+2021-11-09 16:11:402 INFO  commonSteps:40 - --user name and Password are entered--
+2021-11-09 16:11:235 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-09 16:11:351 INFO  DIL_loginpage:38 - User is logged into DIL UI with userId-->parihars
+2021-11-09 16:11:351 INFO  commonSteps:40 - --user name and Password are entered--
+2021-11-10 08:11:499 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-10 08:11:31 INFO  DIL_loginpage:38 - User is logged into DIL UI with userId-->parihars
+2021-11-10 08:11:32 INFO  commonSteps:40 - --user name and Password are entered--
+2021-11-10 08:11:297 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-10 08:11:840 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test_Pipeline
+2021-11-10 08:11:744 INFO  createSourceDestAndTransform:38 - Pipe line is created with name-->PipeLIne
+2021-11-10 08:11:496 INFO  createSourceDestAndTransform:46 - Icon is clicked-->Add a Source
+2021-11-10 08:11:625 INFO  createSourceDestAndTransform:61 - Details entered-->.csv--Auto_Kerb_DND
+2021-11-10 08:11:196 INFO  createSourceDestAndTransform:54 - DRecord validated-->DemoSource
+2021-11-10 08:11:708 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-10 08:11:145 INFO  DIL_loginpage:38 - User is logged into DIL UI with userId-->parihars
+2021-11-10 08:11:145 INFO  commonSteps:40 - --user name and Password are entered--
+2021-11-10 08:11:629 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-10 08:11:196 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test_Pipeline
+2021-11-10 08:11:172 INFO  createSourceDestAndTransform:38 - Pipe line is created with name-->PipeLIne
+2021-11-10 08:11:10 INFO  createSourceDestAndTransform:46 - Icon is clicked-->Add a Source
+2021-11-10 08:11:665 INFO  createSourceDestAndTransform:61 - Details entered-->.csv--Auto_Kerb_DND
+2021-11-10 08:11:244 INFO  createSourceDestAndTransform:54 - DRecord validated-->DemoSource
+2021-11-10 08:11:538 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-10 08:11:125 INFO  DIL_loginpage:38 - User is logged into DIL UI with userId-->parihars
+2021-11-10 08:11:125 INFO  commonSteps:40 - --user name and Password are entered--
+2021-11-10 08:11:573 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-10 08:11:252 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test_Pipeline
+2021-11-10 08:11:193 INFO  createSourceDestAndTransform:38 - Pipe line is created with name-->PipeLIne
+2021-11-10 08:11:943 INFO  createSourceDestAndTransform:46 - Icon is clicked-->Add a Source
+2021-11-10 08:11:346 INFO  createSourceDestAndTransform:61 - Details entered-->.csv--Auto_Kerb_DND
+2021-11-10 08:11:934 INFO  createSourceDestAndTransform:54 - DRecord validated-->DemoSource
+2021-11-10 08:11:987 INFO  createSourceDestAndTransform:85 - Transformation is Created with Name-->TestTrans
+2021-11-10 08:11:601 INFO  createSourceDestAndTransform:93 - Transformation is validated with Name-->TestTrans

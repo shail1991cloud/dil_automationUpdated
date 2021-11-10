@@ -126,6 +126,34 @@ Feature:Creation of Sources and Destination
 #-----------------------------------In Progress__----------------------
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   @Positive @CSource-Test2 @TC**
   Scenario Outline: user is able to validate SourceProperties should be able to delete same
     Given user is on DIL login page
