@@ -605,3 +605,22 @@
 2021-11-12 14:11:882 INFO  createSourceDestAndTransform:93 - Transformation is validated with Name-->TestTrans
 2021-11-12 14:11:651 INFO  createSourceDestAndTransform:99 - Destination is Created with Name-->DemoDestination
 2021-11-12 14:11:559 INFO  createProjectSteps:97 - Pipeline listing page is validated for  created Pipeline with Status-->READY
+2021-11-12 15:11:578 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-12 15:11:924 INFO  DIL_loginpage:38 - User is logged into DIL UI with userId-->parihars
+2021-11-12 15:11:924 INFO  commonSteps:40 - --user name and Password are entered--
+2021-11-12 15:11:449 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-12 15:11:14 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test_Pipeline
+2021-11-12 15:11:275 INFO  createProjectSteps:111 - PipeLines details entered-->PipeLIne--ProjectForAutomation--Test_Pipeline
+2021-11-12 15:11:503 INFO  createProjectSteps:131 - PipeLines properties entered
+2021-11-12 15:11:758 INFO  createProjectSteps:131 - PipeLines properties entered
+2021-11-12 15:11:985 INFO  createProjectSteps:131 - PipeLines properties entered
+2021-11-12 15:11:131 INFO  createProjectSteps:131 - PipeLines properties entered
+2021-11-12 15:11:284 INFO  createProjectSteps:131 - PipeLines properties entered
+2021-11-12 15:11:488 INFO  createProjectSteps:148 - Spark properties entered
+2021-11-12 15:11:270 INFO  createSourceDestAndTransform:46 - Icon is clicked-->Add a Source
+2021-11-12 15:11:104 INFO  createSourceDestAndTransform:111 - Kafka Source  is created with Name-->DemoSource
+2021-11-12 15:11:705 INFO  createSourceDestAndTransform:54 - DRecord validated-->DemoSource
+2021-11-12 15:11:725 INFO  createSourceDestAndTransform:85 - Transformation is Created with Name-->TestTrans
+2021-11-12 15:11:261 INFO  createSourceDestAndTransform:93 - Transformation is validated with Name-->TestTrans
+2021-11-12 15:11:969 INFO  createSourceDestAndTransform:99 - Destination is Created with Name-->DemoDestination
+2021-11-12 15:11:758 INFO  createProjectSteps:97 - Pipeline listing page is validated for  created Pipeline with Status-->READY
