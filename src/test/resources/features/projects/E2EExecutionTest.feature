@@ -2,7 +2,7 @@
 Feature:Creation of a End to End scenarios
 
 
-  @Smoke @Reg @Positive @E2ETest11 @TC29
+  @Smoke @Reg @Positive @E2EExecution1 @TC30
   Scenario Outline: user is able to run created acquire kafka pipeline and validate same in logs
     Given user is on DIL login page
     When enter username and password
