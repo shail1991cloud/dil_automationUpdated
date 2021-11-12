@@ -24,10 +24,10 @@ formatter.scenarioOutline({
       "name": "@Positive"
     },
     {
-      "name": "@E2ETest11"
+      "name": "@E2EExecution1"
     },
     {
-      "name": "@TC29"
+      "name": "@TC30"
     }
   ]
 });
@@ -52,7 +52,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "name": "enters pipeline propertiess",
+  "name": "enters pipeline properties",
   "keyword": "When ",
   "rows": [
     {
@@ -94,7 +94,7 @@ formatter.step({
   ]
 });
 formatter.step({
-  "name": "Spark propertiess",
+  "name": "Spark properties",
   "keyword": "And ",
   "rows": [
     {
@@ -152,8 +152,6 @@ formatter.examples({
         "ExecutionType",
         "Key",
         "Value",
-        "SKey",
-        "SValue",
         "Pipeline",
         "Icon",
         "SourceName",
@@ -183,8 +181,6 @@ formatter.examples({
         "STREAMING",
         "k1",
         "v1",
-        "s1",
-        "v2",
         "PipeLIne",
         "Add a Source",
         "DemoSource",
@@ -226,15 +222,16 @@ formatter.scenario({
       "name": "@Positive"
     },
     {
-      "name": "@E2ETest11"
+      "name": "@E2EExecution1"
     },
     {
-      "name": "@TC29"
+      "name": "@TC30"
     }
   ]
 });
+formatter.write("--Starting the Execution--");
 formatter.before({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user is on DIL login page",
@@ -244,7 +241,7 @@ formatter.match({
   "location": "com.steps.commonSteps.userIsOnDILLoginPage()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "enter username and password",
@@ -254,7 +251,7 @@ formatter.match({
   "location": "com.steps.commonSteps.enterUsernameAndPassword()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "clicks on createProject tab",
@@ -264,7 +261,7 @@ formatter.match({
   "location": "com.steps.createProjectSteps.clicksOnCreateProjectTab()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "creates project with \"AutoDIL\",\"ProjectForAutomation\",\"Test_Pipeline\" and engine",
@@ -274,7 +271,7 @@ formatter.match({
   "location": "com.steps.createProjectSteps.entersAndSelectEngine(java.lang.String,java.lang.String,java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "creates a \"PipeLIne\" with \"ProjectForAutomation\",\"Test_Pipeline\",\"STREAMING\"",
@@ -284,10 +281,10 @@ formatter.match({
   "location": "com.steps.createPipeLineSteps.createsAWith(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
-  "name": "enters pipeline propertiess",
+  "name": "enters pipeline properties",
   "rows": [
     {},
     {},
@@ -298,21 +295,25 @@ formatter.step({
   ],
   "keyword": "When "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.steps.createPipeLineSteps.enters_pipeline_properties(io.cucumber.datatable.DataTable)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
-  "name": "Spark propertiess",
+  "name": "Spark properties",
   "rows": [
     {},
     {}
   ],
   "keyword": "And "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.steps.createPipeLineSteps.spark_properties(io.cucumber.datatable.DataTable)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
   "name": "clicks on \"Add a Source\"",
@@ -322,7 +323,7 @@ formatter.match({
   "location": "com.steps.createSourceDestAndTransform.clicksOn(java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "Enters \"DemoSource\",\"KAFKA\",\"KafkaSSLConnection\",\"CDR\",\"Manual\",\"AutoManualSchemaDND\",\"Earlier\",\"k1\",\"v1\" and clicks on add",
@@ -332,7 +333,7 @@ formatter.match({
   "location": "com.steps.createSourceDestAndTransform.entersAndClicksOnAdd(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "Source should get created with \"DemoSource\"",
@@ -342,7 +343,7 @@ formatter.match({
   "location": "com.steps.createSourceDestAndTransform.sourceShouldGetCreatedWith(java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "enters \"TestTrans\",\"Column\",\"GroupBy\",\"m_id\" and click add",
@@ -352,7 +353,7 @@ formatter.match({
   "location": "com.steps.createSourceDestAndTransform.entersAndClick(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "Transformation with \"TestTrans\" should get created",
@@ -362,7 +363,7 @@ formatter.match({
   "location": "com.steps.createSourceDestAndTransform.transformationWithShouldGetCreated(java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "enters \"DemoDestination\",\"KAFKA\",\"KafkaSSLConnection\",\"CSV\" ,\".csv\",\"CDR\" and click add",
@@ -372,7 +373,7 @@ formatter.match({
   "location": "com.steps.createSourceDestAndTransform.entersAndClickAdd(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "PipeLine with status \"READY\" is validated",
@@ -382,12 +383,13 @@ formatter.match({
   "location": "com.steps.createPipeLineSteps.pipelineWithStatusIsValidated(java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.after({
-  "status": "skipped"
+  "status": "passed"
 });
+formatter.write("---Closing the Browser---");
 formatter.after({
-  "status": "skipped"
+  "status": "passed"
 });
 });
