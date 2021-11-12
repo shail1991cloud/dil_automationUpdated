@@ -116,6 +116,23 @@ public class CommonFunction {
         }
         return sb.toString();
     }
+    /**
+     * @method generateRandomString to generate a random Integer Sequence
+     */
+    public static String generateIntegerSequence(int n) {
+        String AlphaNumericString = "0123456789";
+
+
+        StringBuilder sb = new StringBuilder(n);
+        for (int i = 0; i < n; i++) {
+            int index
+                    = (int) (AlphaNumericString.length()
+                    * Math.random());
+            sb.append(AlphaNumericString
+                    .charAt(index));
+        }
+        return sb.toString();
+    }
 
     /**
      * @method clickOnShadowElement to click on ShadowElement,accept DOM Js of the element and returns WebElement to click

@@ -525,3 +525,64 @@
 2021-11-10 15:11:718 INFO  createSourceDestAndTransform:93 - Transformation is validated with Name-->TestTrans
 2021-11-10 15:11:467 INFO  createSourceDestAndTransform:99 - Destination is Created with Name-->DemoDestination
 2021-11-10 15:11:278 INFO  createProjectSteps:95 - Pipeline listing page is validated for  created Pipeline with Status-->READY
+2021-11-12 12:11:787 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-12 12:11:169 INFO  DIL_loginpage:38 - User is logged into DIL UI with userId-->parihars
+2021-11-12 12:11:169 INFO  commonSteps:40 - --user name and Password are entered--
+2021-11-12 12:11:639 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-12 12:11:218 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test_Pipeline
+2021-11-12 12:11:807 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-12 12:11:265 INFO  DIL_loginpage:38 - User is logged into DIL UI with userId-->parihars
+2021-11-12 12:11:266 INFO  commonSteps:40 - --user name and Password are entered--
+2021-11-12 12:11:631 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-12 12:11:216 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test_Pipeline
+2021-11-12 12:11:484 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-12 12:11:874 INFO  DIL_loginpage:38 - User is logged into DIL UI with userId-->parihars
+2021-11-12 12:11:875 INFO  commonSteps:40 - --user name and Password are entered--
+2021-11-12 12:11:529 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-12 12:11:90 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test_Pipeline
+2021-11-12 13:11:18 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-12 13:11:352 INFO  DIL_loginpage:38 - User is logged into DIL UI with userId-->parihars
+2021-11-12 13:11:353 INFO  commonSteps:40 - --user name and Password are entered--
+2021-11-12 13:11:17 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-12 13:11:546 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test_Pipeline
+2021-11-12 13:11:262 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-12 13:11:309 INFO  DIL_loginpage:38 - User is logged into DIL UI with userId-->parihars
+2021-11-12 13:11:309 INFO  commonSteps:40 - --user name and Password are entered--
+2021-11-12 13:11:698 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-12 13:11:168 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test_Pipeline
+2021-11-12 13:11:582 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-12 13:11:880 INFO  DIL_loginpage:38 - User is logged into DIL UI with userId-->parihars
+2021-11-12 13:11:880 INFO  commonSteps:40 - --user name and Password are entered--
+2021-11-12 13:11:297 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-12 13:11:761 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test_Pipeline
+2021-11-12 13:11:649 INFO  createSourceDestAndTransform:46 - Icon is clicked-->Add a Source
+2021-11-12 13:11:670 INFO  createSourceDestAndTransform:111 - Kafka Source  is created with Name-->DemoSource
+2021-11-12 13:11:219 INFO  createSourceDestAndTransform:54 - DRecord validated-->DemoSource
+2021-11-12 13:11:448 INFO  createSourceDestAndTransform:85 - Transformation is Created with Name-->TestTrans
+2021-11-12 13:11:86 INFO  createSourceDestAndTransform:93 - Transformation is validated with Name-->TestTrans
+2021-11-12 13:11:959 INFO  createSourceDestAndTransform:99 - Destination is Created with Name-->DemoDestination
+2021-11-12 13:11:891 INFO  createProjectSteps:97 - Pipeline listing page is validated for  created Pipeline with Status-->READY
+2021-11-12 14:11:327 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-12 14:11:720 INFO  DIL_loginpage:38 - User is logged into DIL UI with userId-->parihars
+2021-11-12 14:11:721 INFO  commonSteps:40 - --user name and Password are entered--
+2021-11-12 14:11:156 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-12 14:11:650 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test_Pipeline
+2021-11-12 14:11:709 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-12 14:11:112 INFO  DIL_loginpage:38 - User is logged into DIL UI with userId-->parihars
+2021-11-12 14:11:112 INFO  commonSteps:40 - --user name and Password are entered--
+2021-11-12 14:11:685 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-12 14:11:239 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test_Pipeline
+2021-11-12 14:11:543 INFO  createProjectSteps:111 - PipeLines details entered-->PipeLIne--ProjectForAutomation--Test_Pipeline
+2021-11-12 14:11:749 INFO  createProjectSteps:131 - PipeLines properties entered
+2021-11-12 14:11:900 INFO  createProjectSteps:131 - PipeLines properties entered
+2021-11-12 14:11:46 INFO  createProjectSteps:131 - PipeLines properties entered
+2021-11-12 14:11:303 INFO  createProjectSteps:131 - PipeLines properties entered
+2021-11-12 14:11:432 INFO  createProjectSteps:131 - PipeLines properties entered
+2021-11-12 14:11:652 INFO  createProjectSteps:148 - Spark properties entered
+2021-11-12 14:11:540 INFO  createSourceDestAndTransform:46 - Icon is clicked-->Add a Source
+2021-11-12 14:11:649 INFO  createSourceDestAndTransform:111 - Kafka Source  is created with Name-->DemoSource
+2021-11-12 14:11:217 INFO  createSourceDestAndTransform:54 - DRecord validated-->DemoSource
+2021-11-12 14:11:272 INFO  createSourceDestAndTransform:85 - Transformation is Created with Name-->TestTrans
+2021-11-12 14:11:858 INFO  createSourceDestAndTransform:93 - Transformation is validated with Name-->TestTrans
+2021-11-12 14:11:730 INFO  createSourceDestAndTransform:99 - Destination is Created with Name-->DemoDestination
+2021-11-12 14:11:687 INFO  createProjectSteps:97 - Pipeline listing page is validated for  created Pipeline with Status-->READY

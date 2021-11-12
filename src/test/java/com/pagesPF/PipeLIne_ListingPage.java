@@ -32,7 +32,7 @@ public class PipeLIne_ListingPage {
     String labelDIJSPath = "document.querySelector(\"#header\").shadowRoot.querySelector(\"div > scale-app-header > header > div > div > div.header__brand-sector > ul > li\")";
     String noPipeLIneText = "//*[text()=\" %s \"]";
     @FindBy(how = How.XPATH, using = "//button[1]")
-    List<WebElement> buttonsAdd;
+    public List<WebElement> buttonsAdd;
     @FindBy(how = How.XPATH, using = "//*[text()=\"STREAMING \"]")
     WebElement executionType;
     @FindBy(how = How.XPATH, using = "//fieldset[@data-test-id=\"pipeline-creator\"]//div")
@@ -40,9 +40,9 @@ public class PipeLIne_ListingPage {
     @FindBy(how = How.XPATH, using = "//fieldset[@data-test-id=\"creation-date\"]//div")
     WebElement pipeLineCreationDate;
     @FindBy(how = How.XPATH, using = "//input[1][@name='keyAdd']")
-    List<WebElement> keysForPipeLine;
+   public List<WebElement> keysForPipeLine;
     @FindBy(how = How.XPATH, using = "//input[1][@name='valueAdd']")
-    List<WebElement> valuesForPipeLine;
+    public  List<WebElement> valuesForPipeLine;
     @FindBy(how = How.XPATH, using = "//*[text()='Pipelines']")
     WebElement tagPipeLineOnProjectListingPage;
     @FindBy(how = How.XPATH, using = "//*[contains(@id,'input-text-')]")
@@ -52,17 +52,17 @@ public class PipeLIne_ListingPage {
     @FindBy(how = How.XPATH, using = "//*[@placeholder=\"Add tags to categorize pipeline\"]")
     WebElement textFieldTag;
     @FindBy(how = How.XPATH, using = "//*[text()=\" Create Pipeline\"]")
-    WebElement createPipelineIcon;
+    public WebElement createPipelineIcon;
     @FindBy(how = How.XPATH, using = "//*[@id=\"app\"]/div[1]//scale-button[2]")
-    WebElement buttonCreatePipeline;
+    public WebElement buttonCreatePipeline;
     @FindBy(how = How.XPATH, using = "//body//div[@data-test-id=\"pipeline-builder-sidebar-heading\"]//div//div//div[2]//span[1]")
-    WebElement pipeLineKey;
+    public WebElement pipeLineKey;
     @FindBy(how = How.XPATH, using = "//body//div[@data-test-id=\"pipeline-builder-sidebar-heading\"]//div//div//div[2]//span[2]")
-    WebElement pipelineValue;
+    public WebElement pipelineValue;
     @FindBy(how = How.XPATH, using = "//fieldset[7]//div[1]//span[1]")
-    WebElement sparkKey;
+    public WebElement sparkKey;
     @FindBy(how = How.XPATH, using = "//fieldset[7]//div[1]//span[2]")
-    WebElement sparkValue;
+   public WebElement sparkValue;
     @FindBy(how = How.XPATH, using = "//*[text()='Open']")
     WebElement buttonOpen;
     @FindBy(how = How.XPATH, using = "//*[text()='LAST LAUNCH']")
@@ -106,10 +106,10 @@ public class PipeLIne_ListingPage {
 
     }
 
-    public void createPipeLineWithKeyAndValues(String piplineName, String description, String tag, String execution, String pKey, String pValue, String sKey, String sValue) throws InterruptedException, IOException {
+    public void createPipeLineWithKeyAndValues(String pipelineName, String description, String tag, String execution, String pKey, String pValue, String sKey, String sValue) throws InterruptedException, IOException {
         CommonFunction.waitForElementToAppear(driver, createPipelineIcon);
         createPipelineIcon.click();
-        String uniquePipeLineName = CommonFunction.generateRandomString(5) + piplineName + DatesHelper.getTodayDateWithSeconds();
+        String uniquePipeLineName = CommonFunction.generateRandomString(5) + pipelineName + DatesHelper.getTodayDateWithSeconds();
         CommonFunction.waitForElementToAppear(driver, textFieldPipeLineName);
         textFieldPipeLineName.sendKeys(uniquePipeLineName);
         EnvSetUp.setDataValue(Constant.PipeLineName, uniquePipeLineName);
@@ -167,7 +167,20 @@ public class PipeLIne_ListingPage {
         buttonSave.click();
 
     }
+    public void createAcquireKafkaPipeline(String pipelineName, String description, String tag, String execution) throws InterruptedException, IOException {
+        CommonFunction.waitForElementToAppear(driver, createPipelineIcon);
+        createPipelineIcon.click();
+        String uniquePipeLineName = CommonFunction.generateRandomString(5) + pipelineName + DatesHelper.getTodayDateWithSeconds();
+        CommonFunction.waitForElementToAppear(driver, textFieldPipeLineName);
+        textFieldPipeLineName.sendKeys(uniquePipeLineName);
+        EnvSetUp.setDataValue(Constant.PipeLineName, uniquePipeLineName);
+        CommonFunction.waitForElementToAppear(driver, textFieldDescription);
+        textFieldDescription.sendKeys(description);
+        textFieldTag.sendKeys(tag, Keys.ENTER);
+        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, executionTypeToSelect, execution));
+        CommonFunction.scrollToElement(driver, buttonCreatePipeline);
 
+    }
 
 }
 
