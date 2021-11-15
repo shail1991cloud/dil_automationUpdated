@@ -4,10 +4,7 @@ import com.baselibrary.Baseclass;
 import com.dataproviderUtilities.ConfigFileReader;
 import com.helperUtilities.LoggerHelper;
 import com.managersUtilities.CommonFunction;
-import com.pagesPF.Functions_LeanPageObject;
-import com.pagesPF.PipeLIne_ListingPage;
-import com.pagesPF.Project_BuilderPage;
-import com.pagesPF.ProjectsPage;
+import com.pagesPF.*;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -23,11 +20,13 @@ public class createPipeLineSteps extends Baseclass {
     public ConfigFileReader configFileReader;
     Functions_LeanPageObject functions_leanPageObject;
     PipeLIne_ListingPage pipeLIne_listingPage;
+    LogsPage logsPage;
     Logger log = LoggerHelper.getLogger(createProjectSteps.class);
 
     public createPipeLineSteps() {
         projectspage = PageFactory.initElements(driver, ProjectsPage.class);
         projectBuilderpage = PageFactory.initElements(driver, Project_BuilderPage.class);
+        logsPage = PageFactory.initElements(driver, LogsPage.class);
         functions_leanPageObject = PageFactory.initElements(driver, Functions_LeanPageObject.class);
         pipeLIne_listingPage = PageFactory.initElements(driver, PipeLIne_ListingPage.class);
         configFileReader = new ConfigFileReader();
@@ -153,9 +152,14 @@ public class createPipeLineSteps extends Baseclass {
     public void executesThePipeline() throws InterruptedException {
         CommonFunction.waitForElementToAppear(driver,pipeLIne_listingPage.iconExecutePipeLine);
         CommonFunction.clickByHoveringMouse(driver,pipeLIne_listingPage.iconExecutePipeLine);
-        CommonFunction.clickByHoveringMouse(driver,pipeLIne_listingPage.iconExecutePipeLine);
         CommonFunction.waitForSomeTime();
         driver.navigate().refresh();
         CommonFunction.waitForSomeTime();
+    }
+
+    @Then("Pipeline record is validated on logs page")
+    public void pipelineRecordIsValidatedOnLogsPage() throws InterruptedException {
+        logsPage.navigateToLogsPage();
+        logsPage.validatePipelineName();
     }
 }
