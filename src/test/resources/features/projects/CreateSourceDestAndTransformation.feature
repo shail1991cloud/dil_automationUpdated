@@ -75,7 +75,8 @@ Feature:Creation of Sources and Destination
     And  clicks on "<Icon>"
     When Enters "<SourceName>","<SourceType>","<SourceConnection>","<fileType>","<FilePath>","<Separator>","<sourceSchema>","<SchemaValue>"
     Then Source should get created with "<SourceName>"
-    When enters "<DestinationName>","<DestinationType>","<DestConnection>","<fileType>" ,"<FilePath>","<TopicName>" and click add
+    When enters "<DestinationName>","<DestinationType>","<DestConnection>","<fileType>" ,"<FilePath>","<TopicName>"
+    And  clicks add
     Then Destination with "<DestinationName>" should get created
     Examples:
       | ProjectName | Description          | Tag           | Pipeline | Icon         | SourceName | SourceType  | SourceConnection       | fileType | FilePath | Separator | sourceSchema  | SchemaValue | DestinationName | DestinationType | DestConnection         | TopicName |
@@ -91,7 +92,8 @@ Feature:Creation of Sources and Destination
     And  clicks on "<Icon>"
     When Enters "<SourceName>","<SourceType>","<SourceConnection>","<fileType>","<FilePath>","<Separator>","<sourceSchema>","<SchemaValue>"
     Then Source should get created with "<SourceName>"
-    When enters "<DestinationName>","<DestinationType>","<DestConnection>","<fileType>" ,"<FilePath>","<TopicName>" and click add
+    When enters "<DestinationName>","<DestinationType>","<DestConnection>","<fileType>" ,"<FilePath>","<TopicName>"
+    And  clicks add
     Then Destination with "<DestinationName>" should get created
     Examples:
       | ProjectName | Description          | Tag           | Pipeline | Icon         | SourceName | SourceType  | SourceConnection       | fileType | FilePath | Separator | sourceSchema  | SchemaValue | DestinationName | DestinationType | DestConnection | TopicName    |

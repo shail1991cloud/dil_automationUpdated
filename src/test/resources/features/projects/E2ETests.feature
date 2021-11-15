@@ -13,7 +13,8 @@ Feature:Creation of a End to End scenarios
     Then Source should get created with "<SourceName>"
     When enters "<TransformationName>","<Category>","<TransformationType>","<columnValue>" and click add
     Then Transformation with "<TransformationName>" should get created
-    When enters "<DestinationName>","<DestinationType>","<DestConnection>","<fileType>" ,"<FilePath>","<TopicName>" and click add
+    When enters "<DestinationName>","<DestinationType>","<DestConnection>","<fileType>" ,"<FilePath>","<TopicName>"
+    And  clicks add
     Then PipeLine with status "<Status>" is validated
     Examples:
       | ProjectName | Description          | Tag           | ExecutionType | Key | Value | SKey | SValue | Pipeline | Icon         | SourceName | SourceType  | SourceConnection | fileType | FilePath | Separator | sourceSchema  | SchemaValue       | TransformationName | Category | TransformationType | columnValue | DestinationName | DestinationType | DestConnection | TopicName | Status |
@@ -31,7 +32,8 @@ Feature:Creation of a End to End scenarios
     Then Source should get created with "<SourceName>"
     When enters "<TransformationName>","<Category>","<TransformationType>","<columnValue>" and click add
     Then Transformation with "<TransformationName>" should get created
-    When enters "<DestinationName>","<DestinationType>","<DestConnection>","<fileType>" ,"<FilePath>","<TopicName>" and click add
+    When enters "<DestinationName>","<DestinationType>","<DestConnection>","<fileType>" ,"<FilePath>","<TopicName>"
+    And  clicks add
     Then PipeLine with status "<Status>" is validated
     Examples:
       | ProjectName | Description          | Tag           | ExecutionType | Key | Value | SKey | SValue | Pipeline | Icon         | SourceName | SourceType | SourceConnection | fileType | FilePath | SourceSchema | RegistryName      | Offset  | TransformationName | Category | TransformationType | columnValue | DestinationName | DestinationType | DestConnection | TopicName | Status |
@@ -49,7 +51,8 @@ Feature:Creation of a End to End scenarios
     Then Source should get created with "<SourceName>"
     When enters "<TransformationName>","<Category>","<TransformationType>","<columnValue>" and click add
     Then Transformation with "<TransformationName>" should get created
-    When enters "<DestinationName>","<DestinationType>","<DestConnection>","<fileType>" ,"<FilePath>","<TopicName>" and click add
+    When enters "<DestinationName>","<DestinationType>","<DestConnection>","<fileType>" ,"<FilePath>","<TopicName>"
+    And  clicks add
     Then PipeLine with status "<Status>" is validated
     Examples:
       | ProjectName | Description          | Tag           | ExecutionType | Key | Value | SKey | SValue | Pipeline | Icon         | SourceName | SourceType  | SourceConnection | fileType | FilePath | Separator | sourceSchema  | SchemaValue       | TransformationName   | Category | TransformationType | columnValue | DestinationName | DestinationType | DestConnection | TopicName | Status |
@@ -67,7 +70,8 @@ Feature:Creation of a End to End scenarios
     Then Source should get created with "<SourceName>"
     When enters "<TransformationName>","<Category>","<TransformationType>","<columnValue>" and click add
     Then Transformation with "<TransformationName>" should get created
-    When enters "<DestinationName>","<DestinationType>","<DestConnection>","<fileType>" ,"<FilePath>","<TopicName>" and click add
+    When enters "<DestinationName>","<DestinationType>","<DestConnection>","<fileType>" ,"<FilePath>","<TopicName>"
+    And  clicks add
     Then PipeLine with status "<Status>" is validated
     Examples:
       | ProjectName | Description          | Tag           | ExecutionType | Key | Value | SKey | SValue | Pipeline | Icon         | SourceName | SourceType | SourceConnection | fileType | FilePath | SourceSchema | RegistryName      | Offset  | TransformationName | Category | TransformationType | columnValue | DestinationName | DestinationType | DestConnection | TopicName | Status |

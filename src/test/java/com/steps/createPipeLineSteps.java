@@ -149,4 +149,13 @@ public class createPipeLineSteps extends Baseclass {
     }
 
 
+    @When("executes the pipeline")
+    public void executesThePipeline() throws InterruptedException {
+        CommonFunction.waitForElementToAppear(driver,pipeLIne_listingPage.iconExecutePipeLine);
+        CommonFunction.clickByHoveringMouse(driver,pipeLIne_listingPage.iconExecutePipeLine);
+        CommonFunction.clickByHoveringMouse(driver,pipeLIne_listingPage.iconExecutePipeLine);
+        CommonFunction.waitForSomeTime();
+        driver.navigate().refresh();
+        CommonFunction.waitForSomeTime();
+    }
 }

@@ -33,6 +33,8 @@ public class PipeLIne_ListingPage {
     String noPipeLIneText = "//*[text()=\" %s \"]";
     @FindBy(how = How.XPATH, using = "//button[1]")
     public List<WebElement> buttonsAdd;
+    @FindBy(how = How.XPATH, using = "//div/p//scale-icon-action-play")
+    public WebElement iconExecutePipeLine;
     @FindBy(how = How.XPATH, using = "//*[text()=\"STREAMING \"]")
     WebElement executionType;
     @FindBy(how = How.XPATH, using = "//fieldset[@data-test-id=\"pipeline-creator\"]//div")
@@ -43,6 +45,10 @@ public class PipeLIne_ListingPage {
    public List<WebElement> keysForPipeLine;
     @FindBy(how = How.XPATH, using = "//input[1][@name='valueAdd']")
     public  List<WebElement> valuesForPipeLine;
+    @FindBy(how = How.XPATH, using = "//input[1][@name='keyAdd']")
+    public WebElement keysForDest;
+    @FindBy(how = How.XPATH, using = "//input[1][@name='valueAdd']")
+    public  WebElement valuesForDest;
     @FindBy(how = How.XPATH, using = "//*[text()='Pipelines']")
     WebElement tagPipeLineOnProjectListingPage;
     @FindBy(how = How.XPATH, using = "//*[contains(@id,'input-text-')]")

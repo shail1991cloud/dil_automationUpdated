@@ -144,8 +144,6 @@ public class PipeLIne_BuilderPage {
         CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, fileType, fileToAdd));
         CommonFunction.scrollToElement(driver, selectAddButton);
         selectDestType(filePath, topicToAdd);
-        CommonFunction.waitForElementToAppear(driver, selectAddButton);
-        selectAddButton.click();
 
 
     }
