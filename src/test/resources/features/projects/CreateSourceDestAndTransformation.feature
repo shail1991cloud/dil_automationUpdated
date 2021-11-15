@@ -125,36 +125,8 @@ Feature:Creation of Sources and Destination
     Examples:
       | ProjectName | Description          | Tag           | Pipeline | Icon         | SourceName      | SourceType | SourceConnection | TopicName | SourceSchema | RegistryName            | Offset|Key | Value |
       | AutoDIL     | ProjectForAutomation | Test_Pipeline | PipeLIne | Add a Source | DemoSourceKafka | KAFKA      | KafkaSSLConnection      | CDR       | No_Schema    | AutoManualSchemaDND | Earlier |K   | v     |
-#-----------------------------------In Progress__----------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#-----------------------------------In Progress__-----------------------
 
   @Positive @CSource-Test2 @TC**
   Scenario Outline: user is able to validate SourceProperties should be able to delete same

@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         tags = "@E2ETest11",
         monochrome = true,
-        dryRun = true
+        dryRun = false
 
 )
 
