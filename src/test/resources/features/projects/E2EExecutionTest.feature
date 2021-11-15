@@ -1,6 +1,8 @@
 @E2ETests
 Feature:Creation of a End to End Execution scenarios
 
+  #---------------------------------------E2E Execution-----------------------------------------#
+
   @Smoke @Reg @Positive @E2EExecution1 @TC30
   Scenario Outline: user is able to run created acquire kafka pipeline and validate same in logs
     Given user is on DIL login page

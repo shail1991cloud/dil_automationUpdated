@@ -2,13 +2,10 @@ package com.steps;
 
 import com.baselibrary.Baseclass;
 import com.dataproviderUtilities.ConfigFileReader;
-import com.helperUtilities.LoggerHelper;
 import com.pagesPF.ConnectionsPage;
-import com.pagesPF.DIL_loginpage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import java.io.IOException;
@@ -16,8 +13,7 @@ import java.io.IOException;
 public class createConnectionsSteps extends Baseclass {
     public ConfigFileReader configFileReader;
     public ConnectionsPage connectionsPage;
-    public DIL_loginpage loginpage;
-    Logger log = LoggerHelper.getLogger(createConnectionsSteps.class);
+
 
 
     public createConnectionsSteps() {
