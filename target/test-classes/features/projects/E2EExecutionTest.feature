@@ -34,4 +34,4 @@ Feature:Creation of a End to End Execution scenarios
     Then Pipeline record is validated on logs page
     Examples:
       | ProjectName | Description          | Tag           | ExecutionType | Key | Value | Pipeline | Icon         | SourceName | SourceType | SourceConnection      | fileType | FilePath | SourceSchema | RegistryName        | Offset  | DestinationName | DestinationType | DestConnection        | SourceTopicName | DestTopicName | Status |
-      | AutoDIL     | ProjectForAutomation | Test_Pipeline | STREAMING     | k1  | v1    | PipeLIne | Add a Source | DemoSource | KAFKA      | TMPL Kafka Connection | CSV      | .csv     | No_Schema    | AutoManualSchemaDND | Earlier | DemoDestination | KAFKA           | TMPL Kafka Connection | topic10         | topic11       | READY  |
+      | AutoDIL     | ProjectForAutomation | Test_Pipeline | STREAMING     | k1  | v1    | PipeLIne | Add a Source | DemoSource | KAFKA      | TMPLKafkaConnection| CSV      | .csv     | No_Schema    | AutoManualSchemaDND | Earlier | DemoDestination | KAFKA           | TMPLKafkaConnection | topic1         | topic2       | READY  |

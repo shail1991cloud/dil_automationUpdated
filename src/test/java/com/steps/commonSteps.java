@@ -37,6 +37,9 @@ public class commonSteps extends Baseclass {
     @When("^enter username and password$")
     public void enterUsernameAndPassword() throws InterruptedException {
         dil_loginpage.loginToDIL();
+       /*CommonFunction.waitForSomeTime();
+       CommonFunction.scrollToElement(driver,dil_loginpage.skipTourBtn);
+       dil_loginpage.skipTourBtn.click();*/
         log.info("--user name and Password are entered--");
 
     }

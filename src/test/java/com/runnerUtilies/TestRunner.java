@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         glue = {"com/steps"},
         plugin = {"pretty", "html:test-output", "json:target/cucumber.json","html:target/cucumber.html",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
-        tags = "@E2EExecution1",
+        tags = "@Reg",
         monochrome = true,
         dryRun = false
 

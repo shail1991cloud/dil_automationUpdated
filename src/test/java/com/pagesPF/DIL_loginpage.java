@@ -22,6 +22,9 @@ public class DIL_loginpage {
     @FindBy(how = How.XPATH, using = "//*[text()=' Login ']")
     WebElement loginBtn;
 
+    @FindBy(how = How.XPATH, using = "//button[normalize-space()=\"Skip Tour\"]")
+    public  WebElement skipTourBtn;
+
     public DIL_loginpage(WebDriver driver) {
         this.driver = driver;
         configFileReader = new ConfigFileReader();
