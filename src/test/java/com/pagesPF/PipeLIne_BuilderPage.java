@@ -62,6 +62,7 @@ public class PipeLIne_BuilderPage {
     public String manualSchemaConnection = "//*[text()='%s ']";
     public String deleteRecord = "//*[text()=' %s ']";
     public String sourceName = "//*[@title='%s']";
+    public String destinationName = "//*[@title='%s']";
     public String transformation = "//*[@title='%s']";
     public String iconOnPipeLineBuilderPage = "//*[text()='%s']";
     public String topicName = "//*[text()='%s ']";

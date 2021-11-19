@@ -80,6 +80,12 @@ public class createSourceDestAndTransform extends Baseclass {
         log.info("Source Is not Present with Name-->" + name);
 
     }
+    @Then("destination {string} should get deleted")
+    public void destinationShouldGetDeleted(String name) {
+        functions_leanPageObject.validatePresenceOfRecord(pipeLIne_builderPage.sourceName, name);
+        log.info("Source Is not Present with Name-->" + name);
+
+    }
 
     @When("enters {string},{string},{string},{string} and click add")
     public void entersAndClick(String TransformationName, String Category, String TransformationType, String columnValue) throws IOException, InterruptedException {
@@ -102,8 +108,13 @@ public class createSourceDestAndTransform extends Baseclass {
     }
 
     @Then("Destination with {string} should get created")
-    public void destinationWithShouldGetCreated(String DestinationName) {
-        log.info("Transformation is validated with Name-->" + DestinationName);
+    public void destinationWithShouldGetCreated(String DestinationName) throws InterruptedException {
+        CommonFunction.waitForSomeTime();
+        CommonFunction.scrollToElement(driver, pipeLIne_builderPage.status);
+        Assert.assertTrue(CommonFunction.getCustomisedWebElement(driver, pipeLIne_builderPage.destinationName, DestinationName).isDisplayed());
+        (CommonFunction.getCustomisedWebElement(driver, pipeLIne_builderPage.destinationName, DestinationName)).click();
+        log.info("DRecord validated-->" + DestinationName);
+
     }
 
 
