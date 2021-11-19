@@ -68,6 +68,7 @@ public class createSourceDestAndTransform extends Baseclass {
         functions_leanPageObject.deleteRecord(pipeLIne_builderPage.deleteRecord, deleteSource);
         CommonFunction.waitForElementToAppear(driver, pipeLIne_builderPage.deleteButtonOnDeleteSourcePopUp);
         pipeLIne_builderPage.deleteButtonOnDeleteSourcePopUp.click();
+        CommonFunction.waitForSomeTime();
         log.info("Button Clicked-->" + deleteSource);
 
     }
@@ -96,7 +97,7 @@ public class createSourceDestAndTransform extends Baseclass {
 
     @When("enters {string},{string},{string},{string} ,{string},{string}")
     public void entersAndClickAdd(String DestinationName, String DestinationType, String DestConnection, String fileType, String filePath, String TopicName) throws IOException, InterruptedException {
-        pipeLIne_builderPage.createDestination(DestinationName, DestinationType, DestConnection, fileType, filePath, TopicName);
+        pipeLIne_builderPage.createDestinationKafka_FileSystem(DestinationName, DestinationType, DestConnection, fileType, filePath, TopicName);
         log.info("Destination is Created with Name-->" + DestinationName);
     }
 
@@ -135,5 +136,16 @@ public class createSourceDestAndTransform extends Baseclass {
         }
         log.info("Destination properties entered");
 
+    }
+
+    @When("Enters {string},{string},{string}")
+    public void enters(String sourceName, String type, String sourceConnection) throws IOException, InterruptedException {
+
+        pipeLIne_builderPage.createSourceWithDelta(sourceName,type,sourceConnection);
+    }
+
+    @When("enters {string},{string},{string},{string}")
+    public void enters(String nameDest, String destType, String destConn, String destMode) throws IOException, InterruptedException {
+        pipeLIne_builderPage.createDestinationDelta(nameDest,destType,destConn,destMode);
     }
 }

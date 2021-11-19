@@ -55,6 +55,7 @@ public class PipeLIne_BuilderPage {
     public String transformationTypeToSelect = "//*[text()='%s ']";
     public String columnOptionToSelect = "//scale-accordion[@expanded=\"true\"]//option[normalize-space()=\"%s\"]";
     public String type = "//*[text()='%s ']";
+    public String saveMode = "//*[text()='%s ']";
     public String connection = "//*[text()='%s ']";
     public String fileType = "//*[text()='%s ']";
     public String schemaSource = "//*[text()='%s ']";
@@ -132,7 +133,7 @@ public class PipeLIne_BuilderPage {
 
     }
 
-    public void createDestination(String destName, String typeToAdd, String connectionToAdd, String fileToAdd, String filePath, String topicToAdd) throws InterruptedException, IOException {
+    public void createDestinationKafka_FileSystem(String destName, String typeToAdd, String connectionToAdd, String fileToAdd, String filePath, String topicToAdd) throws InterruptedException, IOException {
         CommonFunction.waitForElementToAppear(driver, addButtonOnSourceOrTrans);
         addButtonOnSourceOrTrans.click();
         CommonFunction.waitForElementToAppear(driver, selectDestination);
@@ -191,6 +192,29 @@ public class PipeLIne_BuilderPage {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void createSourceWithDelta(String sourceName, String typeToAdd, String connectionToAdd) throws InterruptedException, IOException {
+        CommonFunction.waitForElementToAppear(driver, FieldEnterName);
+        FieldEnterName.sendKeys(sourceName);
+        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, type, typeToAdd));
+        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, connection, connectionToAdd));
+        buttonAdd.click();
+        CommonFunction.waitForSomeTime();
+        CommonFunction.scrollToElement(driver, status);
+    }
+    public void createDestinationDelta(String destName, String typeToAdd, String connectionToAdd, String modeToAdd) throws InterruptedException, IOException {
+        CommonFunction.waitForElementToAppear(driver, addButtonOnSourceOrTrans);
+        addButtonOnSourceOrTrans.click();
+        CommonFunction.waitForElementToAppear(driver, selectDestination);
+        selectDestination.click();
+        CommonFunction.waitForElementToAppear(driver, FieldEnterName);
+        FieldEnterName.sendKeys(destName);
+        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, type, typeToAdd));
+        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, connection, connectionToAdd));
+        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, saveMode, modeToAdd));
+
+
     }
 
 
