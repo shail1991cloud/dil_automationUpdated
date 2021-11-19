@@ -11,6 +11,7 @@
 /home/pihu/dil_automation/src/test/java/com/helperUtilities/LoggerHelper.java
 /home/pihu/dil_automation/src/test/java/com/callsapi/RestFunctions.java
 /home/pihu/dil_automation/src/test/java/com/enginesApi/ProjectsAuthorizationPojo.java
+/home/pihu/dil_automation/src/test/java/com/pagesPF/LogsPage.java
 /home/pihu/dil_automation/src/test/java/com/pagesPF/ProjectsPage.java
 /home/pihu/dil_automation/src/test/java/com/helperUtilities/CaptureScreenShots.java
 /home/pihu/dil_automation/src/test/java/com/pagesPF/Project_BuilderPage.java

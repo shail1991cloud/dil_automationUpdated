@@ -1,7 +1,7 @@
 @CreateConnection
 Feature: User should be able to Create, Validate Connections on Connections Page
 
-  @Smoke @Reg @Positive @CRC-Test1 @TC30
+  @Smoke @Reg @Positive @CRC-Test1 @TC1
   Scenario Outline: user is able to create Kerberos connection
     Given user is on DIL login page
     When  enter username and password
@@ -15,7 +15,7 @@ Feature: User should be able to Create, Validate Connections on Connections Page
       | Create a connection | AutomationKerberos | Creating Connection | KERBEROS       |
 
 
-  @Smoke @Reg @Positive @CRC-Test2 @TC31
+  @Smoke @Reg @Positive @CRC-Test2 @TC2
   Scenario Outline: user is able to create SSL connection
     Given user is on DIL login page
     When  enter username and password

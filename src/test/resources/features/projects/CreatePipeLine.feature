@@ -5,7 +5,7 @@ Feature:Creation and Field level validation of pipelines
 
 #-----------------------------UI Validation test Cases------------------------------------------------
 
-  @Smoke @Reg @Positive @CP-Test1 @TC1
+  @Smoke @Reg @Positive @CP-Test1 @TC3
   Scenario Outline: user is able to validate pipeline listing page when there is no pipeline created
     Given user is on DIL login page
     When enter username and password
@@ -17,7 +17,7 @@ Feature:Creation and Field level validation of pipelines
       | ProjectName | Description          | Tag           | Tab      | Message                               |
       | AutoDIL     | ProjectForAutomation | Test_Pipeline | Overview |  There is no pipelines in this project.  |
 
-  @Smoke @Reg @Positive @CP-Test1 @TC2
+  @Smoke @Reg @Positive @CP-Test1 @TC4
   Scenario Outline: user is able validate pipeline properties
     Given user is on DIL login page
     When enter username and password
@@ -31,7 +31,7 @@ Feature:Creation and Field level validation of pipelines
 
 #------------------------------Functional Validation Test Cases------------------------------------------
 
-  @Smoke @Reg @Positive @CP-Test2 @TC3
+  @Smoke @Reg @Positive @CP-Test2 @TC5
   Scenario Outline: user is able to create pipeline and validate the same in Pipeline Listing page
     Given user is on DIL login page
     When enter username and password
@@ -43,7 +43,7 @@ Feature:Creation and Field level validation of pipelines
       | ProjectName | Description          | Tag           | Pipeline |
       | AutoDIL     | ProjectForAutomation | Test_Pipeline | PipeLIne |
 
-  @Smoke @Reg @Positive @CP-Test3 @TC4
+  @Smoke @Reg @Positive @CP-Test3 @TC6
   Scenario Outline: user is able to delete pipeline and validate the same in Pipeline Listing page
     Given user is on DIL login page
     When enter username and password
@@ -57,7 +57,7 @@ Feature:Creation and Field level validation of pipelines
       | AutoDIL     | ProjectForAutomation | Test_Pipeline | PipeLIne |
 
 
-  @Smoke @Reg @Positive @CP-Test1 @TC5
+  @Smoke @Reg @Positive @CP-Test1 @TC7
   Scenario Outline: user is able to edit the pipeline and validate the same
     Given user is on DIL login page
     When enter username and password

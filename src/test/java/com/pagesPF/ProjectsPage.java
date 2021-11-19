@@ -165,7 +165,7 @@ public class ProjectsPage {
 
     public void validateProjectName(String projectName, String tag) throws InterruptedException {
 
-        CommonFunction.clickOnShadowElement(driver, projectJsPath);
+        CommonFunction.clickOnShadowElement(driver, projectJsPathD);
         CommonFunction.waitForElementToAppear(driver, searchBoxOnProjectListingPage);
         searchBoxOnProjectListingPage.sendKeys(EnvSetUp.getDataKeyValue(Constant.ProjectName));
         CommonFunction.waitForSomeTime();
