@@ -68,6 +68,18 @@ public class PipeLIne_BuilderPage {
     public String topicName = "//*[text()='%s ']";
     public String offSet = "//*[text()='%s ']";
     public String registryName = "//*[text()=' %s '] ";
+    @FindBy(how = How.XPATH, using = "//span[text()=' Choose Database ']")
+    public WebElement chooseDatabe;
+    @FindBy(how = How.ID, using = "Database Name0")
+    public WebElement databaseName;
+    @FindBy(how = How.ID, using = "Schema0")
+    public WebElement databaseSchema;
+    @FindBy(how = How.ID, using = "Table0")
+    public WebElement databaseTable;
+    @FindBy(how = How.ID, using = "Column0")
+    public WebElement databaseCol1;
+
+
     WebDriver driver;
 
 
@@ -163,7 +175,7 @@ public class PipeLIne_BuilderPage {
     }
 
 
-    public void createSourceWithKafka(String sourceName, String typeToAdd, String connectionToAdd, String topicToAdd, String schemaToAdd,String registryNameToAdd, String offsetToAdd, String key, String value) throws InterruptedException, IOException {
+    public void createSourceWithKafka(String sourceName, String typeToAdd, String connectionToAdd, String topicToAdd, String schemaToAdd, String registryNameToAdd, String offsetToAdd, String key, String value) throws InterruptedException, IOException {
         CommonFunction.waitForElementToAppear(driver, FieldEnterName);
         FieldEnterName.sendKeys(sourceName);
         CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, type, typeToAdd));
@@ -172,20 +184,19 @@ public class PipeLIne_BuilderPage {
         CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, schemaSource, schemaToAdd));
         selectRegistryForManualSchemaKafka(registryNameToAdd);
         CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, offSet, offsetToAdd));
-        CommonFunction.scrollToElement(driver,keyForSource);
-        CommonFunction.waitForElementToAppear(driver,keyForSource);
+        CommonFunction.scrollToElement(driver, keyForSource);
+        CommonFunction.waitForElementToAppear(driver, keyForSource);
         keyForSource.sendKeys(key);
         valueForSource.sendKeys(value);
-        CommonFunction.waitForElementToBeClickable(driver,buttonAddForKeyValue);
+        CommonFunction.waitForElementToBeClickable(driver, buttonAddForKeyValue);
         CommonFunction.waitForElementToAppear(driver, buttonAdd);
-        CommonFunction.waitForElementToBeClickable(driver,buttonAdd);
+        CommonFunction.waitForElementToBeClickable(driver, buttonAdd);
         buttonAdd.click();
         CommonFunction.waitForSomeTime();
         CommonFunction.scrollToElement(driver, status);
     }
 
-    public void selectRegistryForManualSchemaKafka(String registryNameToAdd)
-    {
+    public void selectRegistryForManualSchemaKafka(String registryNameToAdd) {
         try {
             if (RegistryNameDropDown.isDisplayed()) {
                 CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, registryName, registryNameToAdd));
@@ -202,8 +213,9 @@ public class PipeLIne_BuilderPage {
         CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, connection, connectionToAdd));
         buttonAdd.click();
         CommonFunction.waitForSomeTime();
-        CommonFunction.scrollToElement(driver, status);
+//        CommonFunction.scrollToElement(driver, status);
     }
+
     public void createDestinationDelta(String destName, String typeToAdd, String connectionToAdd, String modeToAdd) throws InterruptedException, IOException {
         CommonFunction.waitForElementToAppear(driver, addButtonOnSourceOrTrans);
         addButtonOnSourceOrTrans.click();
@@ -216,6 +228,19 @@ public class PipeLIne_BuilderPage {
         CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, saveMode, modeToAdd));
 
 
+    }
+
+    public void enterRDBMS_DBConfigurations() {
+        CommonFunction.waitForElementToBeClickable(driver, chooseDatabe);
+        chooseDatabe.click();
+        CommonFunction.waitForElementToBeClickable(driver, databaseName);
+        databaseName.click();
+        CommonFunction.waitForElementToBeClickable(driver, databaseSchema);
+        databaseSchema.click();
+        CommonFunction.waitForElementToBeClickable(driver, databaseTable);
+        databaseTable.click();
+        CommonFunction.waitForElementToBeClickable(driver, databaseCol1);
+        databaseTable.click();
     }
 
 

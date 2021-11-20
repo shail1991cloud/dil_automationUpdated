@@ -159,4 +159,9 @@ public class createSourceDestAndTransform extends Baseclass {
     public void enters(String nameDest, String destType, String destConn, String destMode) throws IOException, InterruptedException {
         pipeLIne_builderPage.createDestinationDelta(nameDest,destType,destConn,destMode);
     }
+
+    @And("Enters Database configuration for RDBMS Connection")
+    public void entersDatabaseConfigurationForRDBMSConnection() throws IOException, InterruptedException {
+        pipeLIne_builderPage.enterRDBMS_DBConfigurations();
+    }
 }
