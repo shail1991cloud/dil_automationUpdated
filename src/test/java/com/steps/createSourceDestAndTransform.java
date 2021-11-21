@@ -50,8 +50,9 @@ public class createSourceDestAndTransform extends Baseclass {
     }
 
     @Then("Source should get created with {string}")
-    public void sourceShouldGetCreatedWith(String sourceName) throws InterruptedException, IOException {
+    public void sourceShouldGetCreatedWith(String sourceName) throws InterruptedException {
         Assert.assertTrue(CommonFunction.getCustomisedWebElement(driver, pipeLIne_builderPage.sourceName, sourceName).isDisplayed());
+        CommonFunction.waitForSomeTime();
         (CommonFunction.getCustomisedWebElement(driver, pipeLIne_builderPage.sourceName, sourceName)).click();
         log.info("DRecord validated-->" + sourceName);
 
@@ -80,6 +81,7 @@ public class createSourceDestAndTransform extends Baseclass {
         log.info("Source Is not Present with Name-->" + name);
 
     }
+
     @Then("destination {string} should get deleted")
     public void destinationShouldGetDeleted(String name) {
         functions_leanPageObject.validatePresenceOfRecord(pipeLIne_builderPage.sourceName, name);
@@ -130,13 +132,27 @@ public class createSourceDestAndTransform extends Baseclass {
         CommonFunction.waitForElementToAppear(driver, pipeLIne_builderPage.selectAddButton);
         pipeLIne_builderPage.selectAddButton.click();
         log.info("Button add clicked for Dest creation");
+    }
+
+    @And("clicks add button of {string}")
+    public void clicksAddButtonOf(String type) throws InterruptedException {
+        if (type.equalsIgnoreCase("Source")) {
+            CommonFunction.waitForElementToAppear(driver, pipeLIne_builderPage.buttonAdd);
+            pipeLIne_builderPage.buttonAdd.click();
+        } else {
+            CommonFunction.waitForElementToAppear(driver, pipeLIne_builderPage.selectAddButton);
+            pipeLIne_builderPage.selectAddButton.click();
+        }
+        log.info("Button add clicked for " + type + " creation");
+        CommonFunction.waitForSomeTime();
+
 
     }
 
     @When("enters destination keys and value")
     public void entersDestinationKeysAndValue(io.cucumber.datatable.DataTable dProperties) throws InterruptedException {
         for (Map<Object, Object> pProp : dProperties.asMaps(String.class, String.class)) {
-            CommonFunction.waitForElementToBeClickable(driver,pipeLIne_listingPage.keysForDest);
+            CommonFunction.waitForElementToBeClickable(driver, pipeLIne_listingPage.keysForDest);
             pipeLIne_listingPage.keysForDest.sendKeys((CharSequence) pProp.get("DKey"));
             pipeLIne_listingPage.valuesForDest.sendKeys((CharSequence) pProp.get("DValue"));
             CommonFunction.waitForElementToBeClickable(driver, pipeLIne_listingPage.buttonsAdd.get(0));
@@ -152,16 +168,23 @@ public class createSourceDestAndTransform extends Baseclass {
     @When("Enters {string},{string},{string}")
     public void enters(String sourceName, String type, String sourceConnection) throws IOException, InterruptedException {
 
-        pipeLIne_builderPage.createSourceWithDelta(sourceName,type,sourceConnection);
+        pipeLIne_builderPage.createSourceWithDelta(sourceName, type, sourceConnection);
     }
 
     @When("enters {string},{string},{string},{string}")
     public void enters(String nameDest, String destType, String destConn, String destMode) throws IOException, InterruptedException {
-        pipeLIne_builderPage.createDestinationDelta(nameDest,destType,destConn,destMode);
+        pipeLIne_builderPage.createDestinationDelta(nameDest, destType, destConn, destMode);
     }
 
     @And("Enters Database configuration for RDBMS Connection")
-    public void entersDatabaseConfigurationForRDBMSConnection() throws IOException, InterruptedException {
+    public void entersDatabaseConfigurationForRDBMSConnection() throws InterruptedException {
         pipeLIne_builderPage.enterRDBMS_DBConfigurations();
     }
+
+    @And("Select {string}")
+    public void select(String type) {
+        pipeLIne_builderPage.selectFlowType(type);
+    }
+
+
 }

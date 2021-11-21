@@ -39,6 +39,8 @@ public class PipeLIne_BuilderPage {
     public WebElement selectDestination;
     @FindBy(how = How.XPATH, using = "//*[text()=' Transformation ']")
     public WebElement selectTransformation;
+    @FindBy(how = How.XPATH, using = "//*[text()=' Custom SQL ']")
+    public WebElement selectCustomSQL;
     @FindBy(how = How.XPATH, using = "//scale-accordion[@expanded=\"true\"]//scale-button[@variant=\"secondary\"][normalize-space()=\"+ Add Column\"]")
     public WebElement selectAddColumn;
     @FindBy(how = How.XPATH, using = "//scale-button[normalize-space()=\"Add\"]")
@@ -78,6 +80,8 @@ public class PipeLIne_BuilderPage {
     public WebElement databaseTable;
     @FindBy(how = How.ID, using = "Column0")
     public WebElement databaseCol1;
+    @FindBy(how = How.XPATH, using = "//*[text()=' Save ']")
+    public WebElement btnDatabaseConfigSave;
 
 
     WebDriver driver;
@@ -211,7 +215,7 @@ public class PipeLIne_BuilderPage {
         FieldEnterName.sendKeys(sourceName);
         CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, type, typeToAdd));
         CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, connection, connectionToAdd));
-        buttonAdd.click();
+//        buttonAdd.click();
         CommonFunction.waitForSomeTime();
 //        CommonFunction.scrollToElement(driver, status);
     }
@@ -230,7 +234,24 @@ public class PipeLIne_BuilderPage {
 
     }
 
-    public void enterRDBMS_DBConfigurations() {
+    public void selectFlowType(String type) {
+        CommonFunction.waitForElementToAppear(driver, addButtonOnSourceOrTrans);
+        addButtonOnSourceOrTrans.click();
+        if (type.equalsIgnoreCase("Transaformation")) {
+            CommonFunction.waitForElementToAppear(driver, selectTransformation);
+            selectTransformation.click();
+        } else if (type.equalsIgnoreCase("CustomSQL")) {
+            CommonFunction.waitForElementToAppear(driver, selectCustomSQL);
+            selectCustomSQL.click();
+        } else {
+            CommonFunction.waitForElementToAppear(driver, selectDestination);
+            selectDestination.click();
+        }
+
+    }
+
+    public void enterRDBMS_DBConfigurations() throws InterruptedException {
+        CommonFunction.waitForSomeTime();
         CommonFunction.waitForElementToBeClickable(driver, chooseDatabe);
         chooseDatabe.click();
         CommonFunction.waitForElementToBeClickable(driver, databaseName);
@@ -240,7 +261,10 @@ public class PipeLIne_BuilderPage {
         CommonFunction.waitForElementToBeClickable(driver, databaseTable);
         databaseTable.click();
         CommonFunction.waitForElementToBeClickable(driver, databaseCol1);
-        databaseTable.click();
+        CommonFunction.clickForceFully(driver, databaseCol1);
+        CommonFunction.waitForElementToBeClickable(driver, btnDatabaseConfigSave);
+        btnDatabaseConfigSave.click();
+
     }
 
 

@@ -1,13 +1,13 @@
-Feature: User is able to create RDBMS Source and Destination
+Feature: User is able to create Delta Source and Destination
 
-  @Smoke @Reg @Positive @E2EExecution2
-  Scenario Outline: user is able to create RDBMS source
+  @Smoke @Reg @Positive @E2EExecution2 @TC33
+  Scenario Outline: user is able to create delta source
     Given user is on DIL login page
-    And enter username and password
+    When enter username and password
     And  clicks on createProject tab
-    And creates project with "<ProjectName>","<Description>","<Tag>" and engine
+    When creates project with "<ProjectName>","<Description>","<Tag>" and engine
     And  creates a "<Pipeline>" with "<Description>","<Tag>","<ExecutionType>"
-    And enters pipeline properties
+    When enters pipeline properties
       | PKey                       | PValue      |
       | serviceType                | AcquireFile |
       | isReturnable               | False       |
@@ -20,21 +20,20 @@ Feature: User is able to create RDBMS Source and Destination
       | spark.sql.adaptive.coalescePartitions.enabled | true   |
     And  clicks on "<Icon>"
     When Enters "<SourceName>","<SourceType>","<SourceConnection>"
-    And  Enters Database configuration for RDBMS Connection
     Then Source should get created with "<SourceName>"
     Examples:
       | ProjectName | Description          | Tag  | Pipeline         | ExecutionType | Icon         | SourceName | SourceType | SourceConnection |
-      | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | RDBMS      | RDBMSConnection  |
+      | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | DELTA      | HIveConnection   |
 
 
   @Smoke @Reg @Positive @E2EExecution2 @TC34
-  Scenario Outline: user is able to create RDBMS Destination
+  Scenario Outline: user is able to create delta Destination
     Given user is on DIL login page
-    And enter username and password
+    When enter username and password
     And  clicks on createProject tab
-    And creates project with "<ProjectName>","<Description>","<Tag>" and engine
+    When creates project with "<ProjectName>","<Description>","<Tag>" and engine
     And  creates a "<Pipeline>" with "<Description>","<Tag>","<ExecutionType>"
-    And enters pipeline properties
+    When enters pipeline properties
       | PKey                       | PValue      |
       | serviceType                | AcquireFile |
       | isReturnable               | False       |
@@ -47,25 +46,21 @@ Feature: User is able to create RDBMS Source and Destination
       | spark.sql.adaptive.coalescePartitions.enabled | true   |
     And  clicks on "<Icon>"
     When Enters "<SourceName>","<SourceType>","<SourceConnection>"
-    And  Enters Database configuration for RDBMS Connection
-    And  clicks add button of "Source"
     Then Source should get created with "<SourceName>"
-    And Select "Destination"
-    When Enters "<DestinationName>","<DestinationType>","<DestConnection>"
-    And  Enters Database configuration for RDBMS Connection
+    When enters "<DestinationName>","<DestinationType>","<DestConnection>","<saveMode>"
     When enters destination keys and value
       | DKey   | DValue |
       | mode   | :      |
       | escape | :      |
-    And  clicks add button of "Destination"
+    And  clicks add
     Then Destination with "<DestinationName>" should get created
     Examples:
-      | ProjectName | Description          | Tag  | Pipeline         | ExecutionType | Icon         | SourceName | SourceType | SourceConnection | DestinationName      | DestinationType | DestConnection  |
-      | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | RDBMS      | RDBMSConnection  | DestinationAutoRDBMS | RDBMS           | RDBMSConnection |
+      | ProjectName | Description          | Tag  | Pipeline         | ExecutionType | Icon         | SourceName | SourceType | SourceConnection | DestinationName      | DestinationType | DestConnection | saveMode |
+      | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | DELTA      | HIveConnection   | DEstinationAutoDelta | DELTA           | HIveConnection | Ignore   |
 
 
   @Smoke @Reg @Positive @E2EExecution3 @TC35
-  Scenario Outline: user is able to delete RDBMS source
+  Scenario Outline: user is able to delete delta source
     Given user is on DIL login page
     When enter username and password
     And  clicks on createProject tab
@@ -93,7 +88,7 @@ Feature: User is able to create RDBMS Source and Destination
 
 
   @Smoke @Reg @Positive @E2EExecution4 @TC36
-  Scenario Outline: user is able to delete RDBMS Destination
+  Scenario Outline: user is able to delete delta Destination
     Given user is on DIL login page
     When enter username and password
     And  clicks on createProject tab
@@ -118,7 +113,7 @@ Feature: User is able to create RDBMS Source and Destination
       | DKey   | DValue |
       | mode   | :      |
       | escape | :      |
-    And  clicks add button of "Source"
+    And  clicks add
     Then Destination with "<DestinationName>" should get created
     And  click on "<DeleteButton>" to delete
     Then destination "<DestinationName>" should get deleted
