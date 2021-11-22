@@ -57,7 +57,7 @@ public class PipeLIne_BuilderPage {
     public String transformationTypeToSelect = "//*[text()='%s ']";
     public String columnOptionToSelect = "//scale-accordion[@expanded=\"true\"]//option[normalize-space()=\"%s\"]";
     public String type = "//*[text()='%s ']";
-    public String saveMode = "//*[text()='%s ']";
+    public static String saveMode = "//*[text()='%s ']";
     public String connection = "//*[text()='%s ']";
     public String fileType = "//*[text()='%s ']";
     public String schemaSource = "//*[text()='%s ']";
@@ -71,17 +71,28 @@ public class PipeLIne_BuilderPage {
     public String offSet = "//*[text()='%s ']";
     public String registryName = "//*[text()=' %s '] ";
     @FindBy(how = How.XPATH, using = "//span[text()=' Choose Database ']")
-    public WebElement chooseDatabe;
-    @FindBy(how = How.ID, using = "Database Name0")
-    public WebElement databaseName;
-    @FindBy(how = How.ID, using = "Schema0")
-    public WebElement databaseSchema;
-    @FindBy(how = How.ID, using = "Table0")
-    public WebElement databaseTable;
-    @FindBy(how = How.ID, using = "Column0")
-    public WebElement databaseCol1;
+    public WebElement chooseDatabase;
+    @FindBy(how = How.XPATH, using = "//input[@placeholder='Database']")
+    public WebElement textFieldDatabaseName;
+    @FindBy(how = How.XPATH, using = "//input[@placeholder='Schema']")
+    public WebElement textFieldDatabaseSchema;
+    @FindBy(how = How.XPATH, using = "//input[@placeholder='Table']")
+    public WebElement textFieldDatabaseTable;
+    @FindBy(how = How.XPATH, using = "//input[@placeholder='Columns']")
+    public WebElement textFieldDatabaseColumn;
+    public String databaseName = "//label[text()=' %s ']";
+    public String databaseSchema = "//label[text()=' %s ']";
+    public String databaseTable = "//label[text()=' %s ']";
+    public String databaseCol1 = "//label[text()=' %s ']";
+    @FindBy(how = How.XPATH, using = "//*[@accessibility-title='Edit']")
+    public WebElement btnEditSource;
+    @FindBy(how = How.XPATH, using = "//*[text()='Save ']")
+    public WebElement btnEditSourceSave;
     @FindBy(how = How.XPATH, using = "//*[text()=' Save ']")
     public WebElement btnDatabaseConfigSave;
+    public String updatedDababaseName = "//div[text()='%s']";
+    public String updatedDababaseTableName = "//div[text()='%s']";
+    public String updatedDababaseColName = "//div[text()=' %s ']";
 
 
     WebDriver driver;
@@ -215,9 +226,17 @@ public class PipeLIne_BuilderPage {
         FieldEnterName.sendKeys(sourceName);
         CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, type, typeToAdd));
         CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, connection, connectionToAdd));
-//        buttonAdd.click();
+        buttonAdd.click();
         CommonFunction.waitForSomeTime();
-//        CommonFunction.scrollToElement(driver, status);
+        CommonFunction.scrollToElement(driver, status);
+    }
+
+    public void createSourceWithRDBMS(String sourceName, String typeToAdd, String connectionToAdd) throws InterruptedException, IOException {
+        CommonFunction.waitForElementToAppear(driver, FieldEnterName);
+        FieldEnterName.sendKeys(sourceName);
+        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, type, typeToAdd));
+        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, connection, connectionToAdd));
+        CommonFunction.waitForSomeTime();
     }
 
     public void createDestinationDelta(String destName, String typeToAdd, String connectionToAdd, String modeToAdd) throws InterruptedException, IOException {
@@ -250,24 +269,40 @@ public class PipeLIne_BuilderPage {
 
     }
 
-    public void enterRDBMS_DBConfigurations() throws InterruptedException {
+    public void enterRDBMS_DBConfigurations(String dbName, String dbSchema, String dbTable, String dbCol) throws InterruptedException {
         CommonFunction.waitForSomeTime();
-        CommonFunction.waitForElementToBeClickable(driver, chooseDatabe);
-        chooseDatabe.click();
-        CommonFunction.waitForElementToBeClickable(driver, databaseName);
-        databaseName.click();
-        CommonFunction.waitForElementToBeClickable(driver, databaseSchema);
-        databaseSchema.click();
-        CommonFunction.waitForElementToBeClickable(driver, databaseTable);
-        databaseTable.click();
-        CommonFunction.waitForElementToBeClickable(driver, databaseCol1);
-        CommonFunction.clickForceFully(driver, databaseCol1);
+        CommonFunction.waitForElementToBeClickable(driver, chooseDatabase);
+        chooseDatabase.click();
+
+        CommonFunction.waitForElementToAppear(driver, textFieldDatabaseName);
+        textFieldDatabaseName.sendKeys(dbName);
+        (CommonFunction.getCustomisedWebElement(driver, databaseName, dbName)).click();
+
+        CommonFunction.waitForElementToAppear(driver, textFieldDatabaseSchema);
+        textFieldDatabaseSchema.sendKeys(dbName);
+        (CommonFunction.getCustomisedWebElement(driver, databaseSchema, dbSchema)).click();
+
+        CommonFunction.waitForElementToAppear(driver, textFieldDatabaseTable);
+        textFieldDatabaseTable.sendKeys(dbName);
+        (CommonFunction.getCustomisedWebElement(driver, databaseTable, dbTable)).click();
+
+        CommonFunction.waitForElementToAppear(driver, textFieldDatabaseColumn);
+        textFieldDatabaseColumn.sendKeys(dbName);
+        (CommonFunction.getCustomisedWebElement(driver, databaseCol1, dbCol)).click();
+
         CommonFunction.waitForElementToBeClickable(driver, btnDatabaseConfigSave);
         btnDatabaseConfigSave.click();
 
     }
 
-
+    public void editRDBMSSourceDetails(String dbName, String dbSchema, String dbTable,String dbCol) throws InterruptedException {
+        CommonFunction.waitForElementToAppear(driver, btnEditSource);
+        btnEditSource.click();
+        enterRDBMS_DBConfigurations(dbName,dbSchema,dbTable,dbCol);
+        CommonFunction.waitForSomeTime();
+        CommonFunction.waitForElementToBeClickable(driver, btnEditSourceSave);
+        btnEditSourceSave.click();
+    }
 }
 
 

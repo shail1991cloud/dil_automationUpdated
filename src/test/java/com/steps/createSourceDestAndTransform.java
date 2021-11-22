@@ -176,15 +176,36 @@ public class createSourceDestAndTransform extends Baseclass {
         pipeLIne_builderPage.createDestinationDelta(nameDest, destType, destConn, destMode);
     }
 
-    @And("Enters Database configuration for RDBMS Connection")
-    public void entersDatabaseConfigurationForRDBMSConnection() throws InterruptedException {
-        pipeLIne_builderPage.enterRDBMS_DBConfigurations();
+    @And("Enters {string} {string} {string} {string} for Database configuration")
+    public void entersForDatabaseConfiguration(String dataBaseName, String databaseSchema, String databaseTable, String databaseCol)  throws InterruptedException {
+        pipeLIne_builderPage.enterRDBMS_DBConfigurations(dataBaseName,databaseSchema,databaseTable,databaseCol);
     }
 
-    @And("Select {string}")
-    public void select(String type) {
+    @And("Select flow as {string}")
+    public void selectFlowAs(String type) {
         pipeLIne_builderPage.selectFlowType(type);
     }
 
 
+    @When("Enters {string},{string},{string} for RDBMS Connection")
+    public void entersForRDBMSConnection(String sourceName, String type, String sourceConnection) throws IOException, InterruptedException {
+        pipeLIne_builderPage.createSourceWithRDBMS(sourceName, type, sourceConnection);
+    }
+
+    @And("Enter Save mode {string}")
+    public void enterSaveMode(String modeToAdd) throws InterruptedException, IOException {
+        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, PipeLIne_BuilderPage.saveMode, modeToAdd));
+    }
+
+    @When("Edit {string} {string} {string} {string} fields for Source")
+    public void editFieldsForSource(String updatedDatabase,String updatedSchema, String updatedTableName, String updatedColumnName) throws InterruptedException {
+        pipeLIne_builderPage.editRDBMSSourceDetails(updatedDatabase,updatedSchema,updatedTableName,updatedColumnName);
+    }
+
+    @Then("Validate updated {string},{string},{string} RDBMS Source")
+    public void validateUpdatedRDBMSSource(String updatedDatabase, String updatedTableName, String updatedColumnName) throws InterruptedException {
+        Assert.assertTrue(CommonFunction.getCustomisedWebElement(driver, pipeLIne_builderPage.updatedDababaseName, updatedDatabase).isDisplayed());
+        Assert.assertTrue(CommonFunction.getCustomisedWebElement(driver, pipeLIne_builderPage.updatedDababaseTableName, updatedTableName).isDisplayed());
+        Assert.assertTrue(CommonFunction.getCustomisedWebElement(driver, pipeLIne_builderPage.updatedDababaseColName, updatedColumnName).isDisplayed());
+    }
 }

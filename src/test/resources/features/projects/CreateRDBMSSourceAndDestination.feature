@@ -19,15 +19,16 @@ Feature: User is able to create RDBMS Source and Destination
       | SKey                                          | SValue |
       | spark.sql.adaptive.coalescePartitions.enabled | true   |
     And  clicks on "<Icon>"
-    When Enters "<SourceName>","<SourceType>","<SourceConnection>"
-    And  Enters Database configuration for RDBMS Connection
+    When Enters "<SourceName>","<SourceType>","<SourceConnection>" for RDBMS Connection
+    And  Enters "<DatabaseName>" "<DatabaseSchema>" "<DatabaseTable>" "<DataBaseColumn>" for Database configuration
+    And  clicks add button of "Source"
     Then Source should get created with "<SourceName>"
     Examples:
-      | ProjectName | Description          | Tag  | Pipeline         | ExecutionType | Icon         | SourceName | SourceType | SourceConnection |
-      | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | RDBMS      | RDBMSConnection  |
+      | ProjectName | Description          | Tag  | Pipeline         | ExecutionType | Icon         | SourceName | SourceType | SourceConnection | DatabaseName | DatabaseSchema | DatabaseTable     | DataBaseColumn |
+      | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | RDBMS      | RDBMSConnection  | landing_dil  | DEFAULT        | destinationBigInt | m_bigint       |
 
 
-  @Smoke @Reg @Positive @E2EExecution2 @TC34
+  @Smoke @Reg @Positive @E2EExecution2
   Scenario Outline: user is able to create RDBMS Destination
     Given user is on DIL login page
     And enter username and password
@@ -46,32 +47,33 @@ Feature: User is able to create RDBMS Source and Destination
       | SKey                                          | SValue |
       | spark.sql.adaptive.coalescePartitions.enabled | true   |
     And  clicks on "<Icon>"
-    When Enters "<SourceName>","<SourceType>","<SourceConnection>"
-    And  Enters Database configuration for RDBMS Connection
+    And Enters "<SourceName>","<SourceType>","<SourceConnection>" for RDBMS Connection
+    And  Enters "<DatabaseName>" "<DatabaseSchema>" "<DatabaseTable>" "<DataBaseColumn>" for Database configuration
     And  clicks add button of "Source"
-    Then Source should get created with "<SourceName>"
-    And Select "Destination"
-    When Enters "<DestinationName>","<DestinationType>","<DestConnection>"
-    And  Enters Database configuration for RDBMS Connection
-    When enters destination keys and value
+    And Source should get created with "<SourceName>"
+    When Select flow as "Destination"
+    And Enters "<DestinationName>","<DestinationType>","<DestConnection>" for RDBMS Connection
+    And  Enters "<DatabaseName>" "<DatabaseSchema>" "<DatabaseTable>" "<DataBaseColumn>" for Database configuration
+    And Enter Save mode "<saveMode>"
+    And enters destination keys and value
       | DKey   | DValue |
       | mode   | :      |
       | escape | :      |
     And  clicks add button of "Destination"
     Then Destination with "<DestinationName>" should get created
     Examples:
-      | ProjectName | Description          | Tag  | Pipeline         | ExecutionType | Icon         | SourceName | SourceType | SourceConnection | DestinationName      | DestinationType | DestConnection  |
-      | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | RDBMS      | RDBMSConnection  | DestinationAutoRDBMS | RDBMS           | RDBMSConnection |
+      | ProjectName | Description          | Tag  | Pipeline         | ExecutionType | Icon         | SourceName | SourceType | SourceConnection | DestinationName      | DestinationType | DestConnection  | DatabaseName | DatabaseSchema | DatabaseTable     | DataBaseColumn | saveMode |
+      | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | RDBMS      | RDBMSConnection  | DestinationAutoRDBMS | RDBMS           | RDBMSConnection | landing_dil  | DEFAULT        | destinationBigInt | m_bigint       | Ignore   |
 
 
-  @Smoke @Reg @Positive @E2EExecution3 @TC35
+  @Smoke @Reg @Positive @E2EExecution3
   Scenario Outline: user is able to delete RDBMS source
     Given user is on DIL login page
-    When enter username and password
+    And enter username and password
     And  clicks on createProject tab
-    When creates project with "<ProjectName>","<Description>","<Tag>" and engine
+    And creates project with "<ProjectName>","<Description>","<Tag>" and engine
     And  creates a "<Pipeline>" with "<Description>","<Tag>","<ExecutionType>"
-    When enters pipeline properties
+    And enters pipeline properties
       | PKey                       | PValue      |
       | serviceType                | AcquireFile |
       | isReturnable               | False       |
@@ -83,16 +85,18 @@ Feature: User is able to create RDBMS Source and Destination
       | SKey                                          | SValue |
       | spark.sql.adaptive.coalescePartitions.enabled | true   |
     And  clicks on "<Icon>"
-    When Enters "<SourceName>","<SourceType>","<SourceConnection>"
-    Then Source should get created with "<SourceName>"
-    And  click on "<DeleteButton>" to delete
+    And Enters "<SourceName>","<SourceType>","<SourceConnection>" for RDBMS Connection
+    And  Enters "<DatabaseName>" "<DatabaseSchema>" "<DatabaseTable>" "<DataBaseColumn>" for Database configuration
+    And  clicks add button of "Source"
+    And Source should get created with "<SourceName>"
+    When  click on "<DeleteButton>" to delete
     Then source "<SourceName>" should get deleted
     Examples:
-      | ProjectName | Description          | Tag  | Pipeline         | ExecutionType | Icon         | SourceName | SourceType | SourceConnection | DeleteButton  |
-      | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | DELTA      | HIveConnection   | Delete Source |
+      | ProjectName | Description          | Tag  | Pipeline         | ExecutionType | Icon         | SourceName | SourceType | SourceConnection | DeleteButton  | DatabaseName | DatabaseSchema | DatabaseTable     | DataBaseColumn |
+      | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | RDBMS      | RDBMSConnection  | Delete Source | landing_dil  | DEFAULT        | destinationBigInt | m_bigint       |
 
 
-  @Smoke @Reg @Positive @E2EExecution4 @TC36
+  @Smoke @Reg @Positive @E2EExecution4
   Scenario Outline: user is able to delete RDBMS Destination
     Given user is on DIL login page
     When enter username and password
@@ -111,18 +115,68 @@ Feature: User is able to create RDBMS Source and Destination
       | SKey                                          | SValue |
       | spark.sql.adaptive.coalescePartitions.enabled | true   |
     And  clicks on "<Icon>"
-    When Enters "<SourceName>","<SourceType>","<SourceConnection>"
-    Then Source should get created with "<SourceName>"
-    When enters "<DestinationName>","<DestinationType>","<DestConnection>","<saveMode>"
-    When enters destination keys and value
+    And Enters "<SourceName>","<SourceType>","<SourceConnection>" for RDBMS Connection
+    And  Enters "<DatabaseName>" "<DatabaseSchema>" "<DatabaseTable>" "<DataBaseColumn>" for Database configuration
+    And  clicks add button of "Source"
+    And Source should get created with "<SourceName>"
+    When Select flow as "Destination"
+    And Enters "<DestinationName>","<DestinationType>","<DestConnection>" for RDBMS Connection
+    And Enters "<DatabaseName>" "<DatabaseSchema>" "<DatabaseTable>" "<DataBaseColumn>" for Database configuration
+    And Enter Save mode "<saveMode>"
+    And enters destination keys and value
       | DKey   | DValue |
       | mode   | :      |
       | escape | :      |
-    And  clicks add button of "Source"
+    And  clicks add button of "Destination"
     Then Destination with "<DestinationName>" should get created
     And  click on "<DeleteButton>" to delete
     Then destination "<DestinationName>" should get deleted
     Examples:
-      | ProjectName | Description          | Tag  | Pipeline         | ExecutionType | Icon         | SourceName | SourceType | SourceConnection | DestinationName  | DestinationType | DestConnection | saveMode | DeleteButton       |
-      | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | DELTA      | HIveConnection   | DestinationDelta | DELTA           | HIveConnection | Ignore   | Delete Destination |
+      | ProjectName | Description          | Tag  | Pipeline         | ExecutionType | Icon         | SourceName | SourceType | SourceConnection | DestinationName      | DestinationType | DestConnection  | saveMode | DeleteButton       | DatabaseName | DatabaseSchema | DatabaseTable     | DataBaseColumn | saveMode |
+      | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | RDBMS      | RDBMSConnection  | DestinationAutoRDBMS | RDBMS           | RDBMSConnection | Ignore   | Delete Destination | landing_dil  | DEFAULT        | destinationBigInt | m_bigint       | Ignore   |
 
+  @Positive @CSource-Test2
+  Scenario Outline: user is able to edit RDBMS source details and validate the same
+    Given user is on DIL login page
+    And enter username and password
+    And  clicks on createProject tab
+    And creates project with "<ProjectName>","<Description>","<Tag>" and engine
+    And  creates a "<Pipeline>" with "<Description>","<Tag>","<ExecutionType>"
+    And enters pipeline properties
+      | PKey                       | PValue      |
+      | serviceType                | AcquireFile |
+      | isReturnable               | False       |
+      | isSchemaNeededToBeRegister | False       |
+      | area                       | area        |
+      | flow                       | flow        |
+      | step                       | step        |
+    And  Spark properties
+      | SKey                                          | SValue |
+      | spark.sql.adaptive.coalescePartitions.enabled | true   |
+    And  clicks on "<Icon>"
+    And Enters "<SourceName>","<SourceType>","<SourceConnection>" for RDBMS Connection
+    And  Enters "<DatabaseName>" "<DatabaseSchema>" "<DatabaseTable>" "<DataBaseColumn>" for Database configuration
+    And  clicks add button of "Source"
+    And Source should get created with "<SourceName>"
+    When Edit "<UpdatedDatabase>" "<DatabaseSchema>" "<UpdatedDatabaseTable>" "<UpdatedDataBaseColumn>" fields for Source
+    And Source should get created with "<SourceName>"
+    Then Validate updated "<UpdatedDatabase>","<UpdatedDatabaseTable>","<UpdatedDataBaseColumn>" RDBMS Source
+    Examples:
+      | ProjectName | Description          | Tag  | Pipeline         | ExecutionType | Icon         | SourceName | SourceType | SourceConnection | DatabaseName | DatabaseSchema | DatabaseTable     | DataBaseColumn | UpdatedDatabase | UpdatedDatabaseTable | UpdatedDataBaseColumn |
+      | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | RDBMS      | RDBMSConnection  | landing_dil  | DEFAULT        | destinationBigInt | m_bigint       | test_dil        | testDataSource       | m_id                  |
+
+  @Positive @CDestination-Test1
+  Scenario Outline: user is able to edit RDBMS destination and validate the same
+    Given user is on DIL login page
+    When enter username and password
+    And  clicks on createProject tab
+    When creates project with "<ProjectName>","<Description>","<Tag>" and engine
+    And  creates a "<Pipeline>" having "<Description>" and "<Tag>"
+    And  clicks on "<Icon>"
+    When Enters "<SourceName>","<SourceType>","<SourceConnection>","<fileType>","<FilePath>","<Separator>","<sourceSchema>","<SchemaValue>"
+    Then Source should get created with "<SourceName>"
+    When enters "<DestinationName>","<DestinationType>","<DestConnection>","<fileType>" ,"<FilePath>","<TopicName>" and click add
+    Then Destination with "<DestinationName>" should get created
+    Examples:
+      | ProjectName | Description          | Tag           | Pipeline | Icon         | SourceName | SourceType  | SourceConnection       | fileType | FilePath | Separator | sourceSchema  | SchemaValue | DestinationName | DestinationType | DestConnection         | TopicName |
+      | AutoDIL     | ProjectForAutomation | Test_Pipeline | PipeLIne | Add a Source | DemoSource | File System | AUTOMATION_DONOTDELETE | CSV      | .csv     | ,         | Manual Schema | H_JSON      | DemoDestination | File System     | AUTOMATION_DONOTDELETE | CDR       |
