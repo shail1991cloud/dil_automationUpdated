@@ -1,6 +1,7 @@
+@Delta
 Feature: User is able to create Delta Source and Destination
 
-  @Smoke @Reg @Positive @E2EExecution2 @TC33
+  @Smoke @Reg @Positive @Delta1 @TC33
   Scenario Outline: user is able to create delta source
     Given user is on DIL login page
     When enter username and password
@@ -26,7 +27,7 @@ Feature: User is able to create Delta Source and Destination
       | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | DELTA      | HIveConnection   |
 
 
-  @Smoke @Reg @Positive @E2EExecution2 @TC34
+  @Smoke @Reg @Positive @@Delta2 @TC34
   Scenario Outline: user is able to create delta Destination
     Given user is on DIL login page
     When enter username and password
@@ -59,7 +60,7 @@ Feature: User is able to create Delta Source and Destination
       | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | DELTA      | HIveConnection   | DEstinationAutoDelta | DELTA           | HIveConnection | Ignore   |
 
 
-  @Smoke @Reg @Positive @E2EExecution3 @TC35
+  @Smoke @Reg @Positive @@Delta3 @TC35
   Scenario Outline: user is able to delete delta source
     Given user is on DIL login page
     When enter username and password
@@ -87,7 +88,7 @@ Feature: User is able to create Delta Source and Destination
       | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | DELTA      | HIveConnection   | Delete Source |
 
 
-  @Smoke @Reg @Positive @E2EExecution4 @TC36
+  @Smoke @Reg @Positive @Delta4 @TC36
   Scenario Outline: user is able to delete delta Destination
     Given user is on DIL login page
     When enter username and password
@@ -121,3 +122,63 @@ Feature: User is able to create Delta Source and Destination
       | ProjectName | Description          | Tag  | Pipeline         | ExecutionType | Icon         | SourceName | SourceType | SourceConnection | DestinationName  | DestinationType | DestConnection | saveMode | DeleteButton       |
       | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | DELTA      | HIveConnection   | DestinationDelta | DELTA           | HIveConnection | Ignore   | Delete Destination |
 
+  @Smoke @Reg @Positive @Delta5 @TC37
+  Scenario Outline: user is able to update delta source and validate the same at Source properties panel
+    Given user is on DIL login page
+    When enter username and password
+    And  clicks on createProject tab
+    When creates project with "<ProjectName>","<Description>","<Tag>" and engine
+    And  creates a "<Pipeline>" with "<Description>","<Tag>","<ExecutionType>"
+    When enters pipeline properties
+      | PKey                       | PValue      |
+      | serviceType                | AcquireFile |
+      | isReturnable               | False       |
+      | isSchemaNeededToBeRegister | False       |
+      | area                       | area        |
+      | flow                       | flow        |
+      | step                       | step        |
+    And  Spark properties
+      | SKey                                          | SValue |
+      | spark.sql.adaptive.coalescePartitions.enabled | true   |
+    And  clicks on "<Icon>"
+    When Enters "<SourceName>","<SourceType>","<SourceConnection>"
+    Then Source should get created with "<SourceName>"
+    When edits record for "<NewSourceNmae>" and "<NewSourceConnection>"
+    Then Updated record validated for "<NewSourceNmae>" and "<NewSourceConnection>"
+    Examples:
+      | ProjectName | Description          | Tag  | Pipeline         | ExecutionType | Icon         | SourceName | SourceType | SourceConnection | NewSourceNmae     | NewSourceConnection |
+      | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | DELTA      | HIveConnection   | UpdatedNameSource | HIveConnection      |
+
+  @Smoke @Reg @Positive @Delta6 @TC38
+  Scenario Outline: user is able to update the destination and validate the same at destinationProperties
+    Given user is on DIL login page
+    When enter username and password
+    And  clicks on createProject tab
+    When creates project with "<ProjectName>","<Description>","<Tag>" and engine
+    And  creates a "<Pipeline>" with "<Description>","<Tag>","<ExecutionType>"
+    When enters pipeline properties
+      | PKey                       | PValue      |
+      | serviceType                | AcquireFile |
+      | isReturnable               | False       |
+      | isSchemaNeededToBeRegister | False       |
+      | area                       | area        |
+      | flow                       | flow        |
+      | step                       | step        |
+    And  Spark properties
+      | SKey                                          | SValue |
+      | spark.sql.adaptive.coalescePartitions.enabled | true   |
+    And  clicks on "<Icon>"
+    When Enters "<SourceName>","<SourceType>","<SourceConnection>"
+    Then Source should get created with "<SourceName>"
+    When enters "<DestinationName>","<DestinationType>","<DestConnection>","<saveMode>"
+    When enters destination keys and value
+      | DKey   | DValue |
+      | mode   | :      |
+      | escape | :      |
+    And  clicks add
+    Then Destination with "<DestinationName>" should get created
+    When edits record for "<NewDestName>" and "<NewDestConnection>"
+    Then Updated record validated for "<NewDestName>" and "<NewDestConnection>"
+    Examples:
+      | ProjectName | Description          | Tag  | Pipeline         | ExecutionType | Icon         | SourceName | SourceType | SourceConnection | DestinationName      | DestinationType | DestConnection | saveMode | NewDestName     | NewDestConnection |
+      | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | DELTA      | HIveConnection   | DEstinationAutoDelta | DELTA           | HIveConnection | Ignore   | UpdatedNameDest | HIveConnection    |

@@ -17,7 +17,7 @@ Feature:This Feature deals with standard End to End Pipeline having Source,Desti
     And  clicks add
     Then PipeLine with status "<Status>" is validated
     Examples:
-      | ProjectName | Description          | Tag           | ExecutionType | Key | Value | SKey | SValue | Pipeline | Icon         | SourceName | SourceType  | SourceConnection | fileType | FilePath | Separator | sourceSchema  | SchemaValue       | TransformationName | Category | TransformationType | columnValue | DestinationName | DestinationType | DestConnection | TopicName | Status |
+      | ProjectName | Description          | Tag           | ExecutionType | Key | Value | SKey | SValue | Pipeline | Icon         | SourceName | SourceType  | SourceConnection | fileType | FilePath | Separator | sourceSchema  | SchemaValue         | TransformationName | Category | TransformationType | columnValue | DestinationName | DestinationType | DestConnection | TopicName | Status |
       | AutoDIL     | ProjectForAutomation | Test_Pipeline | STREAMING     | k1  | v1    | s1   | v2     | PipeLIne | Add a Source | DemoSource | File System | Auto_Kerb_DND    | CSV      | .csv     | ,         | Manual Schema | AutoManualSchemaDND | TestTrans          | Column   | GroupBy            | m_boolean   | DemoDestination | File System     | Auto_Kerb_DND  | CDR       | READY  |
 
   @Smoke @Reg @Positive @E2ETest1 @TC29
@@ -36,8 +36,8 @@ Feature:This Feature deals with standard End to End Pipeline having Source,Desti
     And  clicks add
     Then PipeLine with status "<Status>" is validated
     Examples:
-      | ProjectName | Description          | Tag           | ExecutionType | Key | Value | SKey | SValue | Pipeline | Icon         | SourceName | SourceType | SourceConnection | fileType | FilePath | SourceSchema | RegistryName      | Offset  | TransformationName | Category | TransformationType | columnValue | DestinationName | DestinationType | DestConnection | TopicName | Status |
-      | AutoDIL     | ProjectForAutomation | Test_Pipeline | STREAMING     | k1  | v1    | s1   | v2     | PipeLIne | Add a Source | DemoSource | KAFKA      | KafkaSSLConnection   | CSV      | .csv     | Manual       | AutoManualSchemaDND | Earlier | TestTrans          | Column   | GroupBy            | m_boolean   | DemoDestination | File System     | Auto_Kerb_DND  | CDR       | READY  |
+      | ProjectName | Description          | Tag           | ExecutionType | Key | Value | SKey | SValue | Pipeline | Icon         | SourceName | SourceType | SourceConnection   | fileType | FilePath | SourceSchema | RegistryName        | Offset  | TransformationName | Category | TransformationType | columnValue | DestinationName | DestinationType | DestConnection | TopicName | Status |
+      | AutoDIL     | ProjectForAutomation | Test_Pipeline | STREAMING     | k1  | v1    | s1   | v2     | PipeLIne | Add a Source | DemoSource | KAFKA      | KafkaSSLConnection | CSV      | .csv     | Manual       | AutoManualSchemaDND | Earlier | TestTrans          | Column   | GroupBy            | m_boolean   | DemoDestination | File System     | Auto_Kerb_DND  | CDR       | READY  |
 
   @Smoke @Reg @Positive @E2ETest1 @TC30
   Scenario Outline: user is able to create a project with a pipeline in ready status with FileSystem as source and Destination as Kafka
@@ -55,7 +55,7 @@ Feature:This Feature deals with standard End to End Pipeline having Source,Desti
     And  clicks add
     Then PipeLine with status "<Status>" is validated
     Examples:
-      | ProjectName | Description          | Tag           | ExecutionType | Key | Value | SKey | SValue | Pipeline | Icon         | SourceName | SourceType  | SourceConnection | fileType | FilePath | Separator | sourceSchema  | SchemaValue       | TransformationName   | Category | TransformationType | columnValue | DestinationName | DestinationType | DestConnection | TopicName | Status |
+      | ProjectName | Description          | Tag           | ExecutionType | Key | Value | SKey | SValue | Pipeline | Icon         | SourceName | SourceType  | SourceConnection | fileType | FilePath | Separator | sourceSchema  | SchemaValue         | TransformationName   | Category | TransformationType | columnValue | DestinationName | DestinationType | DestConnection     | TopicName | Status |
       | AutoDIL     | ProjectForAutomation | Test_Pipeline | STREAMING     | k1  | v1    | s1   | v2     | PipeLIne | Add a Source | DemoSource | File System | Auto_Kerb_DND    | CSV      | .csv     | ,         | Manual Schema | AutoManualSchemaDND | TestTransFileToKafka | Column   | GroupBy            | m_boolean   | DemoDestination | KAFKA           | KafkaSSLConnection | CDR       | READY  |
 
   @Smoke @Reg @Positive @E2ETest1 @TC31
@@ -74,5 +74,5 @@ Feature:This Feature deals with standard End to End Pipeline having Source,Desti
     And  clicks add
     Then PipeLine with status "<Status>" is validated
     Examples:
-      | ProjectName | Description          | Tag           | ExecutionType | Key | Value | SKey | SValue | Pipeline | Icon         | SourceName | SourceType | SourceConnection | fileType | FilePath | SourceSchema | RegistryName      | Offset  | TransformationName | Category | TransformationType | columnValue | DestinationName | DestinationType | DestConnection | TopicName | Status |
-      | AutoDIL     | ProjectForAutomation | Test_Pipeline | STREAMING     | k1  | v1    | s1   | v2     | PipeLIne | Add a Source | DemoSource | KAFKA      | KafkaSSLConnection   | CSV      | .csv     | Manual       | AutoManualSchemaDND | Earlier | TestTrans          | Column   | GroupBy            | m_id        | DemoDestination | KAFKA           | KafkaSSLConnection | CDR       | READY  |
+      | ProjectName | Description          | Tag           | ExecutionType | Key | Value | SKey | SValue | Pipeline | Icon         | SourceName | SourceType | SourceConnection   | fileType | FilePath | SourceSchema | RegistryName        | Offset  | TransformationName | Category | TransformationType | columnValue | DestinationName | DestinationType | DestConnection     | TopicName | Status |
+      | AutoDIL     | ProjectForAutomation | Test_Pipeline | STREAMING     | k1  | v1    | s1   | v2     | PipeLIne | Add a Source | DemoSource | KAFKA      | KafkaSSLConnection | CSV      | .csv     | Manual       | AutoManualSchemaDND | Earlier | TestTrans          | Column   | GroupBy            | m_id        | DemoDestination | KAFKA           | KafkaSSLConnection | CDR       | READY  |

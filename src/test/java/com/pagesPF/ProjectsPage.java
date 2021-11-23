@@ -86,6 +86,7 @@ public class ProjectsPage {
     String projectJsPathD = "return document.querySelector(\"#header\").shadowRoot.querySelector(\"div > scale-app-header > header > div > nav.header__nav > div > div.header__nav-menu-wrapper > div.header__nav-menu-main > ul > scale-nav-main:nth-child(1) > li > a > span.main-navigation__item-link-text\")";
     String projectJsPath = "return document.querySelector(\"#header\").shadowRoot.querySelector(\"div > scale-app-header > header > nav.header__nav > div > div.header__nav-menu-wrapper > div.header__nav-menu-main > ul > scale-nav-main:nth-child(1) > li > a > span\")";
     String cssSelector = "div > scale-app-header > header > nav.header__nav > div > div.header__nav-menu-wrapper > div.header__nav-menu-main > ul > scale-nav-main:nth-child(1) > li > a > span.main-navigation__item-link-text";
+
     public ProjectsPage(WebDriver driver) {
         this.driver = driver;
         restFunctions = new RestFunctions();

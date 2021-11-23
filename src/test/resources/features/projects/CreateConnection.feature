@@ -26,5 +26,5 @@ Feature: User should be able to Create, Validate Connections on Connections Page
     When  creates the connection
     Then  connection with "<Name>" should be validated on Connection listing page
     Examples:
-      | CreateConnection    | Name          | Description         | ConnectionType | KeyStoreFileName    | TrustStoreFileName   | KeyStorePassword | TrustScorePassword | TLSProtocol |
+      | CreateConnection    | Name          | Description         | ConnectionType | KeyStoreFileName   | TrustStoreFileName   | KeyStorePassword | TrustScorePassword | TLSProtocol |
       | Create a connection | AutomationSSL | Creating Connection | SSL            | kafka-keystore.jks | kafka-truststore.jks | confluent        | confluent          | TLS         |

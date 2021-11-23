@@ -21,7 +21,7 @@ public class LogsPage {
     public WebElement filterFieldPipelineName;
 
 
-    String jsLogsTab="return document.querySelector(\"#header\").shadowRoot.querySelector(\"div > scale-app-header > header > nav.header__nav > div > div.header__nav-menu-wrapper > div.header__nav-menu-main > ul > scale-nav-main:nth-child(3) > li > a > span\")";
+    String jsLogsTab = "return document.querySelector(\"#header\").shadowRoot.querySelector(\"div > scale-app-header > header > nav.header__nav > div > div.header__nav-menu-wrapper > div.header__nav-menu-main > ul > scale-nav-main:nth-child(3) > li > a > span\")";
     WebDriver driver;
     ConfigFileReader configFileReader;
     PipeLIne_ListingPage pipeLIne_listingPage;
@@ -37,10 +37,11 @@ public class LogsPage {
     }
 
     public void navigateToLogsPage() throws InterruptedException {
-        CommonFunction.clickOnShadowElement(driver,jsLogsTab);
+        CommonFunction.clickOnShadowElement(driver, jsLogsTab);
     }
+
     public void validatePipelineName() throws InterruptedException {
-        CommonFunction.waitForElementToAppear(driver,filterFieldPipelineName);
+        CommonFunction.waitForElementToAppear(driver, filterFieldPipelineName);
         filterFieldPipelineName.sendKeys(EnvSetUp.getDataKeyValue(EnvSetUp.getDataKeyValue(Constant.PipeLineName)));
         pipeLIne_listingPage.validatePipeLineRecord();
 

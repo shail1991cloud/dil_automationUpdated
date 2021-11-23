@@ -42,17 +42,17 @@ public class PipeLIne_ListingPage {
     @FindBy(how = How.XPATH, using = "//fieldset[@data-test-id=\"creation-date\"]//div")
     WebElement pipeLineCreationDate;
     @FindBy(how = How.XPATH, using = "//input[1][@name='keyAdd']")
-   public List<WebElement> keysForPipeLine;
+    public List<WebElement> keysForPipeLine;
     @FindBy(how = How.XPATH, using = "//input[1][@name='valueAdd']")
-    public  List<WebElement> valuesForPipeLine;
+    public List<WebElement> valuesForPipeLine;
     @FindBy(how = How.XPATH, using = "//input[1][@name='keyAdd']")
     public WebElement keysForDest;
     @FindBy(how = How.XPATH, using = "//input[1][@name='valueAdd']")
-    public  WebElement valuesForDest;
+    public WebElement valuesForDest;
     @FindBy(how = How.XPATH, using = "//*[text()='Pipelines']")
     WebElement tagPipeLineOnProjectListingPage;
     @FindBy(how = How.XPATH, using = "//*[contains(@id,'input-text-')]")
-    WebElement textFieldPipeLineName;
+    public WebElement textFieldPipeLineName;
     @FindBy(how = How.XPATH, using = "//*[contains(@id,'input-textarea')]")
     WebElement textFieldDescription;
     @FindBy(how = How.XPATH, using = "//*[@placeholder=\"Add tags to categorize pipeline\"]")
@@ -68,7 +68,7 @@ public class PipeLIne_ListingPage {
     @FindBy(how = How.XPATH, using = "//fieldset[7]//div[1]//span[1]")
     public WebElement sparkKey;
     @FindBy(how = How.XPATH, using = "//fieldset[7]//div[1]//span[2]")
-   public WebElement sparkValue;
+    public WebElement sparkValue;
     @FindBy(how = How.XPATH, using = "//*[text()='Open']")
     WebElement buttonOpen;
     @FindBy(how = How.XPATH, using = "//*[text()='LAST LAUNCH']")
@@ -76,11 +76,11 @@ public class PipeLIne_ListingPage {
     @FindBy(how = How.XPATH, using = "//*[text()='Builder ']")
     WebElement tabBuilder;
     @FindBy(how = How.XPATH, using = "//*[@id=\"app\"]//scale-icon-action-edit")
-    WebElement editPipelineToolTip;
+    WebElement editToolTip;
     @FindBy(how = How.XPATH, using = "//button[normalize-space()=\"×\"]")
     WebElement deleteTagIcon;
     @FindBy(how = How.XPATH, using = "//*[text()=' Save ']")
-    WebElement buttonSave;
+    WebElement buttonSavePipeline;
 
     public PipeLIne_ListingPage(WebDriver driver) {
 
@@ -162,17 +162,18 @@ public class PipeLIne_ListingPage {
         Assert.assertTrue(CommonFunction.getCustomisedWebElement(driver, pipeLineStatus, status).isDisplayed());
     }
 
-    public void editPipeline(String executionType,String tag) throws InterruptedException, IOException {
-      CommonFunction.clickByHoveringMouse(driver,editPipelineToolTip);
-      CommonFunction.clickByHoveringMouse(driver,deleteTagIcon);
+    public void editPipeline(String executionType, String tag) throws InterruptedException, IOException {
+        CommonFunction.clickByHoveringMouse(driver, editToolTip);
+        CommonFunction.clickByHoveringMouse(driver, deleteTagIcon);
         textFieldTag.sendKeys(tag);
         textFieldTag.sendKeys(Keys.ENTER);
-       CommonFunction.scrollToElement(driver,buttonSave);
+        CommonFunction.scrollToElement(driver, buttonSavePipeline);
         CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, executionTypeToSelect, executionType));
-        CommonFunction.waitForElementToBeClickable(driver,buttonSave);
-        buttonSave.click();
+        CommonFunction.waitForElementToBeClickable(driver, buttonSavePipeline);
+        buttonSavePipeline.click();
 
     }
+
     public void createAcquireKafkaPipeline(String pipelineName, String description, String tag, String execution) throws InterruptedException, IOException {
         CommonFunction.waitForElementToAppear(driver, createPipelineIcon);
         createPipelineIcon.click();

@@ -1,0 +1,2304 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-11-22T08:34:17.255Z",
+        "before": [
+          {
+            "output": [
+              "--Starting the Execution--"
+            ],
+            "result": {
+              "duration": 1640915000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.beforeScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "user is able to create delta source",
+        "description": "",
+        "id": "user-is-able-to-create-delta-source-and-destination;user-is-able-to-create-delta-source;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 1318000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.afterScenario(io.cucumber.java.Scenario)"
+            }
+          },
+          {
+            "output": [
+              "---Closing the Browser---"
+            ],
+            "result": {
+              "duration": 98267000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.quitBrowser(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 18345383000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on DIL login page",
+            "match": {
+              "location": "com.steps.commonSteps.userIsOnDILLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2051332000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "enter username and password",
+            "match": {
+              "location": "com.steps.commonSteps.enterUsernameAndPassword()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 9351122000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "clicks on createProject tab",
+            "match": {
+              "location": "com.steps.createProjectSteps.clicksOnCreateProjectTab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 575556000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "creates project with \"AutoDIL\",\"ProjectForAutomation\",\"Test\" and engine",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AutoDIL",
+                  "offset": 22
+                },
+                {
+                  "val": "ProjectForAutomation",
+                  "offset": 32
+                },
+                {
+                  "val": "Test",
+                  "offset": 55
+                }
+              ],
+              "location": "com.steps.createProjectSteps.entersAndSelectEngine(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1258066000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "creates a \"AutoDemoPipeline\" with \"ProjectForAutomation\",\"Test\",\"STREAMING\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AutoDemoPipeline\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"ProjectForAutomation\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"Test\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"STREAMING\"",
+                  "offset": 64
+                }
+              ],
+              "location": "com.steps.createPipeLineSteps.createsAWith(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1211639000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "enters pipeline properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.enters_pipeline_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "PKey",
+                  "PValue"
+                ]
+              },
+              {
+                "cells": [
+                  "serviceType",
+                  "AcquireFile"
+                ]
+              },
+              {
+                "cells": [
+                  "isReturnable",
+                  "False"
+                ]
+              },
+              {
+                "cells": [
+                  "isSchemaNeededToBeRegister",
+                  "False"
+                ]
+              },
+              {
+                "cells": [
+                  "area",
+                  "area"
+                ]
+              },
+              {
+                "cells": [
+                  "flow",
+                  "flow"
+                ]
+              },
+              {
+                "cells": [
+                  "step",
+                  "step"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5266823000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "Spark properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.spark_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "SKey",
+                  "SValue"
+                ]
+              },
+              {
+                "cells": [
+                  "spark.sql.adaptive.coalescePartitions.enabled",
+                  "true"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 833240000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "clicks on \"Add a Source\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Add a Source\"",
+                  "offset": 10
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.clicksOn(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6185260000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Enters \"DemoSource\",\"DELTA\",\"HIveConnection\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"DELTA\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"HIveConnection\"",
+                  "offset": 28
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.enters(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 610369000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "Source should get created with \"DemoSource\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.sourceShouldGetCreatedWith(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Delta"
+          },
+          {
+            "name": "@Smoke"
+          },
+          {
+            "name": "@Reg"
+          },
+          {
+            "name": "@Positive"
+          },
+          {
+            "name": "@Delta1"
+          },
+          {
+            "name": "@TC33"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-22T08:35:04.830Z",
+        "before": [
+          {
+            "output": [
+              "--Starting the Execution--"
+            ],
+            "result": {
+              "duration": 1100411000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.beforeScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 60,
+        "name": "user is able to create delta Destination",
+        "description": "",
+        "id": "user-is-able-to-create-delta-source-and-destination;user-is-able-to-create-delta-destination;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 151000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.afterScenario(io.cucumber.java.Scenario)"
+            }
+          },
+          {
+            "output": [
+              "---Closing the Browser---"
+            ],
+            "result": {
+              "duration": 73290000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.quitBrowser(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 29078849000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "user is on DIL login page",
+            "match": {
+              "location": "com.steps.commonSteps.userIsOnDILLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 484257000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "enter username and password",
+            "match": {
+              "location": "com.steps.commonSteps.enterUsernameAndPassword()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1784654000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "clicks on createProject tab",
+            "match": {
+              "location": "com.steps.createProjectSteps.clicksOnCreateProjectTab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 506717000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "creates project with \"AutoDIL\",\"ProjectForAutomation\",\"Test\" and engine",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AutoDIL",
+                  "offset": 22
+                },
+                {
+                  "val": "ProjectForAutomation",
+                  "offset": 32
+                },
+                {
+                  "val": "Test",
+                  "offset": 55
+                }
+              ],
+              "location": "com.steps.createProjectSteps.entersAndSelectEngine(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1175309000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "creates a \"AutoDemoPipeline\" with \"ProjectForAutomation\",\"Test\",\"STREAMING\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AutoDemoPipeline\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"ProjectForAutomation\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"Test\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"STREAMING\"",
+                  "offset": 64
+                }
+              ],
+              "location": "com.steps.createPipeLineSteps.createsAWith(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1059742000,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "enters pipeline properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.enters_pipeline_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "PKey",
+                  "PValue"
+                ]
+              },
+              {
+                "cells": [
+                  "serviceType",
+                  "AcquireFile"
+                ]
+              },
+              {
+                "cells": [
+                  "isReturnable",
+                  "False"
+                ]
+              },
+              {
+                "cells": [
+                  "isSchemaNeededToBeRegister",
+                  "False"
+                ]
+              },
+              {
+                "cells": [
+                  "area",
+                  "area"
+                ]
+              },
+              {
+                "cells": [
+                  "flow",
+                  "flow"
+                ]
+              },
+              {
+                "cells": [
+                  "step",
+                  "step"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5233039000,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "Spark properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.spark_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "SKey",
+                  "SValue"
+                ]
+              },
+              {
+                "cells": [
+                  "spark.sql.adaptive.coalescePartitions.enabled",
+                  "true"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 782802000,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "clicks on \"Add a Source\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Add a Source\"",
+                  "offset": 10
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.clicksOn(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6429407000,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "Enters \"DemoSource\",\"DELTA\",\"HIveConnection\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"DELTA\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"HIveConnection\"",
+                  "offset": 28
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.enters(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 569562000,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "Source should get created with \"DemoSource\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.sourceShouldGetCreatedWith(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1295655000,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "enters \"DEstinationAutoDelta\",\"DELTA\",\"HIveConnection\",\"Ignore\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DEstinationAutoDelta\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"DELTA\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"HIveConnection\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"Ignore\"",
+                  "offset": 55
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.enters(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10716093000,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "enters destination keys and value",
+            "match": {
+              "location": "com.steps.createSourceDestAndTransform.entersDestinationKeysAndValue(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "DKey",
+                  "DValue"
+                ]
+              },
+              {
+                "cells": [
+                  "mode",
+                  ":"
+                ]
+              },
+              {
+                "cells": [
+                  "escape",
+                  ":"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 134241000,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "clicks add",
+            "match": {
+              "location": "com.steps.createSourceDestAndTransform.clicksAdd()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5661437000,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "Destination with \"DEstinationAutoDelta\" should get created",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DEstinationAutoDelta\"",
+                  "offset": 17
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.destinationWithShouldGetCreated(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Delta"
+          },
+          {
+            "name": "@Smoke"
+          },
+          {
+            "name": "@Reg"
+          },
+          {
+            "name": "@Positive"
+          },
+          {
+            "name": "@@Delta2"
+          },
+          {
+            "name": "@TC34"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-22T08:36:10.951Z",
+        "before": [
+          {
+            "output": [
+              "--Starting the Execution--"
+            ],
+            "result": {
+              "duration": 1108912000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.beforeScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 88,
+        "name": "user is able to delete delta source",
+        "description": "",
+        "id": "user-is-able-to-create-delta-source-and-destination;user-is-able-to-delete-delta-source;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 314000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.afterScenario(io.cucumber.java.Scenario)"
+            }
+          },
+          {
+            "output": [
+              "---Closing the Browser---"
+            ],
+            "result": {
+              "duration": 77311000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.quitBrowser(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 23773404000,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "user is on DIL login page",
+            "match": {
+              "location": "com.steps.commonSteps.userIsOnDILLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 351716000,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "enter username and password",
+            "match": {
+              "location": "com.steps.commonSteps.enterUsernameAndPassword()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3387659000,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "clicks on createProject tab",
+            "match": {
+              "location": "com.steps.createProjectSteps.clicksOnCreateProjectTab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 532988000,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "creates project with \"AutoDIL\",\"ProjectForAutomation\",\"Test\" and engine",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AutoDIL",
+                  "offset": 22
+                },
+                {
+                  "val": "ProjectForAutomation",
+                  "offset": 32
+                },
+                {
+                  "val": "Test",
+                  "offset": 55
+                }
+              ],
+              "location": "com.steps.createProjectSteps.entersAndSelectEngine(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16113842000,
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "creates a \"AutoDemoPipeline\" with \"ProjectForAutomation\",\"Test\",\"STREAMING\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AutoDemoPipeline\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"ProjectForAutomation\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"Test\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"STREAMING\"",
+                  "offset": 64
+                }
+              ],
+              "location": "com.steps.createPipeLineSteps.createsAWith(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1229818000,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "enters pipeline properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.enters_pipeline_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "PKey",
+                  "PValue"
+                ]
+              },
+              {
+                "cells": [
+                  "serviceType",
+                  "AcquireFile"
+                ]
+              },
+              {
+                "cells": [
+                  "isReturnable",
+                  "False"
+                ]
+              },
+              {
+                "cells": [
+                  "isSchemaNeededToBeRegister",
+                  "False"
+                ]
+              },
+              {
+                "cells": [
+                  "area",
+                  "area"
+                ]
+              },
+              {
+                "cells": [
+                  "flow",
+                  "flow"
+                ]
+              },
+              {
+                "cells": [
+                  "step",
+                  "step"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5227812000,
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "Spark properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.spark_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "SKey",
+                  "SValue"
+                ]
+              },
+              {
+                "cells": [
+                  "spark.sql.adaptive.coalescePartitions.enabled",
+                  "true"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 771622000,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "clicks on \"Add a Source\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Add a Source\"",
+                  "offset": 10
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.clicksOn(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6148300000,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "Enters \"DemoSource\",\"DELTA\",\"HIveConnection\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"DELTA\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"HIveConnection\"",
+                  "offset": 28
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.enters(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 566592000,
+              "status": "passed"
+            },
+            "line": 83,
+            "name": "Source should get created with \"DemoSource\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.sourceShouldGetCreatedWith(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5561656000,
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "click on \"Delete Source\" to delete",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Delete Source\"",
+                  "offset": 9
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.clickOnToDeleteSource(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10019437000,
+              "status": "passed"
+            },
+            "line": 85,
+            "name": "source \"DemoSource\" should get deleted",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 7
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.sourceShouldGetDeleted(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Delta"
+          },
+          {
+            "name": "@Smoke"
+          },
+          {
+            "name": "@Reg"
+          },
+          {
+            "name": "@Positive"
+          },
+          {
+            "name": "@@Delta3"
+          },
+          {
+            "name": "@TC35"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-22T08:37:25.853Z",
+        "before": [
+          {
+            "output": [
+              "--Starting the Execution--"
+            ],
+            "result": {
+              "duration": 1104479000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.beforeScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 123,
+        "name": "user is able to delete delta Destination",
+        "description": "",
+        "id": "user-is-able-to-create-delta-source-and-destination;user-is-able-to-delete-delta-destination;;2",
+        "after": [
+          {
+            "output": [
+              "this is my failure message"
+            ],
+            "embeddings": [
+              {
+                "data": "iVBORw0KGgoAAAANSUhEUgAABVYAAAI7CAYAAAAH9MAYAAABKGlDQ1BTa2lhAAAokX2RPUvDUBSGH4uLXyCo4OCQURS1qdUqONRULa6tQmunNE2DmNaQxo8f4ewsLv4A/4SjIOjijxAHZ99YJAGJ53LufXLec2/OuRdy88hy09DrR2GtahmN5olBymxnEJBtI/D1Gs/wsvJPXpaNddyBo/VDHoX6uY7siGe9IV/H3B7yTczhUa0ivhMveilup/gqCiLxU5zvBGHM7+Kdnn/hJHUz6faP61ob8gWqnGt4+LisUeeMU2xRni125RsU2WObCpa+iuyL1jHlBemmlAPNFiWpJUXyUpSX3GfgQ/kNJuaSWGsJbp9V5mUSWy6rhSY83gd2aP+ERuNH6nbh8wGmpM1oz3jr9xKTvclbZPRq/OnV4JA+Dquigqo22fwG+FNInH+WWzwAABDbSURBVHic7djBDcAgEMCw0v13PlYgL4RkT5B31szMBwAAAADAsf92AAAAAADAa4xVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIDIWAUAAAAAiIxVAAAAAIBoA9dGCHIEC/+hAAAAAElFTkSuQmCC",
+                "mime_type": "image/png",
+                "name": "user_is_able_to_delete_delta_Destination"
+              }
+            ],
+            "result": {
+              "duration": 81674000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.afterScenario(io.cucumber.java.Scenario)"
+            }
+          },
+          {
+            "output": [
+              "---Closing the Browser---"
+            ],
+            "result": {
+              "duration": 78958000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.quitBrowser(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11496400000,
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "user is on DIL login page",
+            "match": {
+              "location": "com.steps.commonSteps.userIsOnDILLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[text()\u003d\u0027User name\u0027]/following-sibling::input\"}\n  (Session info: chrome\u003d90.0.4430.212)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027pihu-Latitude-5400\u0027, ip: \u0027127.0.1.1\u0027, os.name: \u0027Linux\u0027, os.arch: \u0027amd64\u0027, os.version: \u00275.11.0-40-generic\u0027, java.version: \u002711.0.11\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.212, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: /tmp/.com.google.Chrome.N0Z1OM}, goog:chromeOptions: {debuggerAddress: localhost:46747}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 460174d66a2345cbe8f5e9a2de386b9b\n*** Element info: {Using\u003dxpath, value\u003d//*[text()\u003d\u0027User name\u0027]/following-sibling::input}\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\n\tat com.sun.proxy.$Proxy23.sendKeys(Unknown Source)\n\tat com.pagesPF.DIL_loginpage.loginToDIL(DIL_loginpage.java:36)\n\tat com.steps.commonSteps.enterUsernameAndPassword(commonSteps.java:39)\n\tat ✽.enter username and password(file:///home/pihu/dil_automation/src/test/resources/features/projects/Delta%20Source%20and%20Destination.feature:94)\n",
+              "duration": 10027500000,
+              "status": "failed"
+            },
+            "line": 94,
+            "name": "enter username and password",
+            "match": {
+              "location": "com.steps.commonSteps.enterUsernameAndPassword()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1176000,
+              "status": "skipped"
+            },
+            "line": 95,
+            "name": "clicks on createProject tab",
+            "match": {
+              "location": "com.steps.createProjectSteps.clicksOnCreateProjectTab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1294000,
+              "status": "skipped"
+            },
+            "line": 96,
+            "name": "creates project with \"AutoDIL\",\"ProjectForAutomation\",\"Test\" and engine",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AutoDIL",
+                  "offset": 22
+                },
+                {
+                  "val": "ProjectForAutomation",
+                  "offset": 32
+                },
+                {
+                  "val": "Test",
+                  "offset": 55
+                }
+              ],
+              "location": "com.steps.createProjectSteps.entersAndSelectEngine(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1022000,
+              "status": "skipped"
+            },
+            "line": 97,
+            "name": "creates a \"AutoDemoPipeline\" with \"ProjectForAutomation\",\"Test\",\"STREAMING\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AutoDemoPipeline\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"ProjectForAutomation\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"Test\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"STREAMING\"",
+                  "offset": 64
+                }
+              ],
+              "location": "com.steps.createPipeLineSteps.createsAWith(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1209000,
+              "status": "skipped"
+            },
+            "line": 98,
+            "name": "enters pipeline properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.enters_pipeline_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "PKey",
+                  "PValue"
+                ]
+              },
+              {
+                "cells": [
+                  "serviceType",
+                  "AcquireFile"
+                ]
+              },
+              {
+                "cells": [
+                  "isReturnable",
+                  "False"
+                ]
+              },
+              {
+                "cells": [
+                  "isSchemaNeededToBeRegister",
+                  "False"
+                ]
+              },
+              {
+                "cells": [
+                  "area",
+                  "area"
+                ]
+              },
+              {
+                "cells": [
+                  "flow",
+                  "flow"
+                ]
+              },
+              {
+                "cells": [
+                  "step",
+                  "step"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 727000,
+              "status": "skipped"
+            },
+            "line": 106,
+            "name": "Spark properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.spark_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "SKey",
+                  "SValue"
+                ]
+              },
+              {
+                "cells": [
+                  "spark.sql.adaptive.coalescePartitions.enabled",
+                  "true"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 431000,
+              "status": "skipped"
+            },
+            "line": 109,
+            "name": "clicks on \"Add a Source\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Add a Source\"",
+                  "offset": 10
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.clicksOn(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 520000,
+              "status": "skipped"
+            },
+            "line": 110,
+            "name": "Enters \"DemoSource\",\"DELTA\",\"HIveConnection\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"DELTA\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"HIveConnection\"",
+                  "offset": 28
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.enters(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 484000,
+              "status": "skipped"
+            },
+            "line": 111,
+            "name": "Source should get created with \"DemoSource\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.sourceShouldGetCreatedWith(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 678000,
+              "status": "skipped"
+            },
+            "line": 112,
+            "name": "enters \"DestinationDelta\",\"DELTA\",\"HIveConnection\",\"Ignore\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DestinationDelta\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"DELTA\"",
+                  "offset": 26
+                },
+                {
+                  "val": "\"HIveConnection\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"Ignore\"",
+                  "offset": 51
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.enters(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 775000,
+              "status": "skipped"
+            },
+            "line": 113,
+            "name": "enters destination keys and value",
+            "match": {
+              "location": "com.steps.createSourceDestAndTransform.entersDestinationKeysAndValue(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "DKey",
+                  "DValue"
+                ]
+              },
+              {
+                "cells": [
+                  "mode",
+                  ":"
+                ]
+              },
+              {
+                "cells": [
+                  "escape",
+                  ":"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 388000,
+              "status": "skipped"
+            },
+            "line": 117,
+            "name": "clicks add",
+            "match": {
+              "location": "com.steps.createSourceDestAndTransform.clicksAdd()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 405000,
+              "status": "skipped"
+            },
+            "line": 118,
+            "name": "Destination with \"DestinationDelta\" should get created",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DestinationDelta\"",
+                  "offset": 17
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.destinationWithShouldGetCreated(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 419000,
+              "status": "skipped"
+            },
+            "line": 119,
+            "name": "click on \"Delete Destination\" to delete",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Delete Destination\"",
+                  "offset": 9
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.clickOnToDeleteSource(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 389000,
+              "status": "skipped"
+            },
+            "line": 120,
+            "name": "destination \"DestinationDelta\" should get deleted",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DestinationDelta\"",
+                  "offset": 12
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.destinationShouldGetDeleted(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Delta"
+          },
+          {
+            "name": "@Smoke"
+          },
+          {
+            "name": "@Reg"
+          },
+          {
+            "name": "@Positive"
+          },
+          {
+            "name": "@Delta4"
+          },
+          {
+            "name": "@TC36"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-22T08:37:48.702Z",
+        "before": [
+          {
+            "output": [
+              "--Starting the Execution--"
+            ],
+            "result": {
+              "duration": 1117441000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.beforeScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 150,
+        "name": "user is able to update delta source and validate the same at Source properties panel",
+        "description": "",
+        "id": "user-is-able-to-create-delta-source-and-destination;user-is-able-to-update-delta-source-and-validate-the-same-at-source-properties-panel;;2",
+        "after": [
+          {
+            "output": [
+              "this is my failure message"
+            ],
+            "embeddings": [
+              {
+                "data": "iVBORw0KGgoAAAANSUhEUgAABVYAAAI7CAYAAAAH9MAYAAABKGlDQ1BTa2lhAAAokX2RPUvDUBSGH4uLXyCo4OCQURS1qdUqONRULa6tQmunNE2DmNaQxo8f4ewsLv4A/4SjIOjijxAHZ99YJAGJ53LufXLec2/OuRdy88hy09DrR2GtahmN5olBymxnEJBtI/D1Gs/wsvJPXpaNddyBo/VDHoX6uY7siGe9IV/H3B7yTczhUa0ivhMveilup/gqCiLxU5zvBGHM7+Kdnn/hJHUz6faP61ob8gWqnGt4+LisUeeMU2xRni125RsU2WObCpa+iuyL1jHlBemmlAPNFiWpJUXyUpSX3GfgQ/kNJuaSWGsJbp9V5mUSWy6rhSY83gd2aP+ERuNH6nbh8wGmpM1oz3jr9xKTvclbZPRq/OnV4JA+Dquigqo22fwG+FNInH+WWzwAABE1SURBVHic7dpLagMxEEBBOeR8PuwcTRdQNjY4TmbgmXwMrtpJQtDrR5/WWmsAAAAAALyYOefDf99+cA4AAAAAgJcgrAIAAAAARMIqAAAAAEAkrAIAAAAARMIqAAAAAEAkrAIAAAAA3Nm27fBdWAUAAAAAuHGNqkdxVVgFAAAAALi4j6l7cVVYBQAAAAAY+xH1u/vTWmv99kAAAAAAAM9mzvnwXxurAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEL3/9wAAAAAAAM9g27bdt/P5/OlsYxUAAAAAYHyNp0f3wioAAAAAwMV9RN2LrcIqAAAAAMCNa0zdi6pjjHFaa62/GggAAAAA4FnMOR/+a2MVAAAAACASVgEAAAAAImEVAAAAACASVgEAAAAAImEVAAAAACD6AKUIMAL8YvurAAAAAElFTkSuQmCC",
+                "mime_type": "image/png",
+                "name": "user_is_able_to_update_delta_source_and_validate_the_same_at_Source_properties_panel"
+              }
+            ],
+            "result": {
+              "duration": 106568000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.afterScenario(io.cucumber.java.Scenario)"
+            }
+          },
+          {
+            "output": [
+              "---Closing the Browser---"
+            ],
+            "result": {
+              "duration": 67158000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.quitBrowser(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 24411412000,
+              "status": "passed"
+            },
+            "line": 127,
+            "name": "user is on DIL login page",
+            "match": {
+              "location": "com.steps.commonSteps.userIsOnDILLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[text()\u003d\u0027User name\u0027]/following-sibling::input\"}\n  (Session info: chrome\u003d90.0.4430.212)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027pihu-Latitude-5400\u0027, ip: \u0027127.0.1.1\u0027, os.name: \u0027Linux\u0027, os.arch: \u0027amd64\u0027, os.version: \u00275.11.0-40-generic\u0027, java.version: \u002711.0.11\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.212, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: /tmp/.com.google.Chrome.VkIr2u}, goog:chromeOptions: {debuggerAddress: localhost:40949}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: ac54afcd5bf1483ceb95458cbdc6c06c\n*** Element info: {Using\u003dxpath, value\u003d//*[text()\u003d\u0027User name\u0027]/following-sibling::input}\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\n\tat com.sun.proxy.$Proxy23.sendKeys(Unknown Source)\n\tat com.pagesPF.DIL_loginpage.loginToDIL(DIL_loginpage.java:36)\n\tat com.steps.commonSteps.enterUsernameAndPassword(commonSteps.java:39)\n\tat ✽.enter username and password(file:///home/pihu/dil_automation/src/test/resources/features/projects/Delta%20Source%20and%20Destination.feature:128)\n",
+              "duration": 10013765000,
+              "status": "failed"
+            },
+            "line": 128,
+            "name": "enter username and password",
+            "match": {
+              "location": "com.steps.commonSteps.enterUsernameAndPassword()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1095000,
+              "status": "skipped"
+            },
+            "line": 129,
+            "name": "clicks on createProject tab",
+            "match": {
+              "location": "com.steps.createProjectSteps.clicksOnCreateProjectTab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1875000,
+              "status": "skipped"
+            },
+            "line": 130,
+            "name": "creates project with \"AutoDIL\",\"ProjectForAutomation\",\"Test\" and engine",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AutoDIL",
+                  "offset": 22
+                },
+                {
+                  "val": "ProjectForAutomation",
+                  "offset": 32
+                },
+                {
+                  "val": "Test",
+                  "offset": 55
+                }
+              ],
+              "location": "com.steps.createProjectSteps.entersAndSelectEngine(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1958000,
+              "status": "skipped"
+            },
+            "line": 131,
+            "name": "creates a \"AutoDemoPipeline\" with \"ProjectForAutomation\",\"Test\",\"STREAMING\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AutoDemoPipeline\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"ProjectForAutomation\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"Test\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"STREAMING\"",
+                  "offset": 64
+                }
+              ],
+              "location": "com.steps.createPipeLineSteps.createsAWith(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3313000,
+              "status": "skipped"
+            },
+            "line": 132,
+            "name": "enters pipeline properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.enters_pipeline_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "PKey",
+                  "PValue"
+                ]
+              },
+              {
+                "cells": [
+                  "serviceType",
+                  "AcquireFile"
+                ]
+              },
+              {
+                "cells": [
+                  "isReturnable",
+                  "False"
+                ]
+              },
+              {
+                "cells": [
+                  "isSchemaNeededToBeRegister",
+                  "False"
+                ]
+              },
+              {
+                "cells": [
+                  "area",
+                  "area"
+                ]
+              },
+              {
+                "cells": [
+                  "flow",
+                  "flow"
+                ]
+              },
+              {
+                "cells": [
+                  "step",
+                  "step"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2571000,
+              "status": "skipped"
+            },
+            "line": 140,
+            "name": "Spark properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.spark_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "SKey",
+                  "SValue"
+                ]
+              },
+              {
+                "cells": [
+                  "spark.sql.adaptive.coalescePartitions.enabled",
+                  "true"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1579000,
+              "status": "skipped"
+            },
+            "line": 143,
+            "name": "clicks on \"Add a Source\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Add a Source\"",
+                  "offset": 10
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.clicksOn(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1178000,
+              "status": "skipped"
+            },
+            "line": 144,
+            "name": "Enters \"DemoSource\",\"DELTA\",\"HIveConnection\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"DELTA\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"HIveConnection\"",
+                  "offset": 28
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.enters(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1107000,
+              "status": "skipped"
+            },
+            "line": 145,
+            "name": "Source should get created with \"DemoSource\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.sourceShouldGetCreatedWith(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 963000,
+              "status": "skipped"
+            },
+            "line": 146,
+            "name": "edits record for \"UpdatedName\" and \"HIveConnection\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"UpdatedName\"",
+                  "offset": 17
+                },
+                {
+                  "val": "\"HIveConnection\"",
+                  "offset": 35
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.editsRecordForAnd(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 823000,
+              "status": "skipped"
+            },
+            "line": 147,
+            "name": "Updated record validated for \"UpdatedName\" and \"HIveConnection\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"UpdatedName\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"HIveConnection\"",
+                  "offset": 47
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.updatedRecordValidatedForAnd(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Delta"
+          },
+          {
+            "name": "@Smoke"
+          },
+          {
+            "name": "@Reg"
+          },
+          {
+            "name": "@Positive"
+          },
+          {
+            "name": "@Delta5"
+          },
+          {
+            "name": "@TC37"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-22T08:38:24.466Z",
+        "before": [
+          {
+            "output": [
+              "--Starting the Execution--"
+            ],
+            "result": {
+              "duration": 1142117000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.beforeScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 184,
+        "name": "user is able to update the destination and validate the same at destinationProperties",
+        "description": "",
+        "id": "user-is-able-to-create-delta-source-and-destination;user-is-able-to-update-the-destination-and-validate-the-same-at-destinationproperties;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 336000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.afterScenario(io.cucumber.java.Scenario)"
+            }
+          },
+          {
+            "output": [
+              "---Closing the Browser---"
+            ],
+            "result": {
+              "duration": 81638000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.quitBrowser(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 25212525000,
+              "status": "passed"
+            },
+            "line": 154,
+            "name": "user is on DIL login page",
+            "match": {
+              "location": "com.steps.commonSteps.userIsOnDILLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 411866000,
+              "status": "passed"
+            },
+            "line": 155,
+            "name": "enter username and password",
+            "match": {
+              "location": "com.steps.commonSteps.enterUsernameAndPassword()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1683391000,
+              "status": "passed"
+            },
+            "line": 156,
+            "name": "clicks on createProject tab",
+            "match": {
+              "location": "com.steps.createProjectSteps.clicksOnCreateProjectTab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 479211000,
+              "status": "passed"
+            },
+            "line": 157,
+            "name": "creates project with \"AutoDIL\",\"ProjectForAutomation\",\"Test\" and engine",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AutoDIL",
+                  "offset": 22
+                },
+                {
+                  "val": "ProjectForAutomation",
+                  "offset": 32
+                },
+                {
+                  "val": "Test",
+                  "offset": 55
+                }
+              ],
+              "location": "com.steps.createProjectSteps.entersAndSelectEngine(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1183517000,
+              "status": "passed"
+            },
+            "line": 158,
+            "name": "creates a \"AutoDemoPipeline\" with \"ProjectForAutomation\",\"Test\",\"STREAMING\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AutoDemoPipeline\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"ProjectForAutomation\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"Test\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"STREAMING\"",
+                  "offset": 64
+                }
+              ],
+              "location": "com.steps.createPipeLineSteps.createsAWith(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1130330000,
+              "status": "passed"
+            },
+            "line": 159,
+            "name": "enters pipeline properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.enters_pipeline_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "PKey",
+                  "PValue"
+                ]
+              },
+              {
+                "cells": [
+                  "serviceType",
+                  "AcquireFile"
+                ]
+              },
+              {
+                "cells": [
+                  "isReturnable",
+                  "False"
+                ]
+              },
+              {
+                "cells": [
+                  "isSchemaNeededToBeRegister",
+                  "False"
+                ]
+              },
+              {
+                "cells": [
+                  "area",
+                  "area"
+                ]
+              },
+              {
+                "cells": [
+                  "flow",
+                  "flow"
+                ]
+              },
+              {
+                "cells": [
+                  "step",
+                  "step"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5237990000,
+              "status": "passed"
+            },
+            "line": 167,
+            "name": "Spark properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.spark_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "SKey",
+                  "SValue"
+                ]
+              },
+              {
+                "cells": [
+                  "spark.sql.adaptive.coalescePartitions.enabled",
+                  "true"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 829762000,
+              "status": "passed"
+            },
+            "line": 170,
+            "name": "clicks on \"Add a Source\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Add a Source\"",
+                  "offset": 10
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.clicksOn(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6112555000,
+              "status": "passed"
+            },
+            "line": 171,
+            "name": "Enters \"DemoSource\",\"DELTA\",\"HIveConnection\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"DELTA\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"HIveConnection\"",
+                  "offset": 28
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.enters(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 543551000,
+              "status": "passed"
+            },
+            "line": 172,
+            "name": "Source should get created with \"DemoSource\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.sourceShouldGetCreatedWith(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1564752000,
+              "status": "passed"
+            },
+            "line": 173,
+            "name": "enters \"DEstinationAutoDelta\",\"DELTA\",\"HIveConnection\",\"Ignore\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DEstinationAutoDelta\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"DELTA\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"HIveConnection\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"Ignore\"",
+                  "offset": 55
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.enters(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10519586000,
+              "status": "passed"
+            },
+            "line": 174,
+            "name": "enters destination keys and value",
+            "match": {
+              "location": "com.steps.createSourceDestAndTransform.entersDestinationKeysAndValue(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "DKey",
+                  "DValue"
+                ]
+              },
+              {
+                "cells": [
+                  "mode",
+                  ":"
+                ]
+              },
+              {
+                "cells": [
+                  "escape",
+                  ":"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 94332000,
+              "status": "passed"
+            },
+            "line": 178,
+            "name": "clicks add",
+            "match": {
+              "location": "com.steps.createSourceDestAndTransform.clicksAdd()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5690480000,
+              "status": "passed"
+            },
+            "line": 179,
+            "name": "Destination with \"DEstinationAutoDelta\" should get created",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DEstinationAutoDelta\"",
+                  "offset": 17
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.destinationWithShouldGetCreated(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10918615000,
+              "status": "passed"
+            },
+            "line": 180,
+            "name": "edits record for \"UpdatedNameDest\" and \"HIveConnection\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"UpdatedNameDest\"",
+                  "offset": 17
+                },
+                {
+                  "val": "\"HIveConnection\"",
+                  "offset": 39
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.editsRecordForAnd(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6979126000,
+              "status": "passed"
+            },
+            "line": 181,
+            "name": "Updated record validated for \"UpdatedNameDest\" and \"HIveConnection\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"UpdatedNameDest\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"HIveConnection\"",
+                  "offset": 51
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.updatedRecordValidatedForAnd(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Delta"
+          },
+          {
+            "name": "@Smoke"
+          },
+          {
+            "name": "@Reg"
+          },
+          {
+            "name": "@Positive"
+          },
+          {
+            "name": "@Delta6"
+          },
+          {
+            "name": "@TC38"
+          }
+        ]
+      }
+    ],
+    "name": "User is able to create Delta Source and Destination",
+    "description": "",
+    "id": "user-is-able-to-create-delta-source-and-destination",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/projects/Delta%20Source%20and%20Destination.feature",
+    "tags": [
+      {
+        "name": "@Delta",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
