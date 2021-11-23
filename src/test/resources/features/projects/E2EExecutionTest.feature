@@ -3,7 +3,7 @@ Feature:Creation of a End to End Execution of the pipeline for Spark/TMPL servic
 
   #---------------------------------------E2E Execution-----------------------------------------#
 
-  @Smoke @Reg @Positive @E2EExecution1 @TC26
+  @Smoke @Reg @Positive @E2EExecution1 @TC24
   Scenario Outline: user is able to run created acquire kafka pipeline and validate same in logs
     Given user is on DIL login page
     When enter username and password
@@ -36,7 +36,7 @@ Feature:Creation of a End to End Execution of the pipeline for Spark/TMPL servic
       | ProjectName | Description          | Tag           | ExecutionType | Key | Value | Pipeline | Icon         | SourceName | SourceType | SourceConnection    | fileType | FilePath | SourceSchema | RegistryName        | Offset  | DestinationName | DestinationType | DestConnection      | SourceTopicName | DestTopicName | Status |
       | AutoDIL     | ProjectForAutomation | Test_Pipeline | STREAMING     | k1  | v1    | PipeLIne | Add a Source | DemoSource | KAFKA      | TMPLKafkaConnection | CSV      | .csv     | No_Schema    | AutoManualSchemaDND | Earlier | DemoDestination | KAFKA           | TMPLKafkaConnection | topic1          | topic2        | READY  |
 
-  @Smoke @Reg @Positive @E2EExecution2 @TC27
+  @Smoke @Reg @Positive @E2EExecution2 @TC25
   Scenario Outline: user is able to run created acquire File pipeline and validate same in logs
     Given user is on DIL login page
     When enter username and password

@@ -33,6 +33,8 @@ public class Project_BuilderPage {
     public void editProjectDetailsOnProjectBuilder(String tagName, String Description) throws InterruptedException {
         CommonFunction.waitForElementToAppear(driver, projectspage.existingProjectOnProjectListingPage);
         projectspage.existingProjectOnProjectListingPage.click();
+        CommonFunction.waitForElementToAppear(driver,projectspage.builderTabOnProjectListingPage);
+        projectspage.builderTabOnProjectListingPage.click();
         CommonFunction.clickByHoveringMouse(driver, editProjectToolTipOnProjectBuilder);
         CommonFunction.clickByHoveringMouse(driver, deleteTagToolTipOnProjectBuilderPage);
         textFieldTagName.sendKeys(Keys.ENTER);
