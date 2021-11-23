@@ -130,7 +130,7 @@ public class PipeLIne_BuilderPage {
         CommonFunction.scrollToElement(driver, status);
     }
 
-    public void selectManualSchemaConnectionForFile(String schemaName) throws InterruptedException, IOException {
+    public void selectManualSchemaConnectionForFile(String schemaName) {
         try {
             if (manualSchemaConnectionDropDown.isDisplayed()) {
                 CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, manualSchemaConnection, schemaName));
@@ -275,19 +275,19 @@ public class PipeLIne_BuilderPage {
         chooseDatabase.click();
 
         CommonFunction.waitForElementToAppear(driver, textFieldDatabaseName);
-        textFieldDatabaseName.sendKeys(dbName);
+        CommonFunction.enterText(textFieldDatabaseName, dbName);
         (CommonFunction.getCustomisedWebElement(driver, databaseName, dbName)).click();
 
         CommonFunction.waitForElementToAppear(driver, textFieldDatabaseSchema);
-        textFieldDatabaseSchema.sendKeys(dbName);
+        CommonFunction.enterText(textFieldDatabaseSchema, dbSchema);
         (CommonFunction.getCustomisedWebElement(driver, databaseSchema, dbSchema)).click();
 
         CommonFunction.waitForElementToAppear(driver, textFieldDatabaseTable);
-        textFieldDatabaseTable.sendKeys(dbName);
+        CommonFunction.enterText(textFieldDatabaseTable, dbTable);
         (CommonFunction.getCustomisedWebElement(driver, databaseTable, dbTable)).click();
 
         CommonFunction.waitForElementToAppear(driver, textFieldDatabaseColumn);
-        textFieldDatabaseColumn.sendKeys(dbName);
+        CommonFunction.enterText(textFieldDatabaseColumn, dbCol);
         (CommonFunction.getCustomisedWebElement(driver, databaseCol1, dbCol)).click();
 
         CommonFunction.waitForElementToBeClickable(driver, btnDatabaseConfigSave);
@@ -295,14 +295,15 @@ public class PipeLIne_BuilderPage {
 
     }
 
-    public void editRDBMSSourceDetails(String dbName, String dbSchema, String dbTable,String dbCol) throws InterruptedException {
+    public void editRDBMSSourceDetails(String dbName, String dbSchema, String dbTable, String dbCol) throws InterruptedException {
         CommonFunction.waitForElementToAppear(driver, btnEditSource);
         btnEditSource.click();
-        enterRDBMS_DBConfigurations(dbName,dbSchema,dbTable,dbCol);
+        enterRDBMS_DBConfigurations(dbName, dbSchema, dbTable, dbCol);
         CommonFunction.waitForSomeTime();
         CommonFunction.waitForElementToBeClickable(driver, btnEditSourceSave);
         btnEditSourceSave.click();
     }
+
 }
 
 

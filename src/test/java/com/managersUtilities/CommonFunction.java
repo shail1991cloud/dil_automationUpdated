@@ -82,6 +82,16 @@ public class CommonFunction {
         executor.executeScript("arguments[0].click();", element);
     }
 
+    /**
+     * @method Enter text into text box
+     */
+    public static void enterText(WebElement element, String TextToEnter) throws InterruptedException {
+        waitForMinimalTime();
+        element.clear();
+        element.sendKeys(TextToEnter);
+    }
+
+
     public static void scrollOnElement(WebDriver driver,WebElement element) throws IOException, InterruptedException {
 
         Point location = element.getLocation();

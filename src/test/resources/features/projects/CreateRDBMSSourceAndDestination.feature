@@ -27,7 +27,6 @@ Feature: User is able to create RDBMS Source and Destination
       | ProjectName | Description          | Tag  | Pipeline         | ExecutionType | Icon         | SourceName | SourceType | SourceConnection | DatabaseName | DatabaseSchema | DatabaseTable     | DataBaseColumn |
       | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | RDBMS      | RDBMSConnection  | landing_dil  | DEFAULT        | destinationBigInt | m_bigint       |
 
-
   @Smoke @Reg @Positive @E2EExecution2
   Scenario Outline: user is able to create RDBMS Destination
     Given user is on DIL login page
@@ -65,7 +64,6 @@ Feature: User is able to create RDBMS Source and Destination
       | ProjectName | Description          | Tag  | Pipeline         | ExecutionType | Icon         | SourceName | SourceType | SourceConnection | DestinationName      | DestinationType | DestConnection  | DatabaseName | DatabaseSchema | DatabaseTable     | DataBaseColumn | saveMode |
       | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | RDBMS      | RDBMSConnection  | DestinationAutoRDBMS | RDBMS           | RDBMSConnection | landing_dil  | DEFAULT        | destinationBigInt | m_bigint       | Ignore   |
 
-
   @Smoke @Reg @Positive @E2EExecution3
   Scenario Outline: user is able to delete RDBMS source
     Given user is on DIL login page
@@ -99,11 +97,11 @@ Feature: User is able to create RDBMS Source and Destination
   @Smoke @Reg @Positive @E2EExecution4
   Scenario Outline: user is able to delete RDBMS Destination
     Given user is on DIL login page
-    When enter username and password
+    And enter username and password
     And  clicks on createProject tab
-    When creates project with "<ProjectName>","<Description>","<Tag>" and engine
+    And creates project with "<ProjectName>","<Description>","<Tag>" and engine
     And  creates a "<Pipeline>" with "<Description>","<Tag>","<ExecutionType>"
-    When enters pipeline properties
+    And enters pipeline properties
       | PKey                       | PValue      |
       | serviceType                | AcquireFile |
       | isReturnable               | False       |
@@ -119,7 +117,7 @@ Feature: User is able to create RDBMS Source and Destination
     And  Enters "<DatabaseName>" "<DatabaseSchema>" "<DatabaseTable>" "<DataBaseColumn>" for Database configuration
     And  clicks add button of "Source"
     And Source should get created with "<SourceName>"
-    When Select flow as "Destination"
+    And Select flow as "Destination"
     And Enters "<DestinationName>","<DestinationType>","<DestConnection>" for RDBMS Connection
     And Enters "<DatabaseName>" "<DatabaseSchema>" "<DatabaseTable>" "<DataBaseColumn>" for Database configuration
     And Enter Save mode "<saveMode>"
@@ -128,8 +126,8 @@ Feature: User is able to create RDBMS Source and Destination
       | mode   | :      |
       | escape | :      |
     And  clicks add button of "Destination"
-    Then Destination with "<DestinationName>" should get created
-    And  click on "<DeleteButton>" to delete
+    And Destination with "<DestinationName>" should get created
+    When  click on "<DeleteButton>" to delete
     Then destination "<DestinationName>" should get deleted
     Examples:
       | ProjectName | Description          | Tag  | Pipeline         | ExecutionType | Icon         | SourceName | SourceType | SourceConnection | DestinationName      | DestinationType | DestConnection  | saveMode | DeleteButton       | DatabaseName | DatabaseSchema | DatabaseTable     | DataBaseColumn | saveMode |
@@ -168,15 +166,38 @@ Feature: User is able to create RDBMS Source and Destination
   @Positive @CDestination-Test1
   Scenario Outline: user is able to edit RDBMS destination and validate the same
     Given user is on DIL login page
-    When enter username and password
+    And enter username and password
     And  clicks on createProject tab
-    When creates project with "<ProjectName>","<Description>","<Tag>" and engine
-    And  creates a "<Pipeline>" having "<Description>" and "<Tag>"
+    And creates project with "<ProjectName>","<Description>","<Tag>" and engine
+    And  creates a "<Pipeline>" with "<Description>","<Tag>","<ExecutionType>"
+    And enters pipeline properties
+      | PKey                       | PValue      |
+      | serviceType                | AcquireFile |
+      | isReturnable               | False       |
+      | isSchemaNeededToBeRegister | False       |
+      | area                       | area        |
+      | flow                       | flow        |
+      | step                       | step        |
+    And  Spark properties
+      | SKey                                          | SValue |
+      | spark.sql.adaptive.coalescePartitions.enabled | true   |
     And  clicks on "<Icon>"
-    When Enters "<SourceName>","<SourceType>","<SourceConnection>","<fileType>","<FilePath>","<Separator>","<sourceSchema>","<SchemaValue>"
-    Then Source should get created with "<SourceName>"
-    When enters "<DestinationName>","<DestinationType>","<DestConnection>","<fileType>" ,"<FilePath>","<TopicName>" and click add
-    Then Destination with "<DestinationName>" should get created
+    And Enters "<SourceName>","<SourceType>","<SourceConnection>" for RDBMS Connection
+    And  Enters "<DatabaseName>" "<DatabaseSchema>" "<DatabaseTable>" "<DataBaseColumn>" for Database configuration
+    And  clicks add button of "Source"
+    And Source should get created with "<SourceName>"
+    And Select flow as "Destination"
+    And Enters "<DestinationName>","<DestinationType>","<DestConnection>" for RDBMS Connection
+    And Enters "<DatabaseName>" "<DatabaseSchema>" "<DatabaseTable>" "<DataBaseColumn>" for Database configuration
+    And Enter Save mode "<saveMode>"
+    And enters destination keys and value
+      | DKey   | DValue |
+      | mode   | :      |
+      | escape | :      |
+    And clicks add button of "Destination"
+    And Destination with "<DestinationName>" should get created
+    When Update "<updatedDestinationName>" for RDBMS connection
+    Then Validate updated "<updatedDestinationName>" for RDBMS Destination
     Examples:
-      | ProjectName | Description          | Tag           | Pipeline | Icon         | SourceName | SourceType  | SourceConnection       | fileType | FilePath | Separator | sourceSchema  | SchemaValue | DestinationName | DestinationType | DestConnection         | TopicName |
-      | AutoDIL     | ProjectForAutomation | Test_Pipeline | PipeLIne | Add a Source | DemoSource | File System | AUTOMATION_DONOTDELETE | CSV      | .csv     | ,         | Manual Schema | H_JSON      | DemoDestination | File System     | AUTOMATION_DONOTDELETE | CDR       |
+      | ProjectName | Description          | Tag  | Pipeline         | ExecutionType | Icon         | SourceName | SourceType | SourceConnection | DestinationName      | updatedDestinationName | DestinationType | DestConnection  | saveMode | DatabaseName | DatabaseSchema | DatabaseTable     | DataBaseColumn | saveMode |
+      | AutoDIL_1   | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | RDBMS      | RDBMSConnection  | DestinationAutoRDBMS | New_DestName           | RDBMS           | RDBMSConnection | Ignore   | landing_dil  | DEFAULT        | destinationBigInt | m_bigint       | Ignore   |

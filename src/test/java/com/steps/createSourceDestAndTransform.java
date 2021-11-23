@@ -177,8 +177,8 @@ public class createSourceDestAndTransform extends Baseclass {
     }
 
     @And("Enters {string} {string} {string} {string} for Database configuration")
-    public void entersForDatabaseConfiguration(String dataBaseName, String databaseSchema, String databaseTable, String databaseCol)  throws InterruptedException {
-        pipeLIne_builderPage.enterRDBMS_DBConfigurations(dataBaseName,databaseSchema,databaseTable,databaseCol);
+    public void entersForDatabaseConfiguration(String dataBaseName, String databaseSchema, String databaseTable, String databaseCol) throws InterruptedException {
+        pipeLIne_builderPage.enterRDBMS_DBConfigurations(dataBaseName, databaseSchema, databaseTable, databaseCol);
     }
 
     @And("Select flow as {string}")
@@ -198,8 +198,8 @@ public class createSourceDestAndTransform extends Baseclass {
     }
 
     @When("Edit {string} {string} {string} {string} fields for Source")
-    public void editFieldsForSource(String updatedDatabase,String updatedSchema, String updatedTableName, String updatedColumnName) throws InterruptedException {
-        pipeLIne_builderPage.editRDBMSSourceDetails(updatedDatabase,updatedSchema,updatedTableName,updatedColumnName);
+    public void editFieldsForSource(String updatedDatabase, String updatedSchema, String updatedTableName, String updatedColumnName) throws InterruptedException {
+        pipeLIne_builderPage.editRDBMSSourceDetails(updatedDatabase, updatedSchema, updatedTableName, updatedColumnName);
     }
 
     @Then("Validate updated {string},{string},{string} RDBMS Source")
@@ -207,5 +207,25 @@ public class createSourceDestAndTransform extends Baseclass {
         Assert.assertTrue(CommonFunction.getCustomisedWebElement(driver, pipeLIne_builderPage.updatedDababaseName, updatedDatabase).isDisplayed());
         Assert.assertTrue(CommonFunction.getCustomisedWebElement(driver, pipeLIne_builderPage.updatedDababaseTableName, updatedTableName).isDisplayed());
         Assert.assertTrue(CommonFunction.getCustomisedWebElement(driver, pipeLIne_builderPage.updatedDababaseColName, updatedColumnName).isDisplayed());
+    }
+
+    @When("Update {string} for RDBMS connection")
+    public void updateForRDBMSConnection(String inputText) throws InterruptedException {
+        CommonFunction.waitForElementToAppear(driver, pipeLIne_builderPage.btnEditSource);
+        pipeLIne_builderPage.btnEditSource.click();
+        CommonFunction.waitForSomeTime();
+        CommonFunction.enterText(pipeLIne_builderPage.FieldEnterName, inputText);
+        CommonFunction.waitForElementToBeClickable(driver, pipeLIne_builderPage.btnDatabaseConfigSave);
+        pipeLIne_builderPage.btnDatabaseConfigSave.click();
+
+    }
+
+    @Then("Validate updated {string} for RDBMS Destination")
+    public void validateUpdatedForRDBMSDestination(String inputText) throws InterruptedException {
+        CommonFunction.waitForSomeTime();
+        Assert.assertTrue(CommonFunction.getCustomisedWebElement(driver, pipeLIne_builderPage.destinationName, inputText).isDisplayed());
+        (CommonFunction.getCustomisedWebElement(driver, pipeLIne_builderPage.destinationName, inputText)).click();
+        CommonFunction.waitForSomeTime();
+        Assert.assertTrue(CommonFunction.getCustomisedWebElement(driver, pipeLIne_builderPage.updatedDababaseName, inputText).isDisplayed());
     }
 }
