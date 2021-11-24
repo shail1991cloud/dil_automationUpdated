@@ -115,7 +115,7 @@ public class createPipeLineSteps extends Baseclass {
     @When("enters pipeline properties")
     public void enters_pipeline_properties(io.cucumber.datatable.DataTable pProperties) throws InterruptedException {
         for (Map<Object, Object> pProp : pProperties.asMaps(String.class, String.class)) {
-            if (pProp.get("PKey").equals("serviceType") || pProp.get("PKey").equals("isSchemaNeededToBeRegister")|| pProp.get("PKey").equals("isReturnable")) {
+            if (pProp.get("PKey").equals("serviceType") || pProp.get("PKey").equals("isSchemaNeededToBeRegister")|| pProp.get("PKey").equals("isReturnable")|| pProp.get("PKey").equals("header")) {
                 pipeLIne_listingPage.keysForPipeLine.get(0).sendKeys((CharSequence) pProp.get("PKey"));
                 pipeLIne_listingPage.valuesForPipeLine.get(0).sendKeys((CharSequence) pProp.get("PValue"));
                 CommonFunction.waitForElementToBeClickable(driver, pipeLIne_listingPage.buttonsAdd.get(0));

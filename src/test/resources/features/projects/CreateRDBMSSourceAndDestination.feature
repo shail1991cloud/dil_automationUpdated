@@ -1,6 +1,6 @@
 Feature: User is able to create RDBMS Source and Destination
 
-  @Smoke @Reg @Positive @E2EExecution2 @TC44
+  @Smoke @Reg @Positive @E2EExecution2 @TC18
   Scenario Outline: user is able to create RDBMS source
     Given user is on DIL login page
     And enter username and password
@@ -27,7 +27,7 @@ Feature: User is able to create RDBMS Source and Destination
       | ProjectName | Description          | Tag  | Pipeline         | ExecutionType | Icon         | SourceName | SourceType | SourceConnection | DatabaseName | DatabaseSchema | DatabaseTable     | DataBaseColumn |
       | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | RDBMS      | RDBMSConnection  | landing_dil  | DEFAULT        | destinationBigInt | m_bigint       |
 
-  @Smoke @Reg @Positive @E2EExecution2
+  @Smoke @Reg @Positive @E2EExecution2 @TC19
   Scenario Outline: user is able to create RDBMS Destination
     Given user is on DIL login page
     And enter username and password
@@ -64,7 +64,7 @@ Feature: User is able to create RDBMS Source and Destination
       | ProjectName | Description          | Tag  | Pipeline         | ExecutionType | Icon         | SourceName | SourceType | SourceConnection | DestinationName      | DestinationType | DestConnection  | DatabaseName | DatabaseSchema | DatabaseTable     | DataBaseColumn | saveMode |
       | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | RDBMS      | RDBMSConnection  | DestinationAutoRDBMS | RDBMS           | RDBMSConnection | landing_dil  | DEFAULT        | destinationBigInt | m_bigint       | Ignore   |
 
-  @Smoke @Reg @Positive @E2EExecution3 @TC45
+  @Smoke @Reg @Positive @E2EExecution3 @TC20
   Scenario Outline: user is able to delete RDBMS source
     Given user is on DIL login page
     And enter username and password
@@ -94,7 +94,7 @@ Feature: User is able to create RDBMS Source and Destination
       | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | RDBMS      | RDBMSConnection  | Delete Source | landing_dil  | DEFAULT        | destinationBigInt | m_bigint       |
 
 
-  @Smoke @Reg @Positive @E2EExecution4 @TC46
+  @Smoke @Reg @Positive @E2EExecution4 @TC21
   Scenario Outline: user is able to delete RDBMS Destination
     Given user is on DIL login page
     And enter username and password
@@ -133,7 +133,7 @@ Feature: User is able to create RDBMS Source and Destination
       | ProjectName | Description          | Tag  | Pipeline         | ExecutionType | Icon         | SourceName | SourceType | SourceConnection | DestinationName      | DestinationType | DestConnection  | saveMode | DeleteButton       | DatabaseName | DatabaseSchema | DatabaseTable     | DataBaseColumn | saveMode |
       | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | RDBMS      | RDBMSConnection  | DestinationAutoRDBMS | RDBMS           | RDBMSConnection | Ignore   | Delete Destination | landing_dil  | DEFAULT        | destinationBigInt | m_bigint       | Ignore   |
 
-  @Positive @CSource-Test2 @TC47
+  @Positive @CSource-Test2 @TC23
   Scenario Outline: user is able to edit RDBMS source details and validate the same
     Given user is on DIL login page
     And enter username and password
@@ -163,7 +163,7 @@ Feature: User is able to create RDBMS Source and Destination
       | ProjectName | Description          | Tag  | Pipeline         | ExecutionType | Icon         | SourceName | SourceType | SourceConnection | DatabaseName | DatabaseSchema | DatabaseTable     | DataBaseColumn | UpdatedDatabase | UpdatedDatabaseTable | UpdatedDataBaseColumn |
       | AutoDIL     | ProjectForAutomation | Test | AutoDemoPipeline | STREAMING     | Add a Source | DemoSource | RDBMS      | RDBMSConnection  | landing_dil  | DEFAULT        | destinationBigInt | m_bigint       | test_dil        | testDataSource       | m_id                  |
 
-  @Positive @CDestination-Test1  @TC48
+  @Positive @CDestination-Test1  @TC24
   Scenario Outline: user is able to edit RDBMS destination and validate the same
     Given user is on DIL login page
     And enter username and password
