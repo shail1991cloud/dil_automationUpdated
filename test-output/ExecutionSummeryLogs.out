@@ -1916,3 +1916,364 @@
 2021-11-21 18:11:590 INFO  createSourceDestAndTransform:164 - Destination properties entered
 2021-11-21 18:11:752 INFO  createSourceDestAndTransform:146 - Button add clicked for Destination creation
 2021-11-21 18:11:323 INFO  createSourceDestAndTransform:118 - DRecord validated-->DestinationAutoRDBMS
+2021-11-23 12:11:579 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-23 12:11:893 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-23 12:11:893 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-23 12:11:525 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-23 12:11:137 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test
+2021-11-23 12:11:212 INFO  createProjectSteps:110 - PipeLines details entered-->AutoDemoPipeline--ProjectForAutomation--Test
+2021-11-23 12:11:401 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 12:11:576 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 12:11:731 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 12:11:884 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 12:11:58 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 12:11:200 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 12:11:411 INFO  createProjectSteps:147 - Spark properties entered
+2021-11-23 12:11:250 INFO  createSourceDestAndTransform:48 - Icon is clicked-->Add a Source
+2021-11-23 12:11:978 INFO  createSourceDestAndTransform:146 - Button add clicked for Source creation
+2021-11-23 12:11:476 INFO  createSourceDestAndTransform:57 - DRecord validated-->DemoSource
+2021-11-23 12:11:815 INFO  createSourceDestAndTransform:57 - DRecord validated-->DemoSource
+2021-11-23 14:11:142 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-23 14:11:789 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-23 14:11:790 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-23 14:11:594 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-23 14:11:522 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test
+2021-11-23 14:11:991 INFO  createProjectSteps:110 - PipeLines details entered-->AutoDemoPipeline--ProjectForAutomation--Test
+2021-11-23 14:11:388 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 14:11:651 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 14:11:843 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 14:11:71 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 14:11:264 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 14:11:477 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 14:11:822 INFO  createProjectSteps:147 - Spark properties entered
+2021-11-23 14:11:708 INFO  createSourceDestAndTransform:48 - Icon is clicked-->Add a Source
+2021-11-23 14:11:893 INFO  createSourceDestAndTransform:146 - Button add clicked for Source creation
+2021-11-23 14:11:403 INFO  createSourceDestAndTransform:57 - DRecord validated-->DemoSource
+2021-11-23 14:11:126 INFO  createSourceDestAndTransform:164 - Destination properties entered
+2021-11-23 14:11:199 INFO  createSourceDestAndTransform:146 - Button add clicked for Destination creation
+2021-11-23 14:11:799 INFO  createSourceDestAndTransform:118 - DRecord validated-->DestinationAutoRDBMS
+2021-11-23 14:11:89 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-23 14:11:651 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-23 14:11:651 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-23 14:11:07 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-23 14:11:787 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test
+2021-11-23 14:11:437 INFO  createProjectSteps:110 - PipeLines details entered-->AutoDemoPipeline--ProjectForAutomation--Test
+2021-11-23 14:11:840 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 14:11:130 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 14:11:312 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 14:11:493 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 14:11:753 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 14:11:15 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 14:11:317 INFO  createProjectSteps:147 - Spark properties entered
+2021-11-23 14:11:73 INFO  createSourceDestAndTransform:48 - Icon is clicked-->Add a Source
+2021-11-23 14:11:682 INFO  createSourceDestAndTransform:146 - Button add clicked for Source creation
+2021-11-23 14:11:171 INFO  createSourceDestAndTransform:57 - DRecord validated-->DemoSource
+2021-11-23 14:11:185 INFO  createSourceDestAndTransform:164 - Destination properties entered
+2021-11-23 14:11:272 INFO  createSourceDestAndTransform:146 - Button add clicked for Destination creation
+2021-11-23 14:11:903 INFO  createSourceDestAndTransform:118 - DRecord validated-->DestinationAutoRDBMS
+2021-11-23 14:11:222 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-23 14:11:884 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-23 14:11:885 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-23 14:11:691 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-23 14:11:508 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test
+2021-11-23 14:11:18 INFO  createProjectSteps:110 - PipeLines details entered-->AutoDemoPipeline--ProjectForAutomation--Test
+2021-11-23 14:11:398 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 14:11:631 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 14:11:958 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 14:11:184 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 14:11:379 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 14:11:599 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 14:11:06 INFO  createProjectSteps:147 - Spark properties entered
+2021-11-23 14:11:812 INFO  createSourceDestAndTransform:48 - Icon is clicked-->Add a Source
+2021-11-23 14:11:854 INFO  createSourceDestAndTransform:146 - Button add clicked for Source creation
+2021-11-23 14:11:348 INFO  createSourceDestAndTransform:57 - DRecord validated-->DemoSource
+2021-11-23 14:11:668 INFO  createSourceDestAndTransform:164 - Destination properties entered
+2021-11-23 14:11:810 INFO  createSourceDestAndTransform:146 - Button add clicked for Destination creation
+2021-11-23 14:11:342 INFO  createSourceDestAndTransform:118 - DRecord validated-->DestinationAutoRDBMS
+2021-11-23 15:11:161 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-23 15:11:480 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-23 15:11:481 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-23 15:11:103 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-23 15:11:542 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test
+2021-11-23 15:11:613 INFO  createProjectSteps:110 - PipeLines details entered-->AutoDemoPipeline--ProjectForAutomation--Test
+2021-11-23 15:11:827 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:102 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:312 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:438 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:574 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:695 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:910 INFO  createProjectSteps:147 - Spark properties entered
+2021-11-23 15:11:697 INFO  createSourceDestAndTransform:48 - Icon is clicked-->Add a Source
+2021-11-23 15:11:499 INFO  createSourceDestAndTransform:146 - Button add clicked for Source creation
+2021-11-23 15:11:990 INFO  createSourceDestAndTransform:57 - DRecord validated-->DemoSource
+2021-11-23 15:11:195 INFO  createSourceDestAndTransform:164 - Destination properties entered
+2021-11-23 15:11:383 INFO  createSourceDestAndTransform:146 - Button add clicked for Destination creation
+2021-11-23 15:11:961 INFO  createSourceDestAndTransform:118 - DRecord validated-->DestinationAutoRDBMS
+2021-11-23 15:11:06 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-23 15:11:322 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-23 15:11:323 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-23 15:11:127 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-23 15:11:629 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test
+2021-11-23 15:11:07 INFO  createProjectSteps:110 - PipeLines details entered-->AutoDemoPipeline--ProjectForAutomation--Test
+2021-11-23 15:11:239 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:371 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:556 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:710 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:826 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:950 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:189 INFO  createProjectSteps:147 - Spark properties entered
+2021-11-23 15:11:974 INFO  createSourceDestAndTransform:48 - Icon is clicked-->Add a Source
+2021-11-23 15:11:665 INFO  createSourceDestAndTransform:146 - Button add clicked for Source creation
+2021-11-23 15:11:153 INFO  createSourceDestAndTransform:57 - DRecord validated-->DemoSource
+2021-11-23 15:11:348 INFO  createSourceDestAndTransform:164 - Destination properties entered
+2021-11-23 15:11:421 INFO  createSourceDestAndTransform:146 - Button add clicked for Destination creation
+2021-11-23 15:11:962 INFO  createSourceDestAndTransform:118 - DRecord validated-->DestinationAutoRDBMS
+2021-11-23 15:11:262 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-23 15:11:592 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-23 15:11:593 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-23 15:11:230 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-23 15:11:699 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test
+2021-11-23 15:11:902 INFO  createProjectSteps:110 - PipeLines details entered-->AutoDemoPipeline--ProjectForAutomation--Test
+2021-11-23 15:11:88 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:242 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:367 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:491 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:665 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:868 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:113 INFO  createProjectSteps:147 - Spark properties entered
+2021-11-23 15:11:946 INFO  createSourceDestAndTransform:48 - Icon is clicked-->Add a Source
+2021-11-23 15:11:543 INFO  createSourceDestAndTransform:146 - Button add clicked for Source creation
+2021-11-23 15:11:35 INFO  createSourceDestAndTransform:57 - DRecord validated-->DemoSource
+2021-11-23 15:11:399 INFO  createSourceDestAndTransform:164 - Destination properties entered
+2021-11-23 15:11:541 INFO  createSourceDestAndTransform:146 - Button add clicked for Destination creation
+2021-11-23 15:11:181 INFO  createSourceDestAndTransform:118 - DRecord validated-->DestinationAutoRDBMS
+2021-11-23 15:11:858 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-23 15:11:252 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-23 15:11:252 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-23 15:11:146 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-23 15:11:624 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test
+2021-11-23 15:11:693 INFO  createProjectSteps:110 - PipeLines details entered-->AutoDemoPipeline--ProjectForAutomation--Test
+2021-11-23 15:11:887 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:24 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:159 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:448 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:696 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:951 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:246 INFO  createProjectSteps:147 - Spark properties entered
+2021-11-23 15:11:46 INFO  createSourceDestAndTransform:48 - Icon is clicked-->Add a Source
+2021-11-23 15:11:984 INFO  createSourceDestAndTransform:146 - Button add clicked for Source creation
+2021-11-23 15:11:550 INFO  createSourceDestAndTransform:57 - DRecord validated-->DemoSource
+2021-11-23 15:11:644 INFO  createSourceDestAndTransform:164 - Destination properties entered
+2021-11-23 15:11:726 INFO  createSourceDestAndTransform:146 - Button add clicked for Destination creation
+2021-11-23 15:11:351 INFO  createSourceDestAndTransform:118 - DRecord validated-->DestinationAutoRDBMS
+2021-11-23 15:11:564 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-23 15:11:893 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-23 15:11:893 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-23 15:11:645 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-23 15:11:73 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test
+2021-11-23 15:11:356 INFO  createProjectSteps:110 - PipeLines details entered-->AutoDemoPipeline--ProjectForAutomation--Test
+2021-11-23 15:11:594 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:734 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:867 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:998 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:126 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:268 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 15:11:480 INFO  createProjectSteps:147 - Spark properties entered
+2021-11-23 15:11:312 INFO  createSourceDestAndTransform:48 - Icon is clicked-->Add a Source
+2021-11-23 15:11:83 INFO  createSourceDestAndTransform:146 - Button add clicked for Source creation
+2021-11-23 15:11:578 INFO  createSourceDestAndTransform:57 - DRecord validated-->DemoSource
+2021-11-23 15:11:897 INFO  createSourceDestAndTransform:164 - Destination properties entered
+2021-11-23 15:11:977 INFO  createSourceDestAndTransform:146 - Button add clicked for Destination creation
+2021-11-23 15:11:505 INFO  createSourceDestAndTransform:118 - DRecord validated-->DestinationAutoRDBMS
+2021-11-23 16:11:500 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-23 16:11:879 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-23 16:11:880 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-23 16:11:632 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-23 16:11:259 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test
+2021-11-23 16:11:515 INFO  createProjectSteps:110 - PipeLines details entered-->AutoDemoPipeline--ProjectForAutomation--Test
+2021-11-23 16:11:824 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:966 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:113 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:249 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:385 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:635 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:06 INFO  createProjectSteps:147 - Spark properties entered
+2021-11-23 16:11:882 INFO  createSourceDestAndTransform:48 - Icon is clicked-->Add a Source
+2021-11-23 16:11:679 INFO  createSourceDestAndTransform:146 - Button add clicked for Source creation
+2021-11-23 16:11:161 INFO  createSourceDestAndTransform:57 - DRecord validated-->DemoSource
+2021-11-23 16:11:496 INFO  createSourceDestAndTransform:164 - Destination properties entered
+2021-11-23 16:11:590 INFO  createSourceDestAndTransform:146 - Button add clicked for Destination creation
+2021-11-23 16:11:204 INFO  createSourceDestAndTransform:118 - DRecord validated-->DestinationAutoRDBMS
+2021-11-23 16:11:480 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-23 16:11:97 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-23 16:11:97 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-23 16:11:846 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-23 16:11:766 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL_1,ProjectForAutomation and Test
+2021-11-23 16:11:257 INFO  createProjectSteps:110 - PipeLines details entered-->AutoDemoPipeline--ProjectForAutomation--Test
+2021-11-23 16:11:699 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:913 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:122 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:323 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:478 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:630 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:948 INFO  createProjectSteps:147 - Spark properties entered
+2021-11-23 16:11:701 INFO  createSourceDestAndTransform:48 - Icon is clicked-->Add a Source
+2021-11-23 16:11:276 INFO  createSourceDestAndTransform:146 - Button add clicked for Source creation
+2021-11-23 16:11:816 INFO  createSourceDestAndTransform:57 - DRecord validated-->DemoSource
+2021-11-23 16:11:378 INFO  createSourceDestAndTransform:164 - Destination properties entered
+2021-11-23 16:11:483 INFO  createSourceDestAndTransform:146 - Button add clicked for Destination creation
+2021-11-23 16:11:20 INFO  createSourceDestAndTransform:118 - DRecord validated-->DestinationAutoRDBMS
+2021-11-23 16:11:653 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-23 16:11:996 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-23 16:11:996 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-23 16:11:826 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-23 16:11:265 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL_1,ProjectForAutomation and Test
+2021-11-23 16:11:434 INFO  createProjectSteps:110 - PipeLines details entered-->AutoDemoPipeline--ProjectForAutomation--Test
+2021-11-23 16:11:702 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:947 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:77 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:325 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:560 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:796 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:39 INFO  createProjectSteps:147 - Spark properties entered
+2021-11-23 16:11:899 INFO  createSourceDestAndTransform:48 - Icon is clicked-->Add a Source
+2021-11-23 16:11:782 INFO  createSourceDestAndTransform:146 - Button add clicked for Source creation
+2021-11-23 16:11:341 INFO  createSourceDestAndTransform:57 - DRecord validated-->DemoSource
+2021-11-23 16:11:902 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-23 16:11:272 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-23 16:11:273 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-23 16:11:818 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-23 16:11:318 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL_1,ProjectForAutomation and Test
+2021-11-23 16:11:461 INFO  createProjectSteps:110 - PipeLines details entered-->AutoDemoPipeline--ProjectForAutomation--Test
+2021-11-23 16:11:676 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:827 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:951 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:195 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:345 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:521 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:749 INFO  createProjectSteps:147 - Spark properties entered
+2021-11-23 16:11:584 INFO  createSourceDestAndTransform:48 - Icon is clicked-->Add a Source
+2021-11-23 16:11:843 INFO  createSourceDestAndTransform:146 - Button add clicked for Source creation
+2021-11-23 16:11:404 INFO  createSourceDestAndTransform:57 - DRecord validated-->DemoSource
+2021-11-23 16:11:277 INFO  createSourceDestAndTransform:164 - Destination properties entered
+2021-11-23 16:11:337 INFO  createSourceDestAndTransform:146 - Button add clicked for Destination creation
+2021-11-23 16:11:898 INFO  createSourceDestAndTransform:118 - DRecord validated-->DestinationAutoRDBMS
+2021-11-23 16:11:677 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-23 16:11:08 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-23 16:11:08 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-23 16:11:604 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-23 16:11:190 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL_1,ProjectForAutomation and Test
+2021-11-23 16:11:308 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-23 16:11:653 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-23 16:11:653 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-23 16:11:86 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-23 16:11:607 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL_1,ProjectForAutomation and Test
+2021-11-23 16:11:855 INFO  createProjectSteps:110 - PipeLines details entered-->AutoDemoPipeline--ProjectForAutomation--Test
+2021-11-23 16:11:110 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:255 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:388 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:506 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:726 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:943 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:291 INFO  createProjectSteps:147 - Spark properties entered
+2021-11-23 16:11:149 INFO  createSourceDestAndTransform:48 - Icon is clicked-->Add a Source
+2021-11-23 16:11:852 INFO  createSourceDestAndTransform:146 - Button add clicked for Source creation
+2021-11-23 16:11:402 INFO  createSourceDestAndTransform:57 - DRecord validated-->DemoSource
+2021-11-23 16:11:756 INFO  createSourceDestAndTransform:164 - Destination properties entered
+2021-11-23 16:11:848 INFO  createSourceDestAndTransform:146 - Button add clicked for Destination creation
+2021-11-23 16:11:392 INFO  createSourceDestAndTransform:118 - DRecord validated-->DestinationAutoRDBMS
+2021-11-23 16:11:274 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-23 16:11:600 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-23 16:11:600 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-23 16:11:260 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-23 16:11:691 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL_1,ProjectForAutomation and Test
+2021-11-23 16:11:841 INFO  createProjectSteps:110 - PipeLines details entered-->AutoDemoPipeline--ProjectForAutomation--Test
+2021-11-23 16:11:41 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:179 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:418 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:717 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:942 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:82 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:318 INFO  createProjectSteps:147 - Spark properties entered
+2021-11-23 16:11:117 INFO  createSourceDestAndTransform:48 - Icon is clicked-->Add a Source
+2021-11-23 16:11:768 INFO  createSourceDestAndTransform:146 - Button add clicked for Source creation
+2021-11-23 16:11:257 INFO  createSourceDestAndTransform:57 - DRecord validated-->DemoSource
+2021-11-23 16:11:637 INFO  createSourceDestAndTransform:164 - Destination properties entered
+2021-11-23 16:11:733 INFO  createSourceDestAndTransform:146 - Button add clicked for Destination creation
+2021-11-23 16:11:388 INFO  createSourceDestAndTransform:118 - DRecord validated-->DestinationAutoRDBMS
+2021-11-23 16:11:732 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-23 16:11:90 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-23 16:11:90 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-23 16:11:754 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-23 16:11:417 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL_1,ProjectForAutomation and Test
+2021-11-23 16:11:526 INFO  createProjectSteps:110 - PipeLines details entered-->AutoDemoPipeline--ProjectForAutomation--Test
+2021-11-23 16:11:718 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:855 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:980 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:146 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:307 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:434 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:670 INFO  createProjectSteps:147 - Spark properties entered
+2021-11-23 16:11:480 INFO  createSourceDestAndTransform:48 - Icon is clicked-->Add a Source
+2021-11-23 16:11:379 INFO  createSourceDestAndTransform:146 - Button add clicked for Source creation
+2021-11-23 16:11:900 INFO  createSourceDestAndTransform:57 - DRecord validated-->DemoSource
+2021-11-23 16:11:994 INFO  createSourceDestAndTransform:164 - Destination properties entered
+2021-11-23 16:11:83 INFO  createSourceDestAndTransform:146 - Button add clicked for Destination creation
+2021-11-23 16:11:723 INFO  createSourceDestAndTransform:118 - DRecord validated-->DestinationAutoRDBMS
+2021-11-23 16:11:781 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-23 16:11:173 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-23 16:11:174 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-23 16:11:346 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-23 16:11:911 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL_1,ProjectForAutomation and Test
+2021-11-23 16:11:273 INFO  createProjectSteps:110 - PipeLines details entered-->AutoDemoPipeline--ProjectForAutomation--Test
+2021-11-23 16:11:455 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:601 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:735 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:888 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:45 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:285 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:535 INFO  createProjectSteps:147 - Spark properties entered
+2021-11-23 16:11:260 INFO  createSourceDestAndTransform:48 - Icon is clicked-->Add a Source
+2021-11-23 16:11:136 INFO  createSourceDestAndTransform:146 - Button add clicked for Source creation
+2021-11-23 16:11:631 INFO  createSourceDestAndTransform:57 - DRecord validated-->DemoSource
+2021-11-23 16:11:783 INFO  createSourceDestAndTransform:164 - Destination properties entered
+2021-11-23 16:11:855 INFO  createSourceDestAndTransform:146 - Button add clicked for Destination creation
+2021-11-23 16:11:409 INFO  createSourceDestAndTransform:118 - DRecord validated-->DestinationAutoRDBMS
+2021-11-23 16:11:875 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-23 16:11:189 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-23 16:11:189 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-23 16:11:860 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-23 16:11:366 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL_1,ProjectForAutomation and Test
+2021-11-23 16:11:583 INFO  createProjectSteps:110 - PipeLines details entered-->AutoDemoPipeline--ProjectForAutomation--Test
+2021-11-23 16:11:783 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:920 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:56 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:235 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:611 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:775 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:96 INFO  createProjectSteps:147 - Spark properties entered
+2021-11-23 16:11:826 INFO  createSourceDestAndTransform:48 - Icon is clicked-->Add a Source
+2021-11-23 16:11:750 INFO  createSourceDestAndTransform:146 - Button add clicked for Source creation
+2021-11-23 16:11:249 INFO  createSourceDestAndTransform:57 - DRecord validated-->DemoSource
+2021-11-23 16:11:629 INFO  createSourceDestAndTransform:164 - Destination properties entered
+2021-11-23 16:11:790 INFO  createSourceDestAndTransform:146 - Button add clicked for Destination creation
+2021-11-23 16:11:444 INFO  createSourceDestAndTransform:118 - DRecord validated-->DestinationAutoRDBMS
+2021-11-23 16:11:678 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-23 16:11:06 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-23 16:11:06 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-23 16:11:925 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-23 16:11:375 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL_1,ProjectForAutomation and Test
+2021-11-23 16:11:488 INFO  createProjectSteps:110 - PipeLines details entered-->AutoDemoPipeline--ProjectForAutomation--Test
+2021-11-23 16:11:685 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:828 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:37 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:313 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:461 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:609 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-23 16:11:921 INFO  createProjectSteps:147 - Spark properties entered
+2021-11-23 16:11:704 INFO  createSourceDestAndTransform:48 - Icon is clicked-->Add a Source
+2021-11-23 16:11:647 INFO  createSourceDestAndTransform:146 - Button add clicked for Source creation
+2021-11-23 16:11:150 INFO  createSourceDestAndTransform:57 - DRecord validated-->DemoSource
+2021-11-23 16:11:671 INFO  createSourceDestAndTransform:164 - Destination properties entered
+2021-11-23 16:11:745 INFO  createSourceDestAndTransform:146 - Button add clicked for Destination creation
+2021-11-23 16:11:321 INFO  createSourceDestAndTransform:118 - DRecord validated-->DestinationAutoRDBMS
