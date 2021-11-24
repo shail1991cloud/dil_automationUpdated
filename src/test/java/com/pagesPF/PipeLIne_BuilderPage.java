@@ -1,6 +1,7 @@
 package com.pagesPF;
 
 import com.managersUtilities.CommonFunction;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,12 +15,13 @@ import java.util.List;
 public class PipeLIne_BuilderPage {
 
     public ProjectsPage projectspage;
+    public PipeLIne_ListingPage pipeLIne_listingPage;
     public Functions_LeanPageObject functions_leanPageObject;
     @FindBy(how = How.XPATH, using = "//scale-text-field[@label=\"Name*\"]//input[@type=\"text\"]")
     public WebElement FieldEnterName;
-    @FindBy(how = How.XPATH, using = "//scale-text-field[@label=\"File Path*\"]//input[@type=\"text\"]")
+    @FindBy(how = How.XPATH, using = "//scale-text-field[@label=\"File Path*\" or @label=\"Folder Path*\"]//input[@type=\"text\"]")
     public WebElement filePath;
-    @FindBy(how = How.XPATH, using = "//scale-text-field[@label=\"File Path*\"]//input[@type=\"text\"]")
+    @FindBy(how = How.XPATH, using = "//scale-text-field[@label=\"File Path*\" or @label=\"Folder Path*\"]//input[@type=\"text\"]")
     public List<WebElement> filePathOnDest;
     @FindBy(how = How.XPATH, using = "//*[text()=\"Column seperator*\"]/following::input[1]")
     public WebElement columnSeparatorOnSource;
@@ -27,6 +29,8 @@ public class PipeLIne_BuilderPage {
     public WebElement columnSeparatorOnDest;
     @FindBy(how = How.XPATH, using = "//*[text()=\"Add \"]")
     public WebElement buttonAdd;
+    @FindBy(how = How.XPATH, using = "//scale-button[normalize-space()=\"Save\"]")
+    WebElement buttonSaveRecord;
     @FindBy(how = How.XPATH, using = "//*[text()=\"Status\"]")
     public WebElement status;
     @FindBy(how = How.XPATH, using = "//*[@id=\"base-layout-sidebar\"]//div[2]//div//scale-dropdown[3]/div")
@@ -63,7 +67,7 @@ public class PipeLIne_BuilderPage {
     public String schemaSource = "//*[text()='%s ']";
     public String manualSchemaConnection = "//*[text()='%s ']";
     public String deleteRecord = "//*[text()=' %s ']";
-    public String sourceName = "//*[@title='%s']";
+    public String recordName = "//*[@title='%s']";
     public String destinationName = "//*[@title='%s']";
     public String transformation = "//*[@title='%s']";
     public String iconOnPipeLineBuilderPage = "//*[text()='%s']";
@@ -95,6 +99,8 @@ public class PipeLIne_BuilderPage {
     public String updatedDababaseColName = "//div[text()=' %s ']";
 
 
+    public String recordNameOnProperties = "//div[text()=\"%s\"]";
+    public String connectionNameOnProperties = "//div[text()=\"%s\"]";
     WebDriver driver;
 
 
@@ -102,6 +108,7 @@ public class PipeLIne_BuilderPage {
 
         this.driver = driver;
         projectspage = PageFactory.initElements(driver, ProjectsPage.class);
+        pipeLIne_listingPage = PageFactory.initElements(driver, PipeLIne_ListingPage.class);
         functions_leanPageObject = PageFactory.initElements(driver, Functions_LeanPageObject.class);
     }
 
@@ -120,8 +127,7 @@ public class PipeLIne_BuilderPage {
         CommonFunction.waitForElementToAppear(driver, filePath);
         CommonFunction.scrollToElement(driver, filePath);
         filePath.sendKeys(filepath);
-        CommonFunction.waitForElementToAppear(driver, columnSeparatorOnSource);
-        columnSeparatorOnSource.sendKeys(colSeparator);
+        enterColumnSeparator(colSeparator);
         CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, schemaSource, schemaSourceToAdd));
         selectManualSchemaConnectionForFile(manualSchema);
         CommonFunction.waitForElementToAppear(driver, buttonAdd);
@@ -135,6 +141,16 @@ public class PipeLIne_BuilderPage {
             if (manualSchemaConnectionDropDown.isDisplayed()) {
                 CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, manualSchemaConnection, schemaName));
             }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void enterColumnSeparator(String colSeparator)
+    {
+        try {
+            if (columnSeparatorOnSource.isDisplayed()) {
+                columnSeparatorOnSource.sendKeys(colSeparator);            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -183,7 +199,12 @@ public class PipeLIne_BuilderPage {
 
             CommonFunction.scrollToElement(driver, filePath);
             filePath.sendKeys(filePathToAdd);
-            columnSeparatorOnDest.sendKeys(",");
+            try {
+                if (columnSeparatorOnDest.isDisplayed()) {
+                    columnSeparatorOnDest.sendKeys(",");            }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         } else {
             CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, topicName, topicToAdd));
         }
@@ -302,6 +323,34 @@ public class PipeLIne_BuilderPage {
         CommonFunction.waitForSomeTime();
         CommonFunction.waitForElementToBeClickable(driver, btnEditSourceSave);
         btnEditSourceSave.click();
+    }
+    public void editRecordOnPipelineBuilder(String updatedRecordName, String updatedConnection) throws InterruptedException, IOException {
+        CommonFunction.waitForElementToAppear(driver, pipeLIne_listingPage.editToolTip);
+        CommonFunction.clickByHoveringMouse(driver, pipeLIne_listingPage.editToolTip);
+        CommonFunction.waitForElementToAppear(driver, FieldEnterName);
+        CommonFunction.waitForMinimalTime();
+        FieldEnterName.clear();
+        FieldEnterName.sendKeys(updatedRecordName);
+        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, connection, updatedConnection));
+
+
+    }
+
+    public void saveDetails() throws InterruptedException {
+        CommonFunction.scrollToElement(driver, buttonSaveRecord);
+        CommonFunction.waitForMinimalTime();
+        CommonFunction.clickByHoveringMouse(driver, buttonSaveRecord);
+
+    }
+
+    public void validateUpdatedRecord(String updatedRecordName, String updatedConnection) throws InterruptedException {
+        CommonFunction.scrollToElement(driver, status);
+        (CommonFunction.getCustomisedWebElement(driver, recordName, updatedRecordName)).click();
+        CommonFunction.waitForSomeTime();
+        Assert.assertTrue(CommonFunction.getCustomisedWebElement(driver, recordNameOnProperties, updatedRecordName).isDisplayed());
+        Assert.assertTrue(CommonFunction.getCustomisedWebElement(driver, connectionNameOnProperties, updatedConnection).isDisplayed());
+
+
     }
 
 }

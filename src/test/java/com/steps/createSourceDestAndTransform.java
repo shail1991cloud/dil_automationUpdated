@@ -50,10 +50,9 @@ public class createSourceDestAndTransform extends Baseclass {
     }
 
     @Then("Source should get created with {string}")
-    public void sourceShouldGetCreatedWith(String sourceName) throws InterruptedException {
-        Assert.assertTrue(CommonFunction.getCustomisedWebElement(driver, pipeLIne_builderPage.sourceName, sourceName).isDisplayed());
-        CommonFunction.waitForSomeTime();
-        (CommonFunction.getCustomisedWebElement(driver, pipeLIne_builderPage.sourceName, sourceName)).click();
+    public void sourceShouldGetCreatedWith(String sourceName) throws InterruptedException, IOException {
+        Assert.assertTrue(CommonFunction.getCustomisedWebElement(driver, pipeLIne_builderPage.recordName, sourceName).isDisplayed());
+        (CommonFunction.getCustomisedWebElement(driver, pipeLIne_builderPage.recordName, sourceName)).click();
         log.info("DRecord validated-->" + sourceName);
 
     }
@@ -77,14 +76,13 @@ public class createSourceDestAndTransform extends Baseclass {
 
     @Then("source {string} should get deleted")
     public void sourceShouldGetDeleted(String name) {
-        functions_leanPageObject.validatePresenceOfRecord(pipeLIne_builderPage.sourceName, name);
+        functions_leanPageObject.validatePresenceOfRecord(pipeLIne_builderPage.recordName, name);
         log.info("Source Is not Present with Name-->" + name);
 
     }
-
     @Then("destination {string} should get deleted")
     public void destinationShouldGetDeleted(String name) {
-        functions_leanPageObject.validatePresenceOfRecord(pipeLIne_builderPage.sourceName, name);
+        functions_leanPageObject.validatePresenceOfRecord(pipeLIne_builderPage.recordName, name);
         log.info("Source Is not Present with Name-->" + name);
 
     }
@@ -152,7 +150,7 @@ public class createSourceDestAndTransform extends Baseclass {
     @When("enters destination keys and value")
     public void entersDestinationKeysAndValue(io.cucumber.datatable.DataTable dProperties) throws InterruptedException {
         for (Map<Object, Object> pProp : dProperties.asMaps(String.class, String.class)) {
-            CommonFunction.waitForElementToBeClickable(driver, pipeLIne_listingPage.keysForDest);
+            CommonFunction.waitForElementToBeClickable(driver,pipeLIne_listingPage.keysForDest);
             pipeLIne_listingPage.keysForDest.sendKeys((CharSequence) pProp.get("DKey"));
             pipeLIne_listingPage.valuesForDest.sendKeys((CharSequence) pProp.get("DValue"));
             CommonFunction.waitForElementToBeClickable(driver, pipeLIne_listingPage.buttonsAdd.get(0));
@@ -168,12 +166,12 @@ public class createSourceDestAndTransform extends Baseclass {
     @When("Enters {string},{string},{string}")
     public void enters(String sourceName, String type, String sourceConnection) throws IOException, InterruptedException {
 
-        pipeLIne_builderPage.createSourceWithDelta(sourceName, type, sourceConnection);
+        pipeLIne_builderPage.createSourceWithDelta(sourceName,type,sourceConnection);
     }
 
     @When("enters {string},{string},{string},{string}")
     public void enters(String nameDest, String destType, String destConn, String destMode) throws IOException, InterruptedException {
-        pipeLIne_builderPage.createDestinationDelta(nameDest, destType, destConn, destMode);
+        pipeLIne_builderPage.createDestinationDelta(nameDest,destType,destConn,destMode);
     }
 
     @And("Enters {string} {string} {string} {string} for Database configuration")
@@ -227,5 +225,16 @@ public class createSourceDestAndTransform extends Baseclass {
         (CommonFunction.getCustomisedWebElement(driver, pipeLIne_builderPage.destinationName, inputText)).click();
         CommonFunction.waitForSomeTime();
         Assert.assertTrue(CommonFunction.getCustomisedWebElement(driver, pipeLIne_builderPage.updatedDababaseName, inputText).isDisplayed());
+    }
+
+    @When("edits record for {string} and {string}")
+    public void editsRecordForAnd(String updatedSourceName, String updatedConnection) throws IOException, InterruptedException {
+        pipeLIne_builderPage.editRecordOnPipelineBuilder(updatedSourceName,updatedConnection);
+        pipeLIne_builderPage.saveDetails();
+    }
+
+    @Then("Updated record validated for {string} and {string}")
+    public void updatedRecordValidatedForAnd(String updatedSourceName, String updatedConnection) throws InterruptedException {
+        pipeLIne_builderPage.validateUpdatedRecord(updatedSourceName,updatedConnection);
     }
 }

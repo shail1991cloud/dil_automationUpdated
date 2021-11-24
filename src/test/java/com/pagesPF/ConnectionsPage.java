@@ -72,11 +72,11 @@ public class ConnectionsPage {
     @FindBy(how = How.XPATH, using = "//button[normalize-space()=\"Delete\"]")
     public WebElement buttonDeleteOnDeleteConnectionPopUp;
 
-    String connectionRecordOnConnectionListingPage="//div[@title=\"%s\"]";
-    String connectionOption="//option[text()='%s ']";
-    String optionTLSProtocol="//option[text()=' %s ']";
-    String createConnectionTab="//a[normalize-space()=\"%s\"]";
-    String jsPathConnection="return document.querySelector(\"#header\").shadowRoot.querySelector(\"div > scale-app-header > header > nav.header__nav > div > div.header__nav-menu-wrapper > div.header__nav-menu-main > ul > scale-nav-main:nth-child(2) > li > a > span\")";
+    String connectionRecordOnConnectionListingPage = "//div[@title=\"%s\"]";
+    String connectionOption = "//option[text()='%s ']";
+    String optionTLSProtocol = "//option[text()=' %s ']";
+    String createConnectionTab = "//a[normalize-space()=\"%s\"]";
+    String jsPathConnection = "return document.querySelector(\"#header\").shadowRoot.querySelector(\"div > scale-app-header > header > nav.header__nav > div > div.header__nav-menu-wrapper > div.header__nav-menu-main > ul > scale-nav-main:nth-child(2) > li > a > span\")";
     WebDriver driver;
     ConfigFileReader configFileReader;
 
@@ -89,57 +89,56 @@ public class ConnectionsPage {
     }
 
     public void navigateToCreateConnectionScreen(String createConnectionToAdd) throws InterruptedException {
-        CommonFunction.clickOnShadowElement(driver,jsPathConnection);
-        CommonFunction.waitForElementToAppear(driver,msgMyConnections);
-        WebElement createConnection=CommonFunction.getCustomisedWebElement(driver,createConnectionTab,createConnectionToAdd);
-        CommonFunction.waitForElementToAppear(driver,createConnection);
+        CommonFunction.clickOnShadowElement(driver, jsPathConnection);
+        CommonFunction.waitForElementToAppear(driver, msgMyConnections);
+        WebElement createConnection = CommonFunction.getCustomisedWebElement(driver, createConnectionTab, createConnectionToAdd);
+        CommonFunction.waitForElementToAppear(driver, createConnection);
         createConnection.click();
 
     }
+
     public void enterBasicConnectionDetails(String name, String description, String connectionType) throws InterruptedException, IOException {
-     CommonFunction.waitForElementToAppear(driver,textFieldConnectionName);
-     String uniqueConnectionName = name + DatesHelper.getTodayDateWithSeconds();
-     EnvSetUp.setDataValue(Constant.ConnectionName, uniqueConnectionName);
-     textFieldConnectionName.sendKeys(uniqueConnectionName);
-     CommonFunction.waitForElementToAppear(driver,dropDownSelect);
-     CommonFunction.scrollOnElement(driver,CommonFunction.getCustomisedWebElement(driver,connectionOption,connectionType));
-     CommonFunction.waitForElementToAppear(driver,textFieldDescription);
-     textFieldDescription.sendKeys(description);
+        CommonFunction.waitForElementToAppear(driver, textFieldConnectionName);
+        String uniqueConnectionName = name + DatesHelper.getTodayDateWithSeconds();
+        EnvSetUp.setDataValue(Constant.ConnectionName, uniqueConnectionName);
+        textFieldConnectionName.sendKeys(uniqueConnectionName);
+        CommonFunction.waitForElementToAppear(driver, dropDownSelect);
+        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, connectionOption, connectionType));
+        CommonFunction.waitForElementToAppear(driver, textFieldDescription);
+        textFieldDescription.sendKeys(description);
     }
 
-    public void enterKerberosPrincipalDetails()
-    {
-        CommonFunction.waitForElementToAppear(driver,textFieldKerbPrincipal);
+    public void enterKerberosPrincipalDetails() {
+        CommonFunction.waitForElementToAppear(driver, textFieldKerbPrincipal);
         textFieldKerbPrincipal.sendKeys(configFileReader.getProperties().getProperty("Kerberos_Principal"));
         textFieldKErbFileName.sendKeys(configFileReader.getProperties().getProperty("Kerberos_FileName"));
     }
 
     public void testConnection() throws InterruptedException {
-        CommonFunction.waitLessForElementToAppear(driver,buttonTestConnection);
+        CommonFunction.waitLessForElementToAppear(driver, buttonTestConnection);
         buttonTestConnection.click();
-        CommonFunction.waitLessForElementToAppear(driver,msgConnected);
+        CommonFunction.waitLessForElementToAppear(driver, msgConnected);
         Assert.assertTrue(msgConnected.isDisplayed());
 
     }
 
-    public void saveTheConnection()
-    {
-        CommonFunction.waitForElementToBeClickable(driver,buttonSave);
+    public void saveTheConnection() {
+        CommonFunction.waitForElementToBeClickable(driver, buttonSave);
         buttonSave.click();
     }
 
     public void validateConnection(String name) throws InterruptedException {
 
-        CommonFunction.waitForElementToAppear(driver,headerMyConnection);
+        CommonFunction.waitForElementToAppear(driver, headerMyConnection);
         driver.navigate().refresh();
-        CommonFunction.waitForElementToAppear(driver,fieldSearchBoxOnConnectionsPage);
+        CommonFunction.waitForElementToAppear(driver, fieldSearchBoxOnConnectionsPage);
         fieldSearchBoxOnConnectionsPage.sendKeys(Keys.ENTER);
         fieldSearchBoxOnConnectionsPage.sendKeys(EnvSetUp.getDataKeyValue(Constant.ConnectionName));
-        Assert.assertTrue(CommonFunction.getCustomisedWebElement(driver,connectionRecordOnConnectionListingPage,EnvSetUp.getDataKeyValue(Constant.ConnectionName)).isDisplayed());
-        CommonFunction.waitForElementToAppear(driver,buttonDeleteOnConnectionRecord);
+        Assert.assertTrue(CommonFunction.getCustomisedWebElement(driver, connectionRecordOnConnectionListingPage, EnvSetUp.getDataKeyValue(Constant.ConnectionName)).isDisplayed());
+        CommonFunction.waitForElementToAppear(driver, buttonDeleteOnConnectionRecord);
         buttonDeleteOnConnectionRecord.click();
         CommonFunction.waitForMinimalTime();
-        CommonFunction.waitForElementToBeClickable(driver,buttonDeleteOnDeleteConnectionPopUp);
+        CommonFunction.waitForElementToBeClickable(driver, buttonDeleteOnDeleteConnectionPopUp);
         buttonDeleteOnDeleteConnectionPopUp.click();
         CommonFunction.waitForSomeTime();
 
@@ -149,15 +148,14 @@ public class ConnectionsPage {
 
         //CommonFunction.waitForElementToAppear(driver,textFieldKeyStoreFile);
         textFieldKeyStoreFile.sendKeys(KFile);
-      //  CommonFunction.waitForElementToAppear(driver,textFieldTrustStoreFile);
+        //  CommonFunction.waitForElementToAppear(driver,textFieldTrustStoreFile);
         textFieldTrustStoreFile.sendKeys(TFile);
         CommonFunction.waitForSomeTime();
-        CommonFunction.waitForElementToAppear(driver,textFieldKeysStorePass);
+        CommonFunction.waitForElementToAppear(driver, textFieldKeysStorePass);
         textFieldKeysStorePass.sendKeys(KPass);
-        CommonFunction.waitForElementToAppear(driver,textFieldTrustStorePass);
+        CommonFunction.waitForElementToAppear(driver, textFieldTrustStorePass);
         textFieldTrustStorePass.sendKeys(TPass);
-        CommonFunction.scrollOnElement(driver,CommonFunction.getCustomisedWebElement(driver,optionTLSProtocol,Protocol));
-
+        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, optionTLSProtocol, Protocol));
 
 
     }

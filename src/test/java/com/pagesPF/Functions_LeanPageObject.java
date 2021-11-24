@@ -20,6 +20,7 @@ public class Functions_LeanPageObject {
     public ConfigFileReader configFileReader;
     WebDriver driver;
     Logger log = LoggerHelper.getLogger(DIL_loginpage.class);
+
     public Functions_LeanPageObject(WebDriver driver) {
         this.driver = driver;
         configFileReader = new ConfigFileReader();

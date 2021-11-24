@@ -1,0 +1,200 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-11-24T05:42:31.073Z",
+        "before": [
+          {
+            "output": [
+              "--Starting the Execution--"
+            ],
+            "result": {
+              "duration": 1540730000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.beforeScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "user is able to create Kerberos connection",
+        "description": "",
+        "id": "user-should-be-able-to-create--validate-connections-on-connections-page;user-is-able-to-create-kerberos-connection;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 1751000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.afterScenario(io.cucumber.java.Scenario)"
+            }
+          },
+          {
+            "output": [
+              "---Closing the Browser---"
+            ],
+            "result": {
+              "duration": 83826000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.quitBrowser(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7271336000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on DIL login page",
+            "match": {
+              "location": "com.steps.commonSteps.userIsOnDILLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 336417000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "enter username and password",
+            "match": {
+              "location": "com.steps.commonSteps.enterUsernameAndPassword()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5778383000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "navigates to the \"Create a connection\" tab",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Create a connection\"",
+                  "offset": 17
+                }
+              ],
+              "location": "com.steps.createConnectionsSteps.navigatesToTheTab(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 721846000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "enters \"AutomationKerberos\",\"Creating Connection\",\"KERBEROS\",principal and fileType",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AutomationKerberos\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"Creating Connection\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"KERBEROS\"",
+                  "offset": 50
+                }
+              ],
+              "location": "com.steps.createConnectionsSteps.entersPrincipalAndFileType(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 477613000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "connection should be tested successfully",
+            "match": {
+              "location": "com.steps.createConnectionsSteps.connectionShouldBeTestedSuccessfully()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 90073000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "creates the connection",
+            "match": {
+              "location": "com.steps.createConnectionsSteps.createsTheConnection()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7419799000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "connection with \"AutomationKerberos\" should be validated on Connection listing page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AutomationKerberos\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.steps.createConnectionsSteps.connectionWithShouldBeValidatedOnConnectionListingPage(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateConnection"
+          },
+          {
+            "name": "@Smoke"
+          },
+          {
+            "name": "@Reg"
+          },
+          {
+            "name": "@Positive"
+          },
+          {
+            "name": "@CRC-Test1"
+          },
+          {
+            "name": "@TC1"
+          }
+        ]
+      }
+    ],
+    "name": "User should be able to Create, Validate Connections on Connections Page",
+    "description": "",
+    "id": "user-should-be-able-to-create--validate-connections-on-connections-page",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/projects/CreateConnection.feature",
+    "tags": [
+      {
+        "name": "@CreateConnection",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

@@ -14,8 +14,8 @@ Feature:Creation and Field level validation of pipelines
     And  switches to "<Tab>"
     Then PipeLine listing page is validated for ProjectName,PipelineTag and "<Message>"
     Examples:
-      | ProjectName | Description          | Tag           | Tab      | Message                               |
-      | AutoDIL     | ProjectForAutomation | Test_Pipeline | Overview |  There is no pipelines in this project.  |
+      | ProjectName | Description          | Tag           | Tab      | Message                                |
+      | AutoDIL     | ProjectForAutomation | Test_Pipeline | Overview | There is no pipelines in this project. |
 
   @Smoke @Reg @Positive @CP-Test1 @TC4
   Scenario Outline: user is able validate pipeline properties
@@ -67,6 +67,6 @@ Feature:Creation and Field level validation of pipelines
     When changes the "<NewExecutionType>","<NTag>"
     Then PipeLine properties is validated for "<Description>","<NTag>","<NewExecutionType>","<PKey>","<PValue>","<SKey>" and "<SValue>"
     Examples:
-      | ProjectName | Description          | Tag           | Pipeline | ExecutionType | PKey | PValue | SKey | SValue |NewExecutionType|NTag          |
-      | AutoDIL     | ProjectForAutomation | Test_Pipeline | PipeLIne | STREAMING     | k1   | v1     | s1   | v2     |BATCH           |Edit Pipeline|
+      | ProjectName | Description          | Tag           | Pipeline | ExecutionType | PKey | PValue | SKey | SValue | NewExecutionType | NTag          |
+      | AutoDIL     | ProjectForAutomation | Test_Pipeline | PipeLIne | STREAMING     | k1   | v1     | s1   | v2     | BATCH            | Edit Pipeline |
 
