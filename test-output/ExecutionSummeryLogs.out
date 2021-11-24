@@ -2705,3 +2705,6 @@
 2021-11-24 11:11:825 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test_Pipeline
 2021-11-24 11:11:642 INFO  createProjectSteps:80 - PipeLines is created with-->PipeLIne--ProjectForAutomation--Test_Pipeline--STREAMING--k1v1--s1v2
 2021-11-24 11:11:811 INFO  createProjectSteps:87 - PipeLines Properties is validated with details-->ProjectForAutomation--Test_Pipeline--STREAMING--k1v1--s1v2
+2021-11-24 11:11:937 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-24 11:11:279 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-24 11:11:279 INFO  commonSteps:43 - --user name and Password are entered--
