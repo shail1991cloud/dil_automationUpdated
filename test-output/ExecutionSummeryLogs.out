@@ -2685,3 +2685,16 @@
 2021-11-23 15:11:364 INFO  createSourceDestAndTransform:72 - Button Clicked-->Delete Source
 2021-11-23 15:11:418 INFO  DIL_loginpage:48 - Record is not present
 2021-11-23 15:11:419 INFO  createSourceDestAndTransform:80 - Source Is not Present with Name-->DemoSource
+2021-11-23 18:11:735 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-23 18:11:106 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-23 18:11:106 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-23 18:11:124 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-23 18:11:619 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test_Pipeline
+2021-11-23 18:11:417 INFO  createProjectSteps:62 - Pipe line is created with name-->PipeLIne
+2021-11-23 18:11:862 INFO  createProjectSteps:53 - Pipeline listing page is validated for  created Pipeline
+2021-11-24 10:11:619 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-24 10:11:58 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-24 10:11:58 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-24 10:11:610 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-24 10:11:273 INFO  createProjectSteps:51 - --Details entered for Project With--->Auto-DemoProject, and Test
+2021-11-24 10:11:294 INFO  createProjectSteps:73 - --Submit button displays disable and Project is not created -
