@@ -11,5 +11,5 @@ Feature: To validate created Project with backend API
     Then  user should be able to use "<QueryParam>" to validate project on "<BackendApiPath>"
     Examples:
       | ProjectName | Description      | Tag  | QueryParam  | BackendApiPath | clientId | clientSecret             | passWord | userName | pathParam          | jsonPath     | bearerToken  |
-      | Auto_Pro    | CreatingPipeLine | Test | projectName | /projects      | dil-ui   | ovrzCm54Zu+q2SuJIhaOnA== | Lp4,mLd: | parihars | /authservice/login | tokenDetails | access_token |
+      | Auto_Pro    | CreatingPipeLine | Test | projectName | /projects      | dil-ui   | ovrzCm54Zu+q2SuJIhaOnA== | Parihars@123 | parihars | /authservice/login | tokenDetails | access_token |
 

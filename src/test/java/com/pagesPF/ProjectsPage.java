@@ -54,7 +54,7 @@ public class ProjectsPage {
 
     @FindBy(how = How.XPATH, using = "//div[4]//scale-icon-action-remove[1]//*[local-name()=\"svg\"]")
     public WebElement deleteButtonOnProjectListingPage;
-    @FindBy(how = How.XPATH, using = "//*[@id=\"app\"]//p[3]/button")
+    @FindBy(how = How.XPATH, using = "//div//div[5]//div[1]//p[3]")
     public List<WebElement> deleteButtonsOnProjectListingPage;
     @FindBy(how = How.XPATH, using = "//*[text()=' Delete ']")
     public WebElement deleteButtonOnDeleteProjectPopUp;

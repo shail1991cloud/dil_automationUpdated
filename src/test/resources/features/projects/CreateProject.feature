@@ -106,9 +106,20 @@ Feature:Creation of Projects and validation of Project Setting Pop Up
 
 
     # Do not run it *****
+  @SmokeInNotScope @Test11 @TC52
+  Scenario: user is able to delete all Projects from Project listing page
+    Given user is on DIL login page
+    When  enter username and password
+    Then  he should be able to delete all the Projects from Project Listing Page
+
   @SmokeInNotScope @Test11 @TC16
   Scenario: user is able to delete all Projects from Project listing page
     Given user is on DIL login page
     When  enter username and password
     Then  he should be able to delete all the Projects from Project Listing Page
 
+  @SmokeInNotScope @Test11 @TC16
+  Scenario: user is able to delete all Projects from Project listing page
+    Given user is on DIL login page
+    When  enter username and password
+    Then  he should be able to delete all the Projects from Project Listing Page

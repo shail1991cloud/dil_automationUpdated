@@ -2885,3 +2885,53 @@
 2021-11-25 12:11:879 INFO  createProjectSteps:130 - PipeLines properties entered
 2021-11-25 12:11:16 INFO  createProjectSteps:130 - PipeLines properties entered
 2021-11-25 12:11:300 INFO  createProjectSteps:147 - Spark properties entered
+2021-11-25 13:11:221 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-25 13:11:953 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-25 13:11:954 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-25 13:11:273 INFO  createProjectSteps:117 - All the projrcts are deleted
+2021-11-25 13:11:684 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-25 13:11:201 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-25 13:11:201 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-25 13:11:911 INFO  createProjectSteps:117 - All the projrcts are deleted
+2021-11-25 13:11:987 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-25 13:11:378 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-25 13:11:379 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-25 13:11:742 INFO  createProjectSteps:117 - All the projrcts are deleted
+2021-11-25 13:11:429 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-25 13:11:897 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-25 13:11:897 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-25 13:11:300 INFO  createProjectSteps:117 - All the projrcts are deleted
+2021-11-25 13:11:358 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-25 13:11:784 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-25 13:11:784 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-25 13:11:331 INFO  createProjectSteps:117 - All the projrcts are deleted
+2021-11-25 13:11:126 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-25 13:11:531 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-25 13:11:531 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-25 13:11:982 INFO  createProjectSteps:117 - All the projrcts are deleted
+2021-11-25 13:11:290 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-25 13:11:747 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-25 13:11:747 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-25 13:11:154 INFO  createProjectSteps:117 - All the projrcts are deleted
+2021-11-25 13:11:255 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-25 13:11:696 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-25 13:11:697 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-25 13:11:413 INFO  createProjectSteps:117 - All the projrcts are deleted
+2021-11-25 13:11:100 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-25 13:11:586 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-25 13:11:587 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-25 13:11:51 INFO  createProjectSteps:117 - All the projrcts are deleted
+2021-11-25 13:11:139 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-25 13:11:679 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-25 13:11:680 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-25 13:11:227 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-25 13:11:155 INFO  createProjectSteps:51 - --Details entered for Project With--->Auto_Pro,CreatingPipeLine and Test
+2021-11-25 13:11:580 INFO  apiSteps:80 - Details entered for OathAuthentication
+2021-11-25 13:11:159 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-25 13:11:663 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-25 13:11:664 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-25 13:11:33 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-25 13:11:882 INFO  createProjectSteps:51 - --Details entered for Project With--->Auto_Pro,CreatingPipeLine and Test
+2021-11-25 13:11:376 INFO  apiSteps:80 - Details entered for OathAuthentication
+2021-11-25 13:11:724 INFO  apiSteps:86 - BearerTokenObtained
+2021-11-25 13:11:658 INFO  apiSteps:73 - Project is validated with Backend Api

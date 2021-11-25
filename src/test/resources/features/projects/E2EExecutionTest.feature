@@ -174,7 +174,7 @@ Feature:Creation of a End to End Execution of the pipeline for Spark/TMPL servic
       | ProjectName | Description          | Tag           | ExecutionType | Pipeline | Icon         | SourceName | SourceType  | SourceConnection | fileType | S_Path                                                     | D_Path                                                | SourceSchema | Separator | DestinationName | DestinationType | DestConnection | DestTopicName | Status |
       | AutoDIL     | ProjectForAutomation | Test_Pipeline | BATCH         | PipeLIne | Add a Source | DemoSource | File System | Auto_Kerb_DND    | DeltaIO  | hdfs://10.0.1.92:8020/user/hdfstodeltaInput/sourceData.csv | hdfs://10.0.1.92:8020/user/hdfsFileToFileDestination/ | No Schema    | ,         | DemoDestination | File System     | Auto_Kerb_DND  | topic2        | READY  |
 
-  @Smoke @Reg @Positive @E2EExecution6 @TC52
+  @Smoke @Reg @Positive @E2EExecution6 @TC53
   Scenario Outline: user is able to run created Publish kafka pipeline and validate same in logs
     Given user is on DIL login page
     When enter username and password
