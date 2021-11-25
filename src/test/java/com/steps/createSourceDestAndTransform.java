@@ -192,7 +192,7 @@ public class createSourceDestAndTransform extends Baseclass {
 
     @And("Enter Save mode {string}")
     public void enterSaveMode(String modeToAdd) throws InterruptedException, IOException {
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, PipeLIne_BuilderPage.saveMode, modeToAdd));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, PipeLIne_BuilderPage.saveMode, modeToAdd));
     }
 
     @When("Edit {string} {string} {string} {string} fields for Source")

@@ -105,7 +105,7 @@ public class PipeLIne_ListingPage {
         CommonFunction.waitForElementToAppear(driver, textFieldDescription);
         textFieldDescription.sendKeys(description);
         textFieldTag.sendKeys(tag, Keys.ENTER);
-        CommonFunction.scrollOnElement(driver, executionType);
+        CommonFunction.scrollOnElementToClick(driver, executionType);
         CommonFunction.scrollToElement(driver, buttonCreatePipeline);
         buttonCreatePipeline.click();
         CommonFunction.waitForSomeTime();
@@ -122,7 +122,7 @@ public class PipeLIne_ListingPage {
         CommonFunction.waitForElementToAppear(driver, textFieldDescription);
         textFieldDescription.sendKeys(description);
         textFieldTag.sendKeys(tag, Keys.ENTER);
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, executionTypeToSelect, execution));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, executionTypeToSelect, execution));
         CommonFunction.scrollToElement(driver, buttonCreatePipeline);
         keysForPipeLine.get(0).sendKeys(pKey);
         valuesForPipeLine.get(0).sendKeys(pValue);
@@ -168,7 +168,7 @@ public class PipeLIne_ListingPage {
         textFieldTag.sendKeys(tag);
         textFieldTag.sendKeys(Keys.ENTER);
         CommonFunction.scrollToElement(driver, buttonSavePipeline);
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, executionTypeToSelect, executionType));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, executionTypeToSelect, executionType));
         CommonFunction.waitForElementToBeClickable(driver, buttonSavePipeline);
         buttonSavePipeline.click();
 
@@ -184,7 +184,7 @@ public class PipeLIne_ListingPage {
         CommonFunction.waitForElementToAppear(driver, textFieldDescription);
         textFieldDescription.sendKeys(description);
         textFieldTag.sendKeys(tag, Keys.ENTER);
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, executionTypeToSelect, execution));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, executionTypeToSelect, execution));
         CommonFunction.scrollToElement(driver, buttonCreatePipeline);
 
     }

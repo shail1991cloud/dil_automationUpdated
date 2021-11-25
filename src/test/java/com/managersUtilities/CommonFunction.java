@@ -91,8 +91,13 @@ public class CommonFunction {
         element.sendKeys(TextToEnter);
     }
 
+    /*
 
-    public static void scrollOnElement(WebDriver driver,WebElement element) throws IOException, InterruptedException {
+    @method-scrollOnElementToClick is usefull to click any element ,select any options from down ,works when nothing works
+
+     */
+
+    public static void scrollOnElementToClick(WebDriver driver, WebElement element) throws IOException, InterruptedException {
 
         Point location = element.getLocation();
         JavascriptExecutor js = (JavascriptExecutor)driver;

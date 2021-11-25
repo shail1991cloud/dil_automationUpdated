@@ -103,7 +103,7 @@ public class ConnectionsPage {
         EnvSetUp.setDataValue(Constant.ConnectionName, uniqueConnectionName);
         textFieldConnectionName.sendKeys(uniqueConnectionName);
         CommonFunction.waitForElementToAppear(driver, dropDownSelect);
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, connectionOption, connectionType));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, connectionOption, connectionType));
         CommonFunction.waitForElementToAppear(driver, textFieldDescription);
         textFieldDescription.sendKeys(description);
     }
@@ -155,7 +155,7 @@ public class ConnectionsPage {
         textFieldKeysStorePass.sendKeys(KPass);
         CommonFunction.waitForElementToAppear(driver, textFieldTrustStorePass);
         textFieldTrustStorePass.sendKeys(TPass);
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, optionTLSProtocol, Protocol));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, optionTLSProtocol, Protocol));
 
 
     }

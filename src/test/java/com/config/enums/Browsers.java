@@ -14,4 +14,6 @@ public enum Browsers {
 	IE,
 	CHROME_HEADLESS
 
+
+
 }

@@ -121,14 +121,14 @@ public class PipeLIne_BuilderPage {
     public void createSourceWithFile(String sourceName, String typeToAdd, String connectionToAdd, String fileTypeToAdd, String filepath, String colSeparator, String schemaSourceToAdd, String manualSchema) throws InterruptedException, IOException {
         CommonFunction.waitForElementToAppear(driver, FieldEnterName);
         FieldEnterName.sendKeys(sourceName);
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, type, typeToAdd));
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, connection, connectionToAdd));
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, fileType, fileTypeToAdd));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, type, typeToAdd));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, connection, connectionToAdd));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, fileType, fileTypeToAdd));
         CommonFunction.waitForElementToAppear(driver, filePath);
         CommonFunction.scrollToElement(driver, filePath);
         filePath.sendKeys(filepath);
         enterColumnSeparator(colSeparator);
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, schemaSource, schemaSourceToAdd));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, schemaSource, schemaSourceToAdd));
         selectManualSchemaConnectionForFile(manualSchema);
         CommonFunction.waitForElementToAppear(driver, buttonAdd);
         buttonAdd.click();
@@ -139,7 +139,7 @@ public class PipeLIne_BuilderPage {
     public void selectManualSchemaConnectionForFile(String schemaName) {
         try {
             if (manualSchemaConnectionDropDown.isDisplayed()) {
-                CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, manualSchemaConnection, schemaName));
+                CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, manualSchemaConnection, schemaName));
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -167,7 +167,7 @@ public class PipeLIne_BuilderPage {
         CommonFunction.getCustomisedWebElement(driver, categoryToSelect, category).click();
         CommonFunction.waitForElementToAppear(driver, CommonFunction.getCustomisedWebElement(driver, transformationTypeToSelect, transformationType));
         CommonFunction.getCustomisedWebElement(driver, transformationTypeToSelect, transformationType).click();
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, columnOptionToSelect, columnValue));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, columnOptionToSelect, columnValue));
         selectAddColumn.click();
         CommonFunction.scrollToElement(driver, selectAddButton);
         CommonFunction.waitForElementToAppear(driver, selectAddButton);
@@ -184,9 +184,9 @@ public class PipeLIne_BuilderPage {
         selectDestination.click();
         CommonFunction.waitForElementToAppear(driver, FieldEnterName);
         FieldEnterName.sendKeys(destName);
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, type, typeToAdd));
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, connection, connectionToAdd));
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, fileType, fileToAdd));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, type, typeToAdd));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, connection, connectionToAdd));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, fileType, fileToAdd));
         CommonFunction.scrollToElement(driver, selectAddButton);
         selectDestType(filePath, topicToAdd);
 
@@ -206,7 +206,7 @@ public class PipeLIne_BuilderPage {
                 e.printStackTrace();
             }
         } else {
-            CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, topicName, topicToAdd));
+            CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, topicName, topicToAdd));
         }
     }
 
@@ -214,12 +214,12 @@ public class PipeLIne_BuilderPage {
     public void createSourceWithKafka(String sourceName, String typeToAdd, String connectionToAdd, String topicToAdd, String schemaToAdd, String registryNameToAdd, String offsetToAdd, String key, String value) throws InterruptedException, IOException {
         CommonFunction.waitForElementToAppear(driver, FieldEnterName);
         FieldEnterName.sendKeys(sourceName);
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, type, typeToAdd));
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, connection, connectionToAdd));
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, topicName, topicToAdd));
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, schemaSource, schemaToAdd));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, type, typeToAdd));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, connection, connectionToAdd));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, topicName, topicToAdd));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, schemaSource, schemaToAdd));
         selectRegistryForManualSchemaKafka(registryNameToAdd);
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, offSet, offsetToAdd));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, offSet, offsetToAdd));
         CommonFunction.scrollToElement(driver, keyForSource);
         CommonFunction.waitForElementToAppear(driver, keyForSource);
         keyForSource.sendKeys(key);
@@ -235,7 +235,7 @@ public class PipeLIne_BuilderPage {
     public void selectRegistryForManualSchemaKafka(String registryNameToAdd) {
         try {
             if (RegistryNameDropDown.isDisplayed()) {
-                CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, registryName, registryNameToAdd));
+                CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, registryName, registryNameToAdd));
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -245,8 +245,8 @@ public class PipeLIne_BuilderPage {
     public void createSourceWithDelta(String sourceName, String typeToAdd, String connectionToAdd) throws InterruptedException, IOException {
         CommonFunction.waitForElementToAppear(driver, FieldEnterName);
         FieldEnterName.sendKeys(sourceName);
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, type, typeToAdd));
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, connection, connectionToAdd));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, type, typeToAdd));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, connection, connectionToAdd));
         buttonAdd.click();
         CommonFunction.waitForSomeTime();
         CommonFunction.scrollToElement(driver, status);
@@ -255,8 +255,8 @@ public class PipeLIne_BuilderPage {
     public void createSourceWithRDBMS(String sourceName, String typeToAdd, String connectionToAdd) throws InterruptedException, IOException {
         CommonFunction.waitForElementToAppear(driver, FieldEnterName);
         FieldEnterName.sendKeys(sourceName);
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, type, typeToAdd));
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, connection, connectionToAdd));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, type, typeToAdd));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, connection, connectionToAdd));
         CommonFunction.waitForSomeTime();
     }
 
@@ -267,9 +267,9 @@ public class PipeLIne_BuilderPage {
         selectDestination.click();
         CommonFunction.waitForElementToAppear(driver, FieldEnterName);
         FieldEnterName.sendKeys(destName);
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, type, typeToAdd));
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, connection, connectionToAdd));
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, saveMode, modeToAdd));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, type, typeToAdd));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, connection, connectionToAdd));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, saveMode, modeToAdd));
 
 
     }
@@ -331,7 +331,7 @@ public class PipeLIne_BuilderPage {
         CommonFunction.waitForMinimalTime();
         FieldEnterName.clear();
         FieldEnterName.sendKeys(updatedRecordName);
-        CommonFunction.scrollOnElement(driver, CommonFunction.getCustomisedWebElement(driver, connection, updatedConnection));
+        CommonFunction.scrollOnElementToClick(driver, CommonFunction.getCustomisedWebElement(driver, connection, updatedConnection));
 
 
     }
