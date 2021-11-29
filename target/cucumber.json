@@ -3,14 +3,14 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-11-24T05:42:31.073Z",
+        "start_timestamp": "2021-11-29T07:04:56.182Z",
         "before": [
           {
             "output": [
               "--Starting the Execution--"
             ],
             "result": {
-              "duration": 1540730000,
+              "duration": 1517609000,
               "status": "passed"
             },
             "match": {
@@ -18,14 +18,14 @@
             }
           }
         ],
-        "line": 15,
-        "name": "user is able to create Kerberos connection",
+        "line": 37,
+        "name": "user is able to run created acquire kafka pipeline and validate same in logs",
         "description": "",
-        "id": "user-should-be-able-to-create--validate-connections-on-connections-page;user-is-able-to-create-kerberos-connection;;2",
+        "id": "creation-of-a-end-to-end-execution-of-the-pipeline-for-spark/tmpl-services;user-is-able-to-run-created-acquire-kafka-pipeline-and-validate-same-in-logs;;2",
         "after": [
           {
             "result": {
-              "duration": 1751000,
+              "duration": 1291000,
               "status": "passed"
             },
             "match": {
@@ -37,7 +37,7 @@
               "---Closing the Browser---"
             ],
             "result": {
-              "duration": 83826000,
+              "duration": 81642000,
               "status": "passed"
             },
             "match": {
@@ -50,10 +50,10 @@
         "steps": [
           {
             "result": {
-              "duration": 7271336000,
+              "duration": 7225995000,
               "status": "passed"
             },
-            "line": 6,
+            "line": 8,
             "name": "user is on DIL login page",
             "match": {
               "location": "com.steps.commonSteps.userIsOnDILLoginPage()"
@@ -62,10 +62,10 @@
           },
           {
             "result": {
-              "duration": 336417000,
+              "duration": 429826000,
               "status": "passed"
             },
-            "line": 7,
+            "line": 9,
             "name": "enter username and password",
             "match": {
               "location": "com.steps.commonSteps.enterUsernameAndPassword()"
@@ -74,94 +74,362 @@
           },
           {
             "result": {
-              "duration": 5778383000,
+              "duration": 1781955000,
               "status": "passed"
             },
-            "line": 8,
-            "name": "navigates to the \"Create a connection\" tab",
+            "line": 10,
+            "name": "clicks on createProject tab",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Create a connection\"",
-                  "offset": 17
-                }
-              ],
-              "location": "com.steps.createConnectionsSteps.navigatesToTheTab(java.lang.String)"
+              "location": "com.steps.createProjectSteps.clicksOnCreateProjectTab()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 721846000,
+              "duration": 640093000,
               "status": "passed"
             },
-            "line": 9,
-            "name": "enters \"AutomationKerberos\",\"Creating Connection\",\"KERBEROS\",principal and fileType",
+            "line": 11,
+            "name": "creates project with \"AutoDIL\",\"ProjectForAutomation\",\"Test_Pipeline\" and engine",
             "match": {
               "arguments": [
                 {
-                  "val": "\"AutomationKerberos\"",
-                  "offset": 7
+                  "val": "AutoDIL",
+                  "offset": 22
                 },
                 {
-                  "val": "\"Creating Connection\"",
-                  "offset": 28
+                  "val": "ProjectForAutomation",
+                  "offset": 32
                 },
                 {
-                  "val": "\"KERBEROS\"",
-                  "offset": 50
+                  "val": "Test_Pipeline",
+                  "offset": 55
                 }
               ],
-              "location": "com.steps.createConnectionsSteps.entersPrincipalAndFileType(java.lang.String,java.lang.String,java.lang.String)"
+              "location": "com.steps.createProjectSteps.entersAndSelectEngine(java.lang.String,java.lang.String,java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 477613000,
+              "duration": 1038200000,
               "status": "passed"
             },
-            "line": 10,
-            "name": "connection should be tested successfully",
+            "line": 12,
+            "name": "creates a \"PipeLIne\" with \"ProjectForAutomation\",\"Test_Pipeline\",\"STREAMING\"",
             "match": {
-              "location": "com.steps.createConnectionsSteps.connectionShouldBeTestedSuccessfully()"
+              "arguments": [
+                {
+                  "val": "\"PipeLIne\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"ProjectForAutomation\"",
+                  "offset": 26
+                },
+                {
+                  "val": "\"Test_Pipeline\"",
+                  "offset": 49
+                },
+                {
+                  "val": "\"STREAMING\"",
+                  "offset": 65
+                }
+              ],
+              "location": "com.steps.createPipeLineSteps.createsAWith(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 749415000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "enters pipeline properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.enters_pipeline_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "PKey",
+                  "PValue"
+                ]
+              },
+              {
+                "cells": [
+                  "serviceType",
+                  "AcquireKafka"
+                ]
+              },
+              {
+                "cells": [
+                  "isSchemaNeededToBeRegister",
+                  "true"
+                ]
+              },
+              {
+                "cells": [
+                  "area",
+                  "area"
+                ]
+              },
+              {
+                "cells": [
+                  "flow",
+                  "flow"
+                ]
+              },
+              {
+                "cells": [
+                  "step",
+                  "step"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5207084000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Spark properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.spark_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "SKey",
+                  "SValue"
+                ]
+              },
+              {
+                "cells": [
+                  "spark.sql.adaptive.coalescePartitions.enabled",
+                  "true"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 892846000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "clicks on \"Add a Source\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Add a Source\"",
+                  "offset": 10
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.clicksOn(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7936434000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "Enters \"DemoSource\",\"KAFKA\",\"TMPLKafkaConnection\",\"topic1\",\"No_Schema\",\"AutoManualSchemaDND\",\"Earlier\",\"k1\",\"v1\" and clicks on add",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"KAFKA\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"TMPLKafkaConnection\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"topic1\"",
+                  "offset": 50
+                },
+                {
+                  "val": "\"No_Schema\"",
+                  "offset": 59
+                },
+                {
+                  "val": "\"AutoManualSchemaDND\"",
+                  "offset": 71
+                },
+                {
+                  "val": "\"Earlier\"",
+                  "offset": 93
+                },
+                {
+                  "val": "\"k1\"",
+                  "offset": 103
+                },
+                {
+                  "val": "\"v1\"",
+                  "offset": 108
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.entersAndClicksOnAdd(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 587385000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "Source should get created with \"DemoSource\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.sourceShouldGetCreatedWith(java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 90073000,
+              "duration": 11585696000,
               "status": "passed"
             },
-            "line": 11,
-            "name": "creates the connection",
+            "line": 26,
+            "name": "enters \"DemoDestination\",\"KAFKA\",\"TMPLKafkaConnection\",\"CSV\" ,\".csv\",\"topic2\"",
             "match": {
-              "location": "com.steps.createConnectionsSteps.createsTheConnection()"
+              "arguments": [
+                {
+                  "val": "\"DemoDestination\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"KAFKA\"",
+                  "offset": 25
+                },
+                {
+                  "val": "\"TMPLKafkaConnection\"",
+                  "offset": 33
+                },
+                {
+                  "val": "\"CSV\"",
+                  "offset": 55
+                },
+                {
+                  "val": "\".csv\"",
+                  "offset": 62
+                },
+                {
+                  "val": "\"topic2\"",
+                  "offset": 69
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.entersAndClickAdd(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 7419799000,
+              "duration": 10600941000,
               "status": "passed"
             },
-            "line": 12,
-            "name": "connection with \"AutomationKerberos\" should be validated on Connection listing page",
+            "line": 27,
+            "name": "enters destination keys and value",
+            "match": {
+              "location": "com.steps.createSourceDestAndTransform.entersDestinationKeysAndValue(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "DKey",
+                  "DValue"
+                ]
+              },
+              {
+                "cells": [
+                  "trigger",
+                  "10 seconds"
+                ]
+              },
+              {
+                "cells": [
+                  "checkpointLocation",
+                  "/tmp/1099/"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 155103000,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "clicks add",
+            "match": {
+              "location": "com.steps.createSourceDestAndTransform.clicksAdd()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13533878000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "PipeLine with status \"READY\" is validated",
             "match": {
               "arguments": [
                 {
-                  "val": "\"AutomationKerberos\"",
-                  "offset": 16
+                  "val": "\"READY\"",
+                  "offset": 21
                 }
               ],
-              "location": "com.steps.createConnectionsSteps.connectionWithShouldBeValidatedOnConnectionListingPage(java.lang.String)"
+              "location": "com.steps.createPipeLineSteps.pipelineWithStatusIsValidated(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15804247000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "executes the pipeline",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.executesThePipeline()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5810393000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "Pipeline record is validated on logs page",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.pipelineRecordIsValidatedOnLogsPage()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@CreateConnection"
+            "name": "@E2EExecutionDemo"
           },
           {
             "name": "@Smoke"
@@ -173,22 +441,2311 @@
             "name": "@Positive"
           },
           {
-            "name": "@CRC-Test1"
+            "name": "@E2EExecution1"
           },
           {
-            "name": "@TC1"
+            "name": "@TC31"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-29T07:06:21.860Z",
+        "before": [
+          {
+            "output": [
+              "--Starting the Execution--"
+            ],
+            "result": {
+              "duration": 1100563000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.beforeScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 71,
+        "name": "user is able to run created acquire kafka Swagger pipeline and validate same in logs",
+        "description": "",
+        "id": "creation-of-a-end-to-end-execution-of-the-pipeline-for-spark/tmpl-services;user-is-able-to-run-created-acquire-kafka-swagger-pipeline-and-validate-same-in-logs;;2",
+        "after": [
+          {
+            "output": [
+              "this is my failure message"
+            ],
+            "embeddings": [
+              {
+                "data": "iVBORw0KGgoAAAANSUhEUgAABVYAAAI7CAYAAAAH9MAYAAABKGlDQ1BTa2lhAAAokX2RPUvDUBSGH4uLXyCo4OCQURS1qdUqONRULa6tQmunNE2DmNaQxo8f4ewsLv4A/4SjIOjijxAHZ99YJAGJ53LufXLec2/OuRdy88hy09DrR2GtahmN5olBymxnEJBtI/D1Gs/wsvJPXpaNddyBo/VDHoX6uY7siGe9IV/H3B7yTczhUa0ivhMveilup/gqCiLxU5zvBGHM7+Kdnn/hJHUz6faP61ob8gWqnGt4+LisUeeMU2xRni125RsU2WObCpa+iuyL1jHlBemmlAPNFiWpJUXyUpSX3GfgQ/kNJuaSWGsJbp9V5mUSWy6rhSY83gd2aP+ERuNH6nbh8wGmpM1oz3jr9xKTvclbZPRq/OnV4JA+Dquigqo22fwG+FNInH+WWzwAABE1SURBVHic7dpLagMxEEBBOeR8PuwcTRdQNjY4TmbgmXwMrtpJQtDrR5/WWmsAAAAAALyYOefDf99+cA4AAAAAgJcgrAIAAAAARMIqAAAAAEAkrAIAAAAARMIqAAAAAEAkrAIAAAAA3Nm27fBdWAUAAAAAuHGNqkdxVVgFAAAAALi4j6l7cVVYBQAAAAAY+xH1u/vTWmv99kAAAAAAAM9mzvnwXxurAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEAmrAAAAAACRsAoAAAAAEL3/9wAAAAAAAM9g27bdt/P5/OlsYxUAAAAAYHyNp0f3wioAAAAAwMV9RN2LrcIqAAAAAMCNa0zdi6pjjHFaa62/GggAAAAA4FnMOR/+a2MVAAAAACASVgEAAAAAImEVAAAAACASVgEAAAAAImEVAAAAACD6AKUIMAL8YvurAAAAAElFTkSuQmCC",
+                "mime_type": "image/png",
+                "name": "user_is_able_to_run_created_acquire_kafka_Swagger_pipeline_and_validate_same_in_logs"
+              }
+            ],
+            "result": {
+              "duration": 81836000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.afterScenario(io.cucumber.java.Scenario)"
+            }
+          },
+          {
+            "output": [
+              "---Closing the Browser---"
+            ],
+            "result": {
+              "duration": 79320000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.quitBrowser(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 179302300000,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "user is on DIL login page",
+            "match": {
+              "location": "com.steps.commonSteps.userIsOnDILLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[text()\u003d\u0027User name\u0027]/following-sibling::input\"}\n  (Session info: chrome\u003d90.0.4430.212)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027pihu-Latitude-5400\u0027, ip: \u0027127.0.1.1\u0027, os.name: \u0027Linux\u0027, os.arch: \u0027amd64\u0027, os.version: \u00275.11.0-40-generic\u0027, java.version: \u002711.0.11\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.212, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: /tmp/.com.google.Chrome.TDwRnX}, goog:chromeOptions: {debuggerAddress: localhost:40997}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: fd1a5e5ca00263cb728caa88ccad3014\n*** Element info: {Using\u003dxpath, value\u003d//*[text()\u003d\u0027User name\u0027]/following-sibling::input}\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\n\tat com.sun.proxy.$Proxy23.sendKeys(Unknown Source)\n\tat com.pagesPF.DIL_loginpage.loginToDIL(DIL_loginpage.java:36)\n\tat com.steps.commonSteps.enterUsernameAndPassword(commonSteps.java:39)\n\tat ✽.enter username and password(file:///home/pihu/dil_automation/src/test/resources/features/projects/E2EExecutionTest.feature:42)\n",
+              "duration": 10076628000,
+              "status": "failed"
+            },
+            "line": 42,
+            "name": "enter username and password",
+            "match": {
+              "location": "com.steps.commonSteps.enterUsernameAndPassword()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 906000,
+              "status": "skipped"
+            },
+            "line": 43,
+            "name": "clicks on createProject tab",
+            "match": {
+              "location": "com.steps.createProjectSteps.clicksOnCreateProjectTab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1088000,
+              "status": "skipped"
+            },
+            "line": 44,
+            "name": "creates project with \"AutoDIL\",\"ProjectForAutomation\",\"Test_Pipeline\" and engine",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AutoDIL",
+                  "offset": 22
+                },
+                {
+                  "val": "ProjectForAutomation",
+                  "offset": 32
+                },
+                {
+                  "val": "Test_Pipeline",
+                  "offset": 55
+                }
+              ],
+              "location": "com.steps.createProjectSteps.entersAndSelectEngine(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 685000,
+              "status": "skipped"
+            },
+            "line": 45,
+            "name": "creates a \"PipeLIne\" with \"ProjectForAutomation\",\"Test_Pipeline\",\"STREAMING\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"PipeLIne\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"ProjectForAutomation\"",
+                  "offset": 26
+                },
+                {
+                  "val": "\"Test_Pipeline\"",
+                  "offset": 49
+                },
+                {
+                  "val": "\"STREAMING\"",
+                  "offset": 65
+                }
+              ],
+              "location": "com.steps.createPipeLineSteps.createsAWith(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1095000,
+              "status": "skipped"
+            },
+            "line": 46,
+            "name": "enters pipeline properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.enters_pipeline_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "PKey",
+                  "PValue"
+                ]
+              },
+              {
+                "cells": [
+                  "serviceType",
+                  "AcquireKafkaSwagger"
+                ]
+              },
+              {
+                "cells": [
+                  "header",
+                  "/definitions/ConsentTypeEvent"
+                ]
+              },
+              {
+                "cells": [
+                  "isSchemaNeededToBeRegister",
+                  "true"
+                ]
+              },
+              {
+                "cells": [
+                  "area",
+                  "area"
+                ]
+              },
+              {
+                "cells": [
+                  "flow",
+                  "flow"
+                ]
+              },
+              {
+                "cells": [
+                  "step",
+                  "step"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 839000,
+              "status": "skipped"
+            },
+            "line": 54,
+            "name": "Spark properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.spark_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "SKey",
+                  "SValue"
+                ]
+              },
+              {
+                "cells": [
+                  "spark.sql.adaptive.coalescePartitions.enabled",
+                  "true"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 456000,
+              "status": "skipped"
+            },
+            "line": 57,
+            "name": "clicks on \"Add a Source\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Add a Source\"",
+                  "offset": 10
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.clicksOn(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 638000,
+              "status": "skipped"
+            },
+            "line": 58,
+            "name": "Enters \"DemoSource\",\"KAFKA\",\"TMPLKafkaConnection\",\"topic1\",\"No_Schema\",\"AutoManualSchemaDND\",\"Earlier\",\"k1\",\"v1\" and clicks on add",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"KAFKA\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"TMPLKafkaConnection\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"topic1\"",
+                  "offset": 50
+                },
+                {
+                  "val": "\"No_Schema\"",
+                  "offset": 59
+                },
+                {
+                  "val": "\"AutoManualSchemaDND\"",
+                  "offset": 71
+                },
+                {
+                  "val": "\"Earlier\"",
+                  "offset": 93
+                },
+                {
+                  "val": "\"k1\"",
+                  "offset": 103
+                },
+                {
+                  "val": "\"v1\"",
+                  "offset": 108
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.entersAndClicksOnAdd(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 430000,
+              "status": "skipped"
+            },
+            "line": 59,
+            "name": "Source should get created with \"DemoSource\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.sourceShouldGetCreatedWith(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 545000,
+              "status": "skipped"
+            },
+            "line": 60,
+            "name": "enters \"DemoDestination\",\"KAFKA\",\"TMPLKafkaConnection\",\"CSV\" ,\".csv\",\"topic2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoDestination\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"KAFKA\"",
+                  "offset": 25
+                },
+                {
+                  "val": "\"TMPLKafkaConnection\"",
+                  "offset": 33
+                },
+                {
+                  "val": "\"CSV\"",
+                  "offset": 55
+                },
+                {
+                  "val": "\".csv\"",
+                  "offset": 62
+                },
+                {
+                  "val": "\"topic2\"",
+                  "offset": 69
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.entersAndClickAdd(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 717000,
+              "status": "skipped"
+            },
+            "line": 61,
+            "name": "enters destination keys and value",
+            "match": {
+              "location": "com.steps.createSourceDestAndTransform.entersDestinationKeysAndValue(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "DKey",
+                  "DValue"
+                ]
+              },
+              {
+                "cells": [
+                  "trigger",
+                  "10 seconds"
+                ]
+              },
+              {
+                "cells": [
+                  "checkpointLocation",
+                  "/tmp/1099/"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 490000,
+              "status": "skipped"
+            },
+            "line": 65,
+            "name": "clicks add",
+            "match": {
+              "location": "com.steps.createSourceDestAndTransform.clicksAdd()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 389000,
+              "status": "skipped"
+            },
+            "line": 66,
+            "name": "PipeLine with status \"READY\" is validated",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"READY\"",
+                  "offset": 21
+                }
+              ],
+              "location": "com.steps.createPipeLineSteps.pipelineWithStatusIsValidated(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 337000,
+              "status": "skipped"
+            },
+            "line": 67,
+            "name": "executes the pipeline",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.executesThePipeline()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 343000,
+              "status": "skipped"
+            },
+            "line": 68,
+            "name": "Pipeline record is validated on logs page",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.pipelineRecordIsValidatedOnLogsPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@E2EExecutionDemo"
+          },
+          {
+            "name": "@Smoke"
+          },
+          {
+            "name": "@Reg"
+          },
+          {
+            "name": "@Positive"
+          },
+          {
+            "name": "@E2EExecution2"
+          },
+          {
+            "name": "@TC32"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-29T07:09:32.566Z",
+        "before": [
+          {
+            "output": [
+              "--Starting the Execution--"
+            ],
+            "result": {
+              "duration": 1110075000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.beforeScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 105,
+        "name": "user is able to run created acquire File pipeline and validate same in logs",
+        "description": "",
+        "id": "creation-of-a-end-to-end-execution-of-the-pipeline-for-spark/tmpl-services;user-is-able-to-run-created-acquire-file-pipeline-and-validate-same-in-logs;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 635000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.afterScenario(io.cucumber.java.Scenario)"
+            }
+          },
+          {
+            "output": [
+              "---Closing the Browser---"
+            ],
+            "result": {
+              "duration": 137533000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.quitBrowser(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 14236161000,
+              "status": "passed"
+            },
+            "line": 75,
+            "name": "user is on DIL login page",
+            "match": {
+              "location": "com.steps.commonSteps.userIsOnDILLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 325291000,
+              "status": "passed"
+            },
+            "line": 76,
+            "name": "enter username and password",
+            "match": {
+              "location": "com.steps.commonSteps.enterUsernameAndPassword()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2053813000,
+              "status": "passed"
+            },
+            "line": 77,
+            "name": "clicks on createProject tab",
+            "match": {
+              "location": "com.steps.createProjectSteps.clicksOnCreateProjectTab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 515355000,
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "creates project with \"AutoDIL\",\"ProjectForAutomation\",\"Test_Pipeline\" and engine",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AutoDIL",
+                  "offset": 22
+                },
+                {
+                  "val": "ProjectForAutomation",
+                  "offset": 32
+                },
+                {
+                  "val": "Test_Pipeline",
+                  "offset": 55
+                }
+              ],
+              "location": "com.steps.createProjectSteps.entersAndSelectEngine(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 938043000,
+              "status": "passed"
+            },
+            "line": 79,
+            "name": "creates a \"PipeLIne\" with \"ProjectForAutomation\",\"Test_Pipeline\",\"STREAMING\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"PipeLIne\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"ProjectForAutomation\"",
+                  "offset": 26
+                },
+                {
+                  "val": "\"Test_Pipeline\"",
+                  "offset": 49
+                },
+                {
+                  "val": "\"STREAMING\"",
+                  "offset": 65
+                }
+              ],
+              "location": "com.steps.createPipeLineSteps.createsAWith(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1088215000,
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "enters pipeline properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.enters_pipeline_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "PKey",
+                  "PValue"
+                ]
+              },
+              {
+                "cells": [
+                  "serviceType",
+                  "AcquireFile"
+                ]
+              },
+              {
+                "cells": [
+                  "isReturnable",
+                  "False"
+                ]
+              },
+              {
+                "cells": [
+                  "isSchemaNeededToBeRegister",
+                  "False"
+                ]
+              },
+              {
+                "cells": [
+                  "area",
+                  "area"
+                ]
+              },
+              {
+                "cells": [
+                  "flow",
+                  "flow"
+                ]
+              },
+              {
+                "cells": [
+                  "step",
+                  "step"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5281132000,
+              "status": "passed"
+            },
+            "line": 88,
+            "name": "Spark properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.spark_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "SKey",
+                  "SValue"
+                ]
+              },
+              {
+                "cells": [
+                  "spark.sql.adaptive.coalescePartitions.enabled",
+                  "true"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 881744000,
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "clicks on \"Add a Source\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Add a Source\"",
+                  "offset": 10
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.clicksOn(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6867316000,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "Enters \"DemoSource\",\"File System\",\"Auto_Kerb_DND\",\"CSV\",\"hdfs://10.0.1.92:8020/user/hdfstodeltaInput/sourceData.csv\",\",\",\"No Schema\",\"\u003cSchemaValue\u003e\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"File System\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"Auto_Kerb_DND\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"CSV\"",
+                  "offset": 50
+                },
+                {
+                  "val": "\"hdfs://10.0.1.92:8020/user/hdfstodeltaInput/sourceData.csv\"",
+                  "offset": 56
+                },
+                {
+                  "val": "\",\"",
+                  "offset": 117
+                },
+                {
+                  "val": "\"No Schema\"",
+                  "offset": 121
+                },
+                {
+                  "val": "\"\u003cSchemaValue\u003e\"",
+                  "offset": 133
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.enters(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 560593000,
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "Source should get created with \"DemoSource\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.sourceShouldGetCreatedWith(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1579554000,
+              "status": "passed"
+            },
+            "line": 94,
+            "name": "enters \"DemoDestination\",\"File System\",\"Auto_Kerb_DND\",\"CSV\" ,\"hdfs://10.0.1.92:8020/user/hdfsFileToFileDestination/\",\"topic2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoDestination\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"File System\"",
+                  "offset": 25
+                },
+                {
+                  "val": "\"Auto_Kerb_DND\"",
+                  "offset": 39
+                },
+                {
+                  "val": "\"CSV\"",
+                  "offset": 55
+                },
+                {
+                  "val": "\"hdfs://10.0.1.92:8020/user/hdfsFileToFileDestination/\"",
+                  "offset": 62
+                },
+                {
+                  "val": "\"topic2\"",
+                  "offset": 118
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.entersAndClickAdd(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10580381000,
+              "status": "passed"
+            },
+            "line": 95,
+            "name": "enters destination keys and value",
+            "match": {
+              "location": "com.steps.createSourceDestAndTransform.entersDestinationKeysAndValue(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "DKey",
+                  "DValue"
+                ]
+              },
+              {
+                "cells": [
+                  "mode",
+                  ":"
+                ]
+              },
+              {
+                "cells": [
+                  "escape",
+                  ":"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 109069000,
+              "status": "passed"
+            },
+            "line": 99,
+            "name": "clicks add",
+            "match": {
+              "location": "com.steps.createSourceDestAndTransform.clicksAdd()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11897380000,
+              "status": "passed"
+            },
+            "line": 100,
+            "name": "PipeLine with status \"READY\" is validated",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"READY\"",
+                  "offset": 21
+                }
+              ],
+              "location": "com.steps.createPipeLineSteps.pipelineWithStatusIsValidated(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15794353000,
+              "status": "passed"
+            },
+            "line": 101,
+            "name": "executes the pipeline",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.executesThePipeline()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5984153000,
+              "status": "passed"
+            },
+            "line": 102,
+            "name": "Pipeline record is validated on logs page",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.pipelineRecordIsValidatedOnLogsPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@E2EExecutionDemo"
+          },
+          {
+            "name": "@Smoke"
+          },
+          {
+            "name": "@Reg"
+          },
+          {
+            "name": "@Positive"
+          },
+          {
+            "name": "@E2EExecution3"
+          },
+          {
+            "name": "@TC33"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-29T07:10:52.544Z",
+        "before": [
+          {
+            "output": [
+              "--Starting the Execution--"
+            ],
+            "result": {
+              "duration": 1154358000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.beforeScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 140,
+        "name": "user is able to run created Publish File Streaming pipeline and validate same in logs",
+        "description": "",
+        "id": "creation-of-a-end-to-end-execution-of-the-pipeline-for-spark/tmpl-services;user-is-able-to-run-created-publish-file-streaming-pipeline-and-validate-same-in-logs;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 131000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.afterScenario(io.cucumber.java.Scenario)"
+            }
+          },
+          {
+            "output": [
+              "---Closing the Browser---"
+            ],
+            "result": {
+              "duration": 91952000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.quitBrowser(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 8133121000,
+              "status": "passed"
+            },
+            "line": 109,
+            "name": "user is on DIL login page",
+            "match": {
+              "location": "com.steps.commonSteps.userIsOnDILLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 454003000,
+              "status": "passed"
+            },
+            "line": 110,
+            "name": "enter username and password",
+            "match": {
+              "location": "com.steps.commonSteps.enterUsernameAndPassword()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1959194000,
+              "status": "passed"
+            },
+            "line": 111,
+            "name": "clicks on createProject tab",
+            "match": {
+              "location": "com.steps.createProjectSteps.clicksOnCreateProjectTab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 558094000,
+              "status": "passed"
+            },
+            "line": 112,
+            "name": "creates project with \"AutoDIL\",\"ProjectForAutomation\",\"Test_Pipeline\" and engine",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AutoDIL",
+                  "offset": 22
+                },
+                {
+                  "val": "ProjectForAutomation",
+                  "offset": 32
+                },
+                {
+                  "val": "Test_Pipeline",
+                  "offset": 55
+                }
+              ],
+              "location": "com.steps.createProjectSteps.entersAndSelectEngine(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1180256000,
+              "status": "passed"
+            },
+            "line": 113,
+            "name": "creates a \"PipeLIne\" with \"ProjectForAutomation\",\"Test_Pipeline\",\"STREAMING\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"PipeLIne\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"ProjectForAutomation\"",
+                  "offset": 26
+                },
+                {
+                  "val": "\"Test_Pipeline\"",
+                  "offset": 49
+                },
+                {
+                  "val": "\"STREAMING\"",
+                  "offset": 65
+                }
+              ],
+              "location": "com.steps.createPipeLineSteps.createsAWith(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1007625000,
+              "status": "passed"
+            },
+            "line": 114,
+            "name": "enters pipeline properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.enters_pipeline_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "PKey",
+                  "PValue"
+                ]
+              },
+              {
+                "cells": [
+                  "serviceType",
+                  "PublishFile"
+                ]
+              },
+              {
+                "cells": [
+                  "isReturnable",
+                  "False"
+                ]
+              },
+              {
+                "cells": [
+                  "isSchemaNeededToBeRegister",
+                  "False"
+                ]
+              },
+              {
+                "cells": [
+                  "area",
+                  "area"
+                ]
+              },
+              {
+                "cells": [
+                  "flow",
+                  "flow"
+                ]
+              },
+              {
+                "cells": [
+                  "step",
+                  "step"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5210924000,
+              "status": "passed"
+            },
+            "line": 122,
+            "name": "Spark properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.spark_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "SKey",
+                  "SValue"
+                ]
+              },
+              {
+                "cells": [
+                  "spark.sql.adaptive.coalescePartitions.enabled",
+                  "true"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 835505000,
+              "status": "passed"
+            },
+            "line": 125,
+            "name": "clicks on \"Add a Source\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Add a Source\"",
+                  "offset": 10
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.clicksOn(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6659052000,
+              "status": "passed"
+            },
+            "line": 126,
+            "name": "Enters \"DemoSource\",\"File System\",\"Auto_Kerb_DND\",\"DeltaIO\",\"hdfs://10.0.1.92:8020/user/hdfstodeltaInput/sourceData.csv\",\",\",\"No Schema\",\"\u003cSchemaValue\u003e\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"File System\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"Auto_Kerb_DND\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"DeltaIO\"",
+                  "offset": 50
+                },
+                {
+                  "val": "\"hdfs://10.0.1.92:8020/user/hdfstodeltaInput/sourceData.csv\"",
+                  "offset": 60
+                },
+                {
+                  "val": "\",\"",
+                  "offset": 121
+                },
+                {
+                  "val": "\"No Schema\"",
+                  "offset": 125
+                },
+                {
+                  "val": "\"\u003cSchemaValue\u003e\"",
+                  "offset": 137
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.enters(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 536342000,
+              "status": "passed"
+            },
+            "line": 127,
+            "name": "Source should get created with \"DemoSource\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.sourceShouldGetCreatedWith(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1582813000,
+              "status": "passed"
+            },
+            "line": 128,
+            "name": "enters \"DemoDestination\",\"File System\",\"Auto_Kerb_DND\",\"DeltaIO\" ,\"hdfs://10.0.1.92:8020/user/hdfsFileToFileDestination/\",\"topic2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoDestination\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"File System\"",
+                  "offset": 25
+                },
+                {
+                  "val": "\"Auto_Kerb_DND\"",
+                  "offset": 39
+                },
+                {
+                  "val": "\"DeltaIO\"",
+                  "offset": 55
+                },
+                {
+                  "val": "\"hdfs://10.0.1.92:8020/user/hdfsFileToFileDestination/\"",
+                  "offset": 66
+                },
+                {
+                  "val": "\"topic2\"",
+                  "offset": 122
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.entersAndClickAdd(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10422835000,
+              "status": "passed"
+            },
+            "line": 129,
+            "name": "enters destination keys and value",
+            "match": {
+              "location": "com.steps.createSourceDestAndTransform.entersDestinationKeysAndValue(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "DKey",
+                  "DValue"
+                ]
+              },
+              {
+                "cells": [
+                  "mode",
+                  ":"
+                ]
+              },
+              {
+                "cells": [
+                  "escape",
+                  ":"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 128388000,
+              "status": "passed"
+            },
+            "line": 133,
+            "name": "clicks add",
+            "match": {
+              "location": "com.steps.createSourceDestAndTransform.clicksAdd()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5561439000,
+              "status": "passed"
+            },
+            "line": 134,
+            "name": "Destination with \"DemoDestination\" should get created",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoDestination\"",
+                  "offset": 17
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.destinationWithShouldGetCreated(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 11859448000,
+              "status": "passed"
+            },
+            "line": 135,
+            "name": "PipeLine with status \"READY\" is validated",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"READY\"",
+                  "offset": 21
+                }
+              ],
+              "location": "com.steps.createPipeLineSteps.pipelineWithStatusIsValidated(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15247450000,
+              "status": "passed"
+            },
+            "line": 136,
+            "name": "executes the pipeline",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.executesThePipeline()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5905588000,
+              "status": "passed"
+            },
+            "line": 137,
+            "name": "Pipeline record is validated on logs page",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.pipelineRecordIsValidatedOnLogsPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@E2EExecutionDemo"
+          },
+          {
+            "name": "@Smoke"
+          },
+          {
+            "name": "@Reg"
+          },
+          {
+            "name": "@Positive"
+          },
+          {
+            "name": "@E2EExecution4"
+          },
+          {
+            "name": "@TC34"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-29T07:12:11.064Z",
+        "before": [
+          {
+            "output": [
+              "--Starting the Execution--"
+            ],
+            "result": {
+              "duration": 1127251000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.beforeScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 175,
+        "name": "user is able to run created Publish File Batch pipeline and validate same in logs",
+        "description": "",
+        "id": "creation-of-a-end-to-end-execution-of-the-pipeline-for-spark/tmpl-services;user-is-able-to-run-created-publish-file-batch-pipeline-and-validate-same-in-logs;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 349000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.afterScenario(io.cucumber.java.Scenario)"
+            }
+          },
+          {
+            "output": [
+              "---Closing the Browser---"
+            ],
+            "result": {
+              "duration": 118787000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.quitBrowser(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6646684000,
+              "status": "passed"
+            },
+            "line": 144,
+            "name": "user is on DIL login page",
+            "match": {
+              "location": "com.steps.commonSteps.userIsOnDILLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 404255000,
+              "status": "passed"
+            },
+            "line": 145,
+            "name": "enter username and password",
+            "match": {
+              "location": "com.steps.commonSteps.enterUsernameAndPassword()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1903761000,
+              "status": "passed"
+            },
+            "line": 146,
+            "name": "clicks on createProject tab",
+            "match": {
+              "location": "com.steps.createProjectSteps.clicksOnCreateProjectTab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 544054000,
+              "status": "passed"
+            },
+            "line": 147,
+            "name": "creates project with \"AutoDIL\",\"ProjectForAutomation\",\"Test_Pipeline\" and engine",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AutoDIL",
+                  "offset": 22
+                },
+                {
+                  "val": "ProjectForAutomation",
+                  "offset": 32
+                },
+                {
+                  "val": "Test_Pipeline",
+                  "offset": 55
+                }
+              ],
+              "location": "com.steps.createProjectSteps.entersAndSelectEngine(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1012984000,
+              "status": "passed"
+            },
+            "line": 148,
+            "name": "creates a \"PipeLIne\" with \"ProjectForAutomation\",\"Test_Pipeline\",\"BATCH\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"PipeLIne\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"ProjectForAutomation\"",
+                  "offset": 26
+                },
+                {
+                  "val": "\"Test_Pipeline\"",
+                  "offset": 49
+                },
+                {
+                  "val": "\"BATCH\"",
+                  "offset": 65
+                }
+              ],
+              "location": "com.steps.createPipeLineSteps.createsAWith(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 974897000,
+              "status": "passed"
+            },
+            "line": 149,
+            "name": "enters pipeline properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.enters_pipeline_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "PKey",
+                  "PValue"
+                ]
+              },
+              {
+                "cells": [
+                  "serviceType",
+                  "PublishFile"
+                ]
+              },
+              {
+                "cells": [
+                  "isReturnable",
+                  "False"
+                ]
+              },
+              {
+                "cells": [
+                  "isSchemaNeededToBeRegister",
+                  "False"
+                ]
+              },
+              {
+                "cells": [
+                  "area",
+                  "area"
+                ]
+              },
+              {
+                "cells": [
+                  "flow",
+                  "flow"
+                ]
+              },
+              {
+                "cells": [
+                  "step",
+                  "step"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5216192000,
+              "status": "passed"
+            },
+            "line": 157,
+            "name": "Spark properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.spark_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "SKey",
+                  "SValue"
+                ]
+              },
+              {
+                "cells": [
+                  "spark.sql.adaptive.coalescePartitions.enabled",
+                  "true"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 889105000,
+              "status": "passed"
+            },
+            "line": 160,
+            "name": "clicks on \"Add a Source\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Add a Source\"",
+                  "offset": 10
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.clicksOn(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7123425000,
+              "status": "passed"
+            },
+            "line": 161,
+            "name": "Enters \"DemoSource\",\"File System\",\"Auto_Kerb_DND\",\"DeltaIO\",\"hdfs://10.0.1.92:8020/user/hdfstodeltaInput/sourceData.csv\",\",\",\"No Schema\",\"\u003cSchemaValue\u003e\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"File System\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"Auto_Kerb_DND\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"DeltaIO\"",
+                  "offset": 50
+                },
+                {
+                  "val": "\"hdfs://10.0.1.92:8020/user/hdfstodeltaInput/sourceData.csv\"",
+                  "offset": 60
+                },
+                {
+                  "val": "\",\"",
+                  "offset": 121
+                },
+                {
+                  "val": "\"No Schema\"",
+                  "offset": 125
+                },
+                {
+                  "val": "\"\u003cSchemaValue\u003e\"",
+                  "offset": 137
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.enters(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 674388000,
+              "status": "passed"
+            },
+            "line": 162,
+            "name": "Source should get created with \"DemoSource\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.sourceShouldGetCreatedWith(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1673097000,
+              "status": "passed"
+            },
+            "line": 163,
+            "name": "enters \"DemoDestination\",\"File System\",\"Auto_Kerb_DND\",\"DeltaIO\" ,\"hdfs://10.0.1.92:8020/user/hdfsFileToFileDestination/\",\"topic2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoDestination\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"File System\"",
+                  "offset": 25
+                },
+                {
+                  "val": "\"Auto_Kerb_DND\"",
+                  "offset": 39
+                },
+                {
+                  "val": "\"DeltaIO\"",
+                  "offset": 55
+                },
+                {
+                  "val": "\"hdfs://10.0.1.92:8020/user/hdfsFileToFileDestination/\"",
+                  "offset": 66
+                },
+                {
+                  "val": "\"topic2\"",
+                  "offset": 122
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.entersAndClickAdd(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10443576000,
+              "status": "passed"
+            },
+            "line": 164,
+            "name": "enters destination keys and value",
+            "match": {
+              "location": "com.steps.createSourceDestAndTransform.entersDestinationKeysAndValue(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "DKey",
+                  "DValue"
+                ]
+              },
+              {
+                "cells": [
+                  "mode",
+                  ":"
+                ]
+              },
+              {
+                "cells": [
+                  "escape",
+                  ":"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 93017000,
+              "status": "passed"
+            },
+            "line": 168,
+            "name": "clicks add",
+            "match": {
+              "location": "com.steps.createSourceDestAndTransform.clicksAdd()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5599273000,
+              "status": "passed"
+            },
+            "line": 169,
+            "name": "Destination with \"DemoDestination\" should get created",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoDestination\"",
+                  "offset": 17
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.destinationWithShouldGetCreated(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 12120065000,
+              "status": "passed"
+            },
+            "line": 170,
+            "name": "PipeLine with status \"READY\" is validated",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"READY\"",
+                  "offset": 21
+                }
+              ],
+              "location": "com.steps.createPipeLineSteps.pipelineWithStatusIsValidated(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15848847000,
+              "status": "passed"
+            },
+            "line": 171,
+            "name": "executes the pipeline",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.executesThePipeline()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5961269000,
+              "status": "passed"
+            },
+            "line": 172,
+            "name": "Pipeline record is validated on logs page",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.pipelineRecordIsValidatedOnLogsPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@E2EExecutionDemo"
+          },
+          {
+            "name": "@Smoke"
+          },
+          {
+            "name": "@Reg"
+          },
+          {
+            "name": "@Positive"
+          },
+          {
+            "name": "@E2EExecution5"
+          },
+          {
+            "name": "@TC35"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-29T07:13:29.471Z",
+        "before": [
+          {
+            "output": [
+              "--Starting the Execution--"
+            ],
+            "result": {
+              "duration": 1133237000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.beforeScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 208,
+        "name": "user is able to run created Publish kafka pipeline and validate same in logs",
+        "description": "",
+        "id": "creation-of-a-end-to-end-execution-of-the-pipeline-for-spark/tmpl-services;user-is-able-to-run-created-publish-kafka-pipeline-and-validate-same-in-logs;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 303000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.afterScenario(io.cucumber.java.Scenario)"
+            }
+          },
+          {
+            "output": [
+              "---Closing the Browser---"
+            ],
+            "result": {
+              "duration": 77829000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.steps.Hooks.quitBrowser(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6542765000,
+              "status": "passed"
+            },
+            "line": 179,
+            "name": "user is on DIL login page",
+            "match": {
+              "location": "com.steps.commonSteps.userIsOnDILLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 381598000,
+              "status": "passed"
+            },
+            "line": 180,
+            "name": "enter username and password",
+            "match": {
+              "location": "com.steps.commonSteps.enterUsernameAndPassword()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6752353000,
+              "status": "passed"
+            },
+            "line": 181,
+            "name": "clicks on createProject tab",
+            "match": {
+              "location": "com.steps.createProjectSteps.clicksOnCreateProjectTab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 509048000,
+              "status": "passed"
+            },
+            "line": 182,
+            "name": "creates project with \"AutoDIL\",\"ProjectForAutomation\",\"Test_Pipeline\" and engine",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AutoDIL",
+                  "offset": 22
+                },
+                {
+                  "val": "ProjectForAutomation",
+                  "offset": 32
+                },
+                {
+                  "val": "Test_Pipeline",
+                  "offset": 55
+                }
+              ],
+              "location": "com.steps.createProjectSteps.entersAndSelectEngine(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1064618000,
+              "status": "passed"
+            },
+            "line": 183,
+            "name": "creates a \"PipeLIne\" with \"ProjectForAutomation\",\"Test_Pipeline\",\"STREAMING\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"PipeLIne\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"ProjectForAutomation\"",
+                  "offset": 26
+                },
+                {
+                  "val": "\"Test_Pipeline\"",
+                  "offset": 49
+                },
+                {
+                  "val": "\"STREAMING\"",
+                  "offset": 65
+                }
+              ],
+              "location": "com.steps.createPipeLineSteps.createsAWith(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 738882000,
+              "status": "passed"
+            },
+            "line": 184,
+            "name": "enters pipeline properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.enters_pipeline_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "PKey",
+                  "PValue"
+                ]
+              },
+              {
+                "cells": [
+                  "serviceType",
+                  "PublishKafka"
+                ]
+              },
+              {
+                "cells": [
+                  "isSchemaNeededToBeRegister",
+                  "true"
+                ]
+              },
+              {
+                "cells": [
+                  "area",
+                  "area"
+                ]
+              },
+              {
+                "cells": [
+                  "flow",
+                  "flow"
+                ]
+              },
+              {
+                "cells": [
+                  "step",
+                  "step"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5201990000,
+              "status": "passed"
+            },
+            "line": 191,
+            "name": "Spark properties",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.spark_properties(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "SKey",
+                  "SValue"
+                ]
+              },
+              {
+                "cells": [
+                  "spark.sql.adaptive.coalescePartitions.enabled",
+                  "true"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 762618000,
+              "status": "passed"
+            },
+            "line": 194,
+            "name": "clicks on \"Add a Source\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Add a Source\"",
+                  "offset": 10
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.clicksOn(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7254705000,
+              "status": "passed"
+            },
+            "line": 195,
+            "name": "Enters \"DemoSource\",\"KAFKA\",\"TMPLKafkaConnection\",\"topic1\",\"No_Schema\",\"AutoManualSchemaDND\",\"Earlier\",\"k1\",\"v1\" and clicks on add",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"KAFKA\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"TMPLKafkaConnection\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"topic1\"",
+                  "offset": 50
+                },
+                {
+                  "val": "\"No_Schema\"",
+                  "offset": 59
+                },
+                {
+                  "val": "\"AutoManualSchemaDND\"",
+                  "offset": 71
+                },
+                {
+                  "val": "\"Earlier\"",
+                  "offset": 93
+                },
+                {
+                  "val": "\"k1\"",
+                  "offset": 103
+                },
+                {
+                  "val": "\"v1\"",
+                  "offset": 108
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.entersAndClicksOnAdd(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 516682000,
+              "status": "passed"
+            },
+            "line": 196,
+            "name": "Source should get created with \"DemoSource\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoSource\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.sourceShouldGetCreatedWith(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 11537622000,
+              "status": "passed"
+            },
+            "line": 197,
+            "name": "enters \"DemoDestination\",\"KAFKA\",\"TMPLKafkaConnection\",\"CSV\" ,\".csv\",\"topic2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DemoDestination\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"KAFKA\"",
+                  "offset": 25
+                },
+                {
+                  "val": "\"TMPLKafkaConnection\"",
+                  "offset": 33
+                },
+                {
+                  "val": "\"CSV\"",
+                  "offset": 55
+                },
+                {
+                  "val": "\".csv\"",
+                  "offset": 62
+                },
+                {
+                  "val": "\"topic2\"",
+                  "offset": 69
+                }
+              ],
+              "location": "com.steps.createSourceDestAndTransform.entersAndClickAdd(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10380337000,
+              "status": "passed"
+            },
+            "line": 198,
+            "name": "enters destination keys and value",
+            "match": {
+              "location": "com.steps.createSourceDestAndTransform.entersDestinationKeysAndValue(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "DKey",
+                  "DValue"
+                ]
+              },
+              {
+                "cells": [
+                  "trigger",
+                  "10 seconds"
+                ]
+              },
+              {
+                "cells": [
+                  "checkpointLocation",
+                  "/tmp/1099/"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 135238000,
+              "status": "passed"
+            },
+            "line": 202,
+            "name": "clicks add",
+            "match": {
+              "location": "com.steps.createSourceDestAndTransform.clicksAdd()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11894405000,
+              "status": "passed"
+            },
+            "line": 203,
+            "name": "PipeLine with status \"READY\" is validated",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"READY\"",
+                  "offset": 21
+                }
+              ],
+              "location": "com.steps.createPipeLineSteps.pipelineWithStatusIsValidated(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15801495000,
+              "status": "passed"
+            },
+            "line": 204,
+            "name": "executes the pipeline",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.executesThePipeline()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5779961000,
+              "status": "passed"
+            },
+            "line": 205,
+            "name": "Pipeline record is validated on logs page",
+            "match": {
+              "location": "com.steps.createPipeLineSteps.pipelineRecordIsValidatedOnLogsPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@E2EExecutionDemo"
+          },
+          {
+            "name": "@Smoke"
+          },
+          {
+            "name": "@Reg"
+          },
+          {
+            "name": "@Positive"
+          },
+          {
+            "name": "@E2EExecution6"
+          },
+          {
+            "name": "@TC53"
           }
         ]
       }
     ],
-    "name": "User should be able to Create, Validate Connections on Connections Page",
+    "name": "Creation of a End to End Execution of the pipeline for Spark/TMPL services",
     "description": "",
-    "id": "user-should-be-able-to-create--validate-connections-on-connections-page",
+    "id": "creation-of-a-end-to-end-execution-of-the-pipeline-for-spark/tmpl-services",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/projects/CreateConnection.feature",
+    "uri": "file:src/test/resources/features/projects/E2EExecutionTest.feature",
     "tags": [
       {
-        "name": "@CreateConnection",
+        "name": "@E2EExecutionDemo",
         "type": "Tag",
         "location": {
           "line": 1,

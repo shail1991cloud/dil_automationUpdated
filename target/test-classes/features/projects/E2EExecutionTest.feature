@@ -1,4 +1,4 @@
-@E2EExecution
+@E2EExecutionDemo
 Feature:Creation of a End to End Execution of the pipeline for Spark/TMPL services
 
   #---------------------------------------E2E Execution-----------------------------------------#
