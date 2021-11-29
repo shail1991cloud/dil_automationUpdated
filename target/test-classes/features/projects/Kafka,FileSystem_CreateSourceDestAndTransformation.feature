@@ -3,7 +3,7 @@ Feature:Creation of Sources and Destination
   As a user I want to Create a Source and Destination,Validate Source and Destination attributes
 
 
-  @Smoke @Reg @Positive @CSource-Test1 @TC36
+  @Smoke @Reg @Positive @CSource-Test1 @TC36 @Demo
   Scenario Outline: user is able to create file type source for ManualSchema
     Given user is on DIL login page
     When enter username and password
@@ -81,7 +81,7 @@ Feature:Creation of Sources and Destination
       | ProjectName | Description          | Tag           | Pipeline | Icon         | SourceName | SourceType  | SourceConnection | fileType | FilePath | Separator | sourceSchema  | SchemaValue         | DestinationName | DestinationType | DestConnection | TopicName |
       | AutoDIL     | ProjectForAutomation | Test_Pipeline | PipeLIne | Add a Source | DemoSource | File System | Auto_Kerb_DND    | CSV      | .csv     | ,         | Manual Schema | AutoManualSchemaDND | DemoDestination | File System     | Auto_Kerb_DND  | CDR       |
 
-  @Smoke @Reg @Positive @CDestination-Test1 @TC39
+  @Smoke @Reg @Positive @CDestination-Test1 @TC39 @Demo
   Scenario Outline: user is able to create Kafka type Destination
     Given user is on DIL login page
     When enter username and password

@@ -26,7 +26,7 @@ Feature:Creation of Projects and validation of Project Setting Pop Up
     And   clicks on createProject tab
     Then  all the fields on Project Setting up page are validated
 
-  @Smoke @Reg @Positive @CRP-Test4 @TC11
+  @Smoke @Reg @Positive @CRP-Test4 @TC11 @Demo
   Scenario Outline: user is able to create a Project and is able to validate it in ProjectListing Page
     Given user is on DIL login page
     When  enter username and password

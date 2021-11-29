@@ -17,7 +17,7 @@ Feature:Creation and Field level validation of pipelines
       | ProjectName | Description          | Tag           | Tab      | Message                                |
       | AutoDIL     | ProjectForAutomation | Test_Pipeline | Overview | There is no pipelines in this project. |
 
-  @Smoke @Reg @Positive @CP-Test1 @TC4
+  @Smoke @Reg @Positive @CP-Test1 @TC4 @Demo
   Scenario Outline: user is able validate pipeline properties
     Given user is on DIL login page
     When enter username and password
