@@ -4958,3 +4958,24 @@
 2021-11-29 15:11:589 INFO  createSourceDestAndTransform:162 - Destination properties entered
 2021-11-29 15:11:683 INFO  createSourceDestAndTransform:132 - Button add clicked for Dest creation
 2021-11-29 15:11:712 INFO  createProjectSteps:96 - Pipeline listing page is validated for  created Pipeline with Status-->READY
+2021-11-30 11:11:844 INFO  commonSteps:33 - --Browser Launched--and user is navigated to DIL Login Page
+2021-11-30 11:11:142 INFO  DIL_loginpage:41 - User is logged into DIL UI with userId-->parihars
+2021-11-30 11:11:143 INFO  commonSteps:43 - --user name and Password are entered--
+2021-11-30 11:11:712 INFO  createProjectSteps:44 - User has clicked on ProjectSetUp Popup
+2021-11-30 11:11:249 INFO  createProjectSteps:51 - --Details entered for Project With--->AutoDIL,ProjectForAutomation and Test_Pipeline
+2021-11-30 11:11:351 INFO  createProjectSteps:110 - PipeLines details entered-->PipeLIne--ProjectForAutomation--Test_Pipeline
+2021-11-30 11:11:585 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-30 11:11:718 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-30 11:11:839 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-30 11:11:958 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-30 11:11:77 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-30 11:11:205 INFO  createProjectSteps:130 - PipeLines properties entered
+2021-11-30 11:11:396 INFO  createProjectSteps:147 - Spark properties entered
+2021-11-30 11:11:271 INFO  createSourceDestAndTransform:48 - Icon is clicked-->Add a Source
+2021-11-30 11:11:197 INFO  createSourceDestAndTransform:63 - Details entered-->hdfs://10.0.1.92:8020/user/hdfstodeltaInput/sourceData.csv--Auto_Kerb_DND
+2021-11-30 11:11:824 INFO  createSourceDestAndTransform:56 - DRecord validated-->DemoSource
+2021-11-30 11:11:856 INFO  createSourceDestAndTransform:107 - Destination is Created with Name-->DemoDestination
+2021-11-30 11:11:350 INFO  createSourceDestAndTransform:162 - Destination properties entered
+2021-11-30 11:11:472 INFO  createSourceDestAndTransform:132 - Button add clicked for Dest creation
+2021-11-30 11:11:188 INFO  createSourceDestAndTransform:116 - DRecord validated-->DemoDestination
+2021-11-30 11:11:14 INFO  createProjectSteps:96 - Pipeline listing page is validated for  created Pipeline with Status-->READY

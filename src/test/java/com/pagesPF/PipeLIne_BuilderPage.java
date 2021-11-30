@@ -38,13 +38,15 @@ public class PipeLIne_BuilderPage {
     @FindBy(how = How.XPATH, using = "//scale-dropdown[@label=\"Registry Name*\"]//div//select")
     public WebElement RegistryNameDropDown;
     @FindBy(how = How.XPATH, using = "//*[text()=' + ']")
-    public WebElement addButtonOnSourceOrTrans;
+    public WebElement addButtonIcon;
     @FindBy(how = How.XPATH, using = "//*[text()=' Destination ']")
     public WebElement selectDestination;
     @FindBy(how = How.XPATH, using = "//*[text()=' Transformation ']")
     public WebElement selectTransformation;
     @FindBy(how = How.XPATH, using = "//*[text()=' Custom SQL ']")
     public WebElement selectCustomSQL;
+    @FindBy(how = How.XPATH, using = "//scale-text-field[@label=\"Custom Name*\"]//input[@type=\"text\"]")
+    public WebElement textFieldCustomSQLName;
     @FindBy(how = How.XPATH, using = "//scale-accordion[@expanded=\"true\"]//scale-button[@variant=\"secondary\"][normalize-space()=\"+ Add Column\"]")
     public WebElement selectAddColumn;
     @FindBy(how = How.XPATH, using = "//scale-button[normalize-space()=\"Add\"]")
@@ -94,9 +96,25 @@ public class PipeLIne_BuilderPage {
     public WebElement btnEditSourceSave;
     @FindBy(how = How.XPATH, using = "//*[text()=' Save ']")
     public WebElement btnDatabaseConfigSave;
+    @FindBy(how = How.XPATH, using = "//scale-button[normalize-space()=\"+ Add node\"]")
+    public WebElement addNodeButton;
+    @FindBy(how = How.XPATH, using = "//scale-button[normalize-space()=\"+ Add subquery\"]")
+    public WebElement addSubQuery;
+    @FindBy(how = How.XPATH, using = "//scale-button[normalize-space()=\"+ Add subquery\"]")
+    public WebElement queryNameTextField;
+    @FindBy(how = How.XPATH, using = "//scale-textarea[@label=\"Custom SQL*\"]//div//textarea")
+    public WebElement queryTextField;
+    @FindBy(how = How.XPATH, using = "//scale-modal[@heading=\"Add Subquery\"]//scale-button[@slot=\"action\"][normalize-space()=\"Add\"]")
+    public WebElement buttonAddOnSubQuery;
+    @FindBy(how = How.XPATH, using = "//scale-button[@xpath='1'][text()=' Add ']")
+    public WebElement buttonAddOnCustomSQL;
+    @FindBy(how = How.XPATH, using = "//*[text()='Direct Query ']")
+    public WebElement directQueryOption;
+    public String nodeNameOnCustomSQL="//*[text()='%s ']";
     public String updatedDababaseName = "//div[text()='%s']";
     public String updatedDababaseTableName = "//div[text()='%s']";
     public String updatedDababaseColName = "//div[text()=' %s ']";
+
 
 
     public String recordNameOnProperties = "//div[text()=\"%s\"]";
@@ -112,6 +130,14 @@ public class PipeLIne_BuilderPage {
         functions_leanPageObject = PageFactory.initElements(driver, Functions_LeanPageObject.class);
     }
 
+    public void createCustomSQL(String customName,String nodeName,String sqlName,String customSQL)
+    {
+        CommonFunction.waitForElementToAppear(driver, addButtonIcon);
+        addButtonIcon.click();
+        CommonFunction.waitForElementToAppear(driver, selectCustomSQL);
+        selectCustomSQL.click();
+        CommonFunction.waitForElementToAppear(driver, selectCustomSQL);
+    }
     public void clickOnAddSourceORDestinationIcon(String icon) throws InterruptedException {
         CommonFunction.getCustomisedWebElement(driver, iconOnPipeLineBuilderPage, icon);
         CommonFunction.waitForElementToAppear(driver, CommonFunction.getCustomisedWebElement(driver, iconOnPipeLineBuilderPage, icon));
@@ -136,6 +162,8 @@ public class PipeLIne_BuilderPage {
         CommonFunction.scrollToElement(driver, status);
     }
 
+
+
     public void selectManualSchemaConnectionForFile(String schemaName) {
         try {
             if (manualSchemaConnectionDropDown.isDisplayed()) {
@@ -157,8 +185,8 @@ public class PipeLIne_BuilderPage {
     }
 
     public void createTransformation(String transformationName, String category, String transformationType, String columnValue) throws InterruptedException, IOException {
-        CommonFunction.waitForElementToAppear(driver, addButtonOnSourceOrTrans);
-        addButtonOnSourceOrTrans.click();
+        CommonFunction.waitForElementToAppear(driver, addButtonIcon);
+        addButtonIcon.click();
         CommonFunction.waitForElementToAppear(driver, selectTransformation);
         selectTransformation.click();
         CommonFunction.waitForElementToAppear(driver, FieldEnterName);
@@ -178,8 +206,8 @@ public class PipeLIne_BuilderPage {
     }
 
     public void createDestinationKafka_FileSystem(String destName, String typeToAdd, String connectionToAdd, String fileToAdd, String filePath, String topicToAdd) throws InterruptedException, IOException {
-        CommonFunction.waitForElementToAppear(driver, addButtonOnSourceOrTrans);
-        addButtonOnSourceOrTrans.click();
+        CommonFunction.waitForElementToAppear(driver, addButtonIcon);
+        addButtonIcon.click();
         CommonFunction.waitForElementToAppear(driver, selectDestination);
         selectDestination.click();
         CommonFunction.waitForElementToAppear(driver, FieldEnterName);
@@ -261,8 +289,8 @@ public class PipeLIne_BuilderPage {
     }
 
     public void createDestinationDelta(String destName, String typeToAdd, String connectionToAdd, String modeToAdd) throws InterruptedException, IOException {
-        CommonFunction.waitForElementToAppear(driver, addButtonOnSourceOrTrans);
-        addButtonOnSourceOrTrans.click();
+        CommonFunction.waitForElementToAppear(driver, addButtonIcon);
+        addButtonIcon.click();
         CommonFunction.waitForElementToAppear(driver, selectDestination);
         selectDestination.click();
         CommonFunction.waitForElementToAppear(driver, FieldEnterName);
@@ -275,8 +303,8 @@ public class PipeLIne_BuilderPage {
     }
 
     public void selectFlowType(String type) {
-        CommonFunction.waitForElementToAppear(driver, addButtonOnSourceOrTrans);
-        addButtonOnSourceOrTrans.click();
+        CommonFunction.waitForElementToAppear(driver, addButtonIcon);
+        addButtonIcon.click();
         if (type.equalsIgnoreCase("Transaformation")) {
             CommonFunction.waitForElementToAppear(driver, selectTransformation);
             selectTransformation.click();
